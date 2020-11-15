@@ -1,6 +1,6 @@
 # curvelops
 
-Python wrapper for [CurveLab](https://github.com/slimgroup/PyCurvelab)'s 2D and 3D curvelet transforms. It uses the [PyLops](https://pylops.readthedocs.io/) design framework for the forward and inverse curvelet transforms as matrix-free linear operations. If you are still confused, check some examples below or the [PyLops website](https://pylops.readthedocs.io/)!
+Python wrapper for [CurveLab](https://github.com/slimgroup/PyCurvelab)'s 2D and 3D curvelet transforms. It uses the [PyLops](https://pylops.readthedocs.io/) design framework to provide the forward and inverse curvelet transforms as matrix-free linear operations. If you are still confused, check out [some examples](https://github.com/cako/curvelops/tree/main/examples) below or the [PyLops website](https://pylops.readthedocs.io/)!
 
 ## Installation
 
