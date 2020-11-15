@@ -1,5 +1,3 @@
-[![PyPI version](https://badge.fury.io/py/curvelops.svg)](https://badge.fury.io/py/curvelops)
-
 # curvelops
 
 Python wrapper for [CurveLab](https://github.com/slimgroup/PyCurvelab)'s 2D and 3D curvelet transforms. It uses the [PyLops](https://pylops.readthedocs.io/) design framework for the forward and inverse curvelet transforms as matrix-free linear operations. If you are still confused, check some examples below or the [PyLops website](https://pylops.readthedocs.io/)!
@@ -17,10 +15,10 @@ After these are installed, you may install `curvelops` with:
 ```bash
 export FFTW=/path/to/fftw
 export FDCT=/path/to/CurveLab
-pip install curvelops
+python3 -m pip install git+https://github.com/cako/curvelops
 ```
 
-as long as you are using a `pip>=10.0`. To check, run `pip --version`.
+as long as you are using a `pip>=10.0`. To check, run `python3 -m pip --version`.
 
 ## Getting Started
 
