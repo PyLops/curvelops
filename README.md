@@ -36,7 +36,9 @@ assert np.allclose(x, xinv.reshape(100, 50))
 ```
 
 An excellent place to see how to use the library is the `examples/` folder. `Demo_Single_Curvelet` for example contains a `curvelops` version of the CurveLab Matlab demo.
+
 ![Demo](https://github.com/cako/curvelops/raw/main/docs/source/static/demo.png)
+![Reconstruction](https://github.com/cako/curvelops/raw/main/docs/source/static/reconstruction.png)
 
 ## Tips and Tricks for Dependencies
 
