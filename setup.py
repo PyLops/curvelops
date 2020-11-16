@@ -73,6 +73,24 @@ ext_modules = [
     )
 ]
 
+# Remove -stdlib=libc++ from MACOS flags if MACOS_GCC flag is equal to 1
+# (This is required because pybind11 assumes OSX will use clang compiler but
+# FFTW and FDCT may require switching to a gcc compiler in some OSX versions.
+MACOS = sys.platform.startswith("darwin")
+if MACOS and int(os.getenv('MACOS_GCC', 0)) == 1:
+    for ext in ext_modules:
+        new_flags = []
+        for flag in ext.extra_compile_args:
+            if flag != "-stdlib=libc++":
+                new_flags.append(flag)
+        ext.extra_compile_args = new_flags
+
+        new_flags = []
+        for flag in ext.extra_link_args:
+            if flag != "-stdlib=libc++":
+                new_flags.append(flag)
+        ext.extra_link_args = new_flags
+
 setup(
     name=NAME,
     version=VERSION,
