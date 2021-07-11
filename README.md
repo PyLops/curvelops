@@ -60,6 +60,10 @@ In the file `makefile.opt` set `FFTW_DIR`, `CC` and `CXX` variables as required 
 
 The `FFTW` variable is the same as `FFTW_DIR` as provided in the CurveLab installation. The `FDCT` variable points to the root of the CurveLab installation. It will be something like `/path/to/CurveLab-2.1.3` for the latest version.
 
+## Useful links
+
+* [Paul Goyes](https://github.com/PAULGOYES) has kindly contributed a rundown of how to install curvelops: [link to YouTube video (in Spanish)](https://www.youtube.com/watch?v=LAFkknyOpGY).
+
 ## Disclaimer
 
 This package contains no CurveLab code apart from function calls. It is provided to simplify the use of CurveLab in a Python environment. Please ensure you own a CurveLab license as per required by the authors. See the [CurveLab website](http://curvelet.org/software.html) for more information. All CurveLab rights are reserved to Emmanuel Candes, Laurent Demanet, David Donoho and Lexing Ying.
