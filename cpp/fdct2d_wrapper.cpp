@@ -163,7 +163,10 @@ py::array_t<cpx> fdct2d_inverse_wrap(int m, int n, int nbscales, int nbangles_co
 PYBIND11_MODULE(fdct2d_wrapper, m)
 {
     m.doc() = "FDCT2D pybind11 wrapper";
-    m.def("fdct2d_param_wrap", &fdct2d_param_wrap, "Parameters for 2D FDCT");
-    m.def("fdct2d_forward_wrap", &fdct2d_forward_wrap, "2D Forward FDCT");
-    m.def("fdct2d_inverse_wrap", &fdct2d_inverse_wrap, "2D Inverse FDCT");
+    m.def("fdct2d_param_wrap", &fdct2d_param_wrap, "Parameters for 2D FDCT",
+          py::return_value_policy::take_ownership);
+    m.def("fdct2d_forward_wrap", &fdct2d_forward_wrap, "2D Forward FDCT",
+          py::return_value_policy::take_ownership);
+    m.def("fdct2d_inverse_wrap", &fdct2d_inverse_wrap, "2D Inverse FDCT",
+          py::return_value_policy::take_ownership);
 }

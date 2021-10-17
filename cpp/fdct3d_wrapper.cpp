@@ -163,7 +163,10 @@ py::array_t<cpx> fdct3d_inverse_wrap(int m, int n, int p, int nbscales, int nban
 PYBIND11_MODULE(fdct3d_wrapper, m)
 {
     m.doc() = "FDCT3D pybind11 wrapper";
-    m.def("fdct3d_param_wrap", &fdct3d_param_wrap, "Parameters for 3D FDCT");
-    m.def("fdct3d_forward_wrap", &fdct3d_forward_wrap, "3D Forward FDCT");
-    m.def("fdct3d_inverse_wrap", &fdct3d_inverse_wrap, "3D Inverse FDCT");
+    m.def("fdct3d_param_wrap", &fdct3d_param_wrap, "Parameters for 3D FDCT",
+          py::return_value_policy::take_ownership);
+    m.def("fdct3d_forward_wrap", &fdct3d_forward_wrap, "3D Forward FDCT",
+          py::return_value_policy::take_ownership);
+    m.def("fdct3d_inverse_wrap", &fdct3d_inverse_wrap, "3D Inverse FDCT",
+          py::return_value_policy::take_ownership);
 }
