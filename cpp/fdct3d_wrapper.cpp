@@ -71,12 +71,22 @@ vector<vector<py::array_t<cpx>>> fdct3d_forward_wrap(int nbscales, int nbangles_
         c[i].resize(ctns[i].size());
         for (size_t j = 0; j < ctns[i].size(); j++)
         {
+            py::capsule free_when_done(
+                ctns[i][j].data(),
+                [](void *cpx_ptr)
+                {
+                    cpx *cpx_arr = reinterpret_cast<cpx *>(cpx_ptr);
+                    delete[] cpx_arr;
+                });
+
             py::array c_arr(
                 {ctns[i][j]._p, ctns[i][j]._n, ctns[i][j]._m}, // Shape
                 {sizeof(cpx) * ctns[i][j]._m * ctns[i][j]._n,  // Strides (in bytes) of the underlying data array
                  sizeof(cpx) * ctns[i][j]._m,
                  sizeof(cpx)},
-                ctns[i][j].data()); // Data pointer
+                ctns[i][j].data(), // Data pointer
+                free_when_done);
+
             c[i][j] = c_arr;
             ctns[i][j]._m = ctns[i][j]._n = ctns[i][j]._p = 0;
             ctns[i][j]._data = NULL;
@@ -127,12 +137,21 @@ py::array_t<cpx> fdct3d_inverse_wrap(int m, int n, int p, int nbscales, int nban
             ctns[i][j]._data = NULL;
         }
 
+    py::capsule free_when_done(
+        xtns.data(),
+        [](void *cpx_ptr)
+        {
+            cpx *cpx_arr = reinterpret_cast<cpx *>(cpx_ptr);
+            delete[] cpx_arr;
+        });
+
     // Create output array
     py::array x({m, n, p},
                 {sizeof(cpx),
                  sizeof(cpx) * m,
                  sizeof(cpx) * m * n},
-                xtns.data());
+                xtns.data(),
+                free_when_done);
 
     // Clear output structure without deallocating
     xtns._m = xtns._n = xtns._p = 0;
