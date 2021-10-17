@@ -71,6 +71,8 @@ vector<vector<py::array_t<cpx>>> fdct3d_forward_wrap(int nbscales, int nbangles_
         c[i].resize(ctns[i].size());
         for (size_t j = 0; j < ctns[i].size(); j++)
         {
+            // Create capsule linked to `ctns[i][j]._data` to track its lifetime
+            // https://stackoverflow.com/questions/44659924/returning-numpy-arrays-via-pybind11
             py::capsule free_when_done(
                 ctns[i][j].data(),
                 [](void *cpx_ptr)
