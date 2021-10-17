@@ -15,7 +15,7 @@ if "clean" in sys.argv:
 from pybind11.setup_helpers import Pybind11Extension, build_ext
 
 NAME = "curvelops"
-VERSION = "0.1"
+VERSION = "0.11"
 AUTHOR = "Carlos Alberto da Costa Filho"
 AUTHOR_EMAIL = "c.dacostaf@gmail.com"
 URL = "https://github.com/cako/curvelops"
