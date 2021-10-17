@@ -71,12 +71,24 @@ vector<vector<py::array_t<cpx>>> fdct3d_forward_wrap(int nbscales, int nbangles_
         c[i].resize(ctns[i].size());
         for (size_t j = 0; j < ctns[i].size(); j++)
         {
+            // Create capsule linked to `ctns[i][j]._data` to track its lifetime
+            // https://stackoverflow.com/questions/44659924/returning-numpy-arrays-via-pybind11
+            py::capsule free_when_done(
+                ctns[i][j].data(),
+                [](void *cpx_ptr)
+                {
+                    cpx *cpx_arr = reinterpret_cast<cpx *>(cpx_ptr);
+                    delete[] cpx_arr;
+                });
+
             py::array c_arr(
                 {ctns[i][j]._p, ctns[i][j]._n, ctns[i][j]._m}, // Shape
                 {sizeof(cpx) * ctns[i][j]._m * ctns[i][j]._n,  // Strides (in bytes) of the underlying data array
                  sizeof(cpx) * ctns[i][j]._m,
                  sizeof(cpx)},
-                ctns[i][j].data()); // Data pointer
+                ctns[i][j].data(), // Data pointer
+                free_when_done);
+
             c[i][j] = c_arr;
             ctns[i][j]._m = ctns[i][j]._n = ctns[i][j]._p = 0;
             ctns[i][j]._data = NULL;
@@ -127,12 +139,21 @@ py::array_t<cpx> fdct3d_inverse_wrap(int m, int n, int p, int nbscales, int nban
             ctns[i][j]._data = NULL;
         }
 
+    py::capsule free_when_done(
+        xtns.data(),
+        [](void *cpx_ptr)
+        {
+            cpx *cpx_arr = reinterpret_cast<cpx *>(cpx_ptr);
+            delete[] cpx_arr;
+        });
+
     // Create output array
     py::array x({m, n, p},
                 {sizeof(cpx),
                  sizeof(cpx) * m,
                  sizeof(cpx) * m * n},
-                xtns.data());
+                xtns.data(),
+                free_when_done);
 
     // Clear output structure without deallocating
     xtns._m = xtns._n = xtns._p = 0;
@@ -144,7 +165,10 @@ py::array_t<cpx> fdct3d_inverse_wrap(int m, int n, int p, int nbscales, int nban
 PYBIND11_MODULE(fdct3d_wrapper, m)
 {
     m.doc() = "FDCT3D pybind11 wrapper";
-    m.def("fdct3d_param_wrap", &fdct3d_param_wrap, "Parameters for 3D FDCT");
-    m.def("fdct3d_forward_wrap", &fdct3d_forward_wrap, "3D Forward FDCT");
-    m.def("fdct3d_inverse_wrap", &fdct3d_inverse_wrap, "3D Inverse FDCT");
+    m.def("fdct3d_param_wrap", &fdct3d_param_wrap, "Parameters for 3D FDCT",
+          py::return_value_policy::take_ownership);
+    m.def("fdct3d_forward_wrap", &fdct3d_forward_wrap, "3D Forward FDCT",
+          py::return_value_policy::take_ownership);
+    m.def("fdct3d_inverse_wrap", &fdct3d_inverse_wrap, "3D Inverse FDCT",
+          py::return_value_policy::take_ownership);
 }

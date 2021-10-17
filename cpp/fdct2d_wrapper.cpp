@@ -74,11 +74,23 @@ vector<vector<py::array_t<cpx>>> fdct2d_forward_wrap(int nbscales, int nbangles_
         c[i].resize(cmat[i].size());
         for (size_t j = 0; j < cmat[i].size(); j++)
         {
+            // Create capsule linked to `cmat[i][j]._data` to track its lifetime
+            // https://stackoverflow.com/questions/44659924/returning-numpy-arrays-via-pybind11
+            py::capsule free_when_done(
+                cmat[i][j].data(),
+                [](void *cpx_ptr)
+                {
+                    cpx *cpx_arr = reinterpret_cast<cpx *>(cpx_ptr);
+                    delete[] cpx_arr;
+                });
+
             py::array c_arr(
                 {cmat[i][j]._n, cmat[i][j]._m}, // Shape
                 {sizeof(cpx) * cmat[i][j]._m,   // Strides (in bytes) of the underlying data array
                  sizeof(cpx)},
-                cmat[i][j].data()); // Data pointer
+                cmat[i][j].data(), // Data pointer
+                free_when_done);
+
             c[i][j] = c_arr;
             cmat[i][j]._m = cmat[i][j]._n = 0;
             cmat[i][j]._data = NULL;
@@ -128,11 +140,20 @@ py::array_t<cpx> fdct2d_inverse_wrap(int m, int n, int nbscales, int nbangles_co
             cmat[i][j]._data = NULL;
         }
 
+    py::capsule free_when_done(
+        xmat.data(),
+        [](void *cpx_ptr)
+        {
+            cpx *cpx_arr = reinterpret_cast<cpx *>(cpx_ptr);
+            delete[] cpx_arr;
+        });
+
     // Create output array
     py::array x({m, n},
                 {sizeof(cpx),
                  sizeof(cpx) * m},
-                xmat.data());
+                xmat.data(),
+                free_when_done);
 
     // Clear output structure without deallocating
     xmat._m = xmat._n = 0;
@@ -144,7 +165,10 @@ py::array_t<cpx> fdct2d_inverse_wrap(int m, int n, int nbscales, int nbangles_co
 PYBIND11_MODULE(fdct2d_wrapper, m)
 {
     m.doc() = "FDCT2D pybind11 wrapper";
-    m.def("fdct2d_param_wrap", &fdct2d_param_wrap, "Parameters for 2D FDCT");
-    m.def("fdct2d_forward_wrap", &fdct2d_forward_wrap, "2D Forward FDCT");
-    m.def("fdct2d_inverse_wrap", &fdct2d_inverse_wrap, "2D Inverse FDCT");
+    m.def("fdct2d_param_wrap", &fdct2d_param_wrap, "Parameters for 2D FDCT",
+          py::return_value_policy::take_ownership);
+    m.def("fdct2d_forward_wrap", &fdct2d_forward_wrap, "2D Forward FDCT",
+          py::return_value_policy::take_ownership);
+    m.def("fdct2d_inverse_wrap", &fdct2d_inverse_wrap, "2D Inverse FDCT",
+          py::return_value_policy::take_ownership);
 }
