@@ -64,9 +64,7 @@ ext_modules = [
         libraries=["fftw"],
         library_dirs=[os.path.join(FFTW, "fftw", ".libs")],
         extra_objects=[
-            os.path.join(
-                FDCT, "fdct_wrapping_cpp", "src", "libfdct_wrapping.a"
-            )
+            os.path.join(FDCT, "fdct_wrapping_cpp", "src", "libfdct_wrapping.a")
         ],
         language="c++",
     ),
