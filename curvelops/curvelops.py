@@ -147,11 +147,16 @@ class FDCT(LinearOperator):
         self.explicit = False
 
     def _matvec(self, x):
-        fwd_out = np.zeros((self._output_len, self._ndim_iterable), dtype=self.dtype)
+        fwd_out = np.zeros(
+            (self._output_len, self._ndim_iterable), dtype=self.dtype
+        )
         for i, index in enumerate(self._iterator):
             x_shaped = np.array(x.reshape(self.dims)[index])
             c_struct = self.fdct(
-                self.nbscales, self.nbangles_coarse, self.allcurvelets, x_shaped
+                self.nbscales,
+                self.nbangles_coarse,
+                self.allcurvelets,
+                x_shaped,
             )
             fwd_out[:, i] = self.vect(c_struct)
         return fwd_out.ravel()
@@ -204,8 +209,12 @@ class FDCT2D(FDCT):
         dtype="complex128",
     ):
         if len(dirs) != 2:
-            raise ValueError("FDCT2D must be called with exactly two directions")
-        super().__init__(dims, dirs, nbscales, nbangles_coarse, allcurvelets, dtype)
+            raise ValueError(
+                "FDCT2D must be called with exactly two directions"
+            )
+        super().__init__(
+            dims, dirs, nbscales, nbangles_coarse, allcurvelets, dtype
+        )
 
 
 class FDCT3D(FDCT):
@@ -221,5 +230,9 @@ class FDCT3D(FDCT):
         dtype="complex128",
     ):
         if len(dirs) != 3:
-            raise ValueError("FDCT3D must be called with exactly three directions")
-        super().__init__(dims, dirs, nbscales, nbangles_coarse, allcurvelets, dtype)
+            raise ValueError(
+                "FDCT3D must be called with exactly three directions"
+            )
+        super().__init__(
+            dims, dirs, nbscales, nbangles_coarse, allcurvelets, dtype
+        )
