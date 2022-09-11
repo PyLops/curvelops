@@ -2,8 +2,8 @@
 Provides a LinearOperator for the 2D and 3D curvelet transforms.
 """
 
-__version__ = '0.1'
-__author__ = 'Carlos Alberto da Costa Filho'
+__version__ = "0.1"
+__author__ = "Carlos Alberto da Costa Filho"
 
 from itertools import product
 
@@ -58,8 +58,15 @@ def _fdct_docs(dimension):
 class FDCT(LinearOperator):
     __doc__ = _fdct_docs(0)
 
-    def __init__(self, dims, dirs, nbscales=None, nbangles_coarse=16,
-                 allcurvelets=True, dtype='complex128'):
+    def __init__(
+        self,
+        dims,
+        dirs,
+        nbscales=None,
+        nbangles_coarse=16,
+        allcurvelets=True,
+        dtype="complex128",
+    ):
         ndim = len(dims)
 
         # Ensure directions are between 0, ndim-1
@@ -76,13 +83,15 @@ class FDCT(LinearOperator):
             self.fdct = fdct2d_forward_wrap
             self.ifdct = fdct2d_inverse_wrap
             _, _, _, _, nxs, nys = fdct2d_param_wrap(
-                *self._input_shape, nbscales, nbangles_coarse, allcurvelets)
+                *self._input_shape, nbscales, nbangles_coarse, allcurvelets
+            )
             sizes = (nys, nxs)
         elif len(dirs) == 3:
             self.fdct = fdct3d_forward_wrap
             self.ifdct = fdct3d_inverse_wrap
             _, _, _, nxs, nys, nzs = fdct3d_param_wrap(
-                *self._input_shape, nbscales, nbangles_coarse, allcurvelets)
+                *self._input_shape, nbscales, nbangles_coarse, allcurvelets
+            )
             sizes = (nzs, nys, nxs)
         else:
             raise NotImplementedError("FDCT is only implemented in 2D or 3D")
@@ -104,9 +113,14 @@ class FDCT(LinearOperator):
         # Build the iterator itself. In our example, the slices
         # would be [:, i, :] for i in range(200)
         # We use slice(None) is the colon operator
-        self._iterator = list(product(
-            *(range(dims[ax]) if doiter else [slice(None)]
-                for ax, doiter in enumerate(iterable_axes))))
+        self._iterator = list(
+            product(
+                *(
+                    range(dims[ax]) if doiter else [slice(None)]
+                    for ax, doiter in enumerate(iterable_axes)
+                )
+            )
+        )
 
         # For a single 2d/3d input, the length of the vector will be given by
         # the shapes in FDCT.sizes
@@ -133,14 +147,15 @@ class FDCT(LinearOperator):
         self.explicit = False
 
     def _matvec(self, x):
-        fwd_out = np.zeros((self._output_len, self._ndim_iterable),
-                           dtype=self.dtype)
+        fwd_out = np.zeros((self._output_len, self._ndim_iterable), dtype=self.dtype)
         for i, index in enumerate(self._iterator):
             x_shaped = np.array(x.reshape(self.dims)[index])
-            c_struct = self.fdct(self.nbscales,
-                                 self.nbangles_coarse,
-                                 self.allcurvelets,
-                                 x_shaped)
+            c_struct = self.fdct(
+                self.nbscales,
+                self.nbangles_coarse,
+                self.allcurvelets,
+                x_shaped,
+            )
             fwd_out[:, i] = self.vect(c_struct)
         return fwd_out.ravel()
 
@@ -149,11 +164,13 @@ class FDCT(LinearOperator):
         inv_out = np.zeros(self.dims, dtype=self.dtype)
         for i, index in enumerate(self._iterator):
             y_struct = self.struct(np.array(y_shaped[:, i]))
-            xinv = self.ifdct(*self._input_shape,
-                              self.nbscales,
-                              self.nbangles_coarse,
-                              self.allcurvelets,
-                              y_struct)
+            xinv = self.ifdct(
+                *self._input_shape,
+                self.nbscales,
+                self.nbangles_coarse,
+                self.allcurvelets,
+                y_struct,
+            )
             inv_out[index] = xinv
 
         return inv_out.ravel()
@@ -168,7 +185,7 @@ class FDCT(LinearOperator):
             angles = []
             for j in range(len(self.shapes[i])):
                 size = np.prod(self.shapes[i][j])
-                angles.append(x[k:k + size].reshape(self.shapes[i][j]))
+                angles.append(x[k : k + size].reshape(self.shapes[i][j]))
                 k += size
             c_struct.append(angles)
         return c_struct
@@ -180,24 +197,32 @@ class FDCT(LinearOperator):
 class FDCT2D(FDCT):
     __doc__ = _fdct_docs(2)
 
-    def __init__(self, dims, dirs=(-2, -1),
-                 nbscales=None, nbangles_coarse=16, allcurvelets=True,
-                 dtype='complex128'):
+    def __init__(
+        self,
+        dims,
+        dirs=(-2, -1),
+        nbscales=None,
+        nbangles_coarse=16,
+        allcurvelets=True,
+        dtype="complex128",
+    ):
         if len(dirs) != 2:
-            raise ValueError(
-                "FDCT2D must be called with exactly two directions")
-        super().__init__(dims, dirs, nbscales, nbangles_coarse, allcurvelets,
-                         dtype)
+            raise ValueError("FDCT2D must be called with exactly two directions")
+        super().__init__(dims, dirs, nbscales, nbangles_coarse, allcurvelets, dtype)
 
 
 class FDCT3D(FDCT):
     __doc__ = _fdct_docs(3)
 
-    def __init__(self, dims, dirs=(-3, -2, -1),
-                 nbscales=None, nbangles_coarse=16, allcurvelets=True,
-                 dtype='complex128'):
+    def __init__(
+        self,
+        dims,
+        dirs=(-3, -2, -1),
+        nbscales=None,
+        nbangles_coarse=16,
+        allcurvelets=True,
+        dtype="complex128",
+    ):
         if len(dirs) != 3:
-            raise ValueError(
-                "FDCT3D must be called with exactly three directions")
-        super().__init__(dims, dirs, nbscales, nbangles_coarse, allcurvelets,
-                         dtype)
+            raise ValueError("FDCT3D must be called with exactly three directions")
+        super().__init__(dims, dirs, nbscales, nbangles_coarse, allcurvelets, dtype)
