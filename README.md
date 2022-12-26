@@ -4,7 +4,7 @@ Python wrapper for [CurveLab](http://www.curvelet.org)'s 2D and 3D curvelet tran
 
 ## Installation
 
-Installing `curvelops` requires the following components:
+Installing `curvelops` requires the following external components:
 
 - [FFTW](http://www.fftw.org/download.html) 2.1.5
 - [CurveLab](http://curvelet.org/software.html) >= 2.0.2
@@ -28,11 +28,11 @@ For a 2D transform, you can get started with:
 import numpy as np
 import curvelops as cl
 
-x = np.random.normal(0., 1., (100, 50))
-FDCT = cl.FDCT2D(dims=(100, 50))
-c = FDCT * x.ravel()
-xinv = FDCT.H * c
-assert np.allclose(x, xinv.reshape(100, 50))
+x = np.random.randn(100, 50)
+FDCT = cl.FDCT2D(dims=x.shape)
+c = FDCT @ x
+xinv = FDCT.H @ c
+np.testing.assert_allclose(x, xinv)
 ```
 
 An excellent place to see how to use the library is the `examples/` folder. `Demo_Single_Curvelet` for example contains a `curvelops` version of the CurveLab Matlab demo.
@@ -54,7 +54,7 @@ The `--prefix` and `--with-gcc` are optional and determine where it will install
 
 ### CurveLab
 
-In the file `makefile.opt` set `FFTW_DIR`, `CC` and `CXX` variables as required in the instructions. To keep things consistent, set `FFTW_DIR=/home/user/opt/fftw-2.1.5` (or whatever directory was used in the `--prefix` option). For the others, use the same compiler which was used to compile FFTW.
+In the file `makefile.opt` set `FFTW_DIR`, `CC` and `CXX` variables as required in the instructions. To keep things consistent, set `FFTW_DIR=/home/user/opt/fftw-2.1.5` (or whatever directory was used in the `--prefix` option above). For the other options (`CC` and `CXX`), use the same compiler which was used to compile FFTW.
 
 ### curvelops
 
