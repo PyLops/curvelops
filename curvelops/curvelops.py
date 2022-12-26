@@ -86,7 +86,7 @@ class FDCT(LinearOperator):
         # Check dimension
         sizes: Union[Tuple[NDArray, NDArray], Tuple[NDArray, NDArray, NDArray]]
         if len(axes) == 2:
-            self.fdct: Callable[[int, int, bool]] = fdct2d_forward_wrap  # type: ignore  # noqa: F405
+            self.fdct: Callable = fdct2d_forward_wrap  # type: ignore  # noqa: F405
             self.ifdct: Callable = fdct2d_inverse_wrap  # type: ignore  # noqa: F405
             _, _, _, _, nxs, nys = fdct2d_param_wrap(  # type: ignore  # noqa: F405
                 *self._input_shape, nbscales, nbangles_coarse, allcurvelets
