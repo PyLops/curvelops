@@ -113,7 +113,7 @@ class FDCT(LinearOperator):
         # Now we need to build the iterator which will only iterate along
         # the required axes. Following the example above,
         # iterable_axes = [ False, True, False ]
-        iterable_axes = [False if i in axes else True for i in range(ndim)]
+        iterable_axes = [i not in axes for i in range(ndim)]
         self._ndim_iterable = np.prod(np.array(dims)[iterable_axes])
 
         # Build the iterator itself. In our example, the slices
