@@ -15,7 +15,7 @@ if "clean" in sys.argv:
 from pybind11.setup_helpers import Pybind11Extension, build_ext
 
 NAME = "curvelops"
-VERSION = "0.11"
+VERSION = "0.2"
 AUTHOR = "Carlos Alberto da Costa Filho"
 AUTHOR_EMAIL = "c.dacostaf@gmail.com"
 URL = "https://github.com/cako/curvelops"
@@ -64,7 +64,9 @@ ext_modules = [
         libraries=["fftw"],
         library_dirs=[os.path.join(FFTW, "fftw", ".libs")],
         extra_objects=[
-            os.path.join(FDCT, "fdct_wrapping_cpp", "src", "libfdct_wrapping.a")
+            os.path.join(
+                FDCT, "fdct_wrapping_cpp", "src", "libfdct_wrapping.a"
+            )
         ],
         language="c++",
     ),
