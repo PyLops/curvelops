@@ -1,6 +1,6 @@
 # curvelops
 
-Python wrapper for [CurveLab](http://www.curvelet.org)'s 2D and 3D curvelet transforms. It uses the [PyLops](https://pylops.readthedocs.io/) design framework to provide the forward and inverse curvelet transforms as matrix-free linear operations. If you are still confused, check out [some examples](https://github.com/cako/curvelops/tree/main/examples) below or the [PyLops website](https://pylops.readthedocs.io/)!
+Python wrapper for [CurveLab](http://www.curvelet.org)'s 2D and 3D curvelet transforms. It uses the [PyLops](https://pylops.readthedocs.io/) design framework to provide the forward and inverse curvelet transforms as matrix-free linear operations. If you are still confused, check out [some examples](https://github.com/PyLops/curvelops/tree/main/examples) below or the [PyLops website](https://pylops.readthedocs.io/)!
 
 ## Installation
 
@@ -15,7 +15,7 @@ After these are installed, you may install `curvelops` with:
 ```bash
 export FFTW=/path/to/fftw
 export FDCT=/path/to/CurveLab
-python3 -m pip install git+https://github.com/cako/curvelops@main
+python3 -m pip install git+https://github.com/PyLops/curvelops@main
 ```
 
 as long as you are using a `pip>=10.0`. To check, run `python3 -m pip --version`.
@@ -37,8 +37,8 @@ assert np.allclose(x, xinv.reshape(100, 50))
 
 An excellent place to see how to use the library is the `examples/` folder. `Demo_Single_Curvelet` for example contains a `curvelops` version of the CurveLab Matlab demo.
 
-![Demo](https://github.com/cako/curvelops/raw/main/docs/source/static/demo.png)
-![Reconstruction](https://github.com/cako/curvelops/raw/main/docs/source/static/reconstruction.png)
+![Demo](https://github.com/PyLops/curvelops/raw/main/docs/source/static/demo.png)
+![Reconstruction](https://github.com/PyLops/curvelops/raw/main/docs/source/static/reconstruction.png)
 
 ## Tips and Tricks for Dependencies
 

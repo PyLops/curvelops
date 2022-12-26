@@ -1,7 +1,7 @@
-import pytest
 import numpy as np
-
+import pytest
 from pylops.utils import dottest
+
 from curvelops import FDCT2D, FDCT3D
 
 PYCT = False
