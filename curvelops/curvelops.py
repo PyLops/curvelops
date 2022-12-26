@@ -114,7 +114,8 @@ class FDCT(LinearOperator):
         # the required axes. Following the example above,
         # iterable_axes = [ False, True, False ]
         iterable_axes = [i not in axes for i in range(ndim)]
-        self._ndim_iterable = np.prod(np.array(dims)[iterable_axes])
+        iterable_dims = np.array(dims)[iterable_axes]
+        self._ndim_iterable = np.prod(iterable_dims)
 
         # Build the iterator itself. In our example, the slices
         # would be [:, i, :] for i in range(200)
@@ -151,7 +152,7 @@ class FDCT(LinearOperator):
         super().__init__(
             dtype=dtype,
             dims=self.inpdims,
-            dimsd=(*np.array(dims)[iterable_axes], self._output_len),
+            dimsd=(*iterable_dims, self._output_len),
         )
 
     def _matvec(self, x: NDArray) -> NDArray:
