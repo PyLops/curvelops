@@ -119,7 +119,7 @@ setup(
     packages=find_packages(exclude=["pytests"]),
     install_requires=[
         "numpy",
-        "pylops",
+        "pylops>=2.0",
         "scipy",
     ],
     setup_requires=["pybind11"],
