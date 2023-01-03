@@ -46,7 +46,10 @@ def test_FDCT2D_2dsignal(par):
     FDCTop = FDCT2D(dims=(par["nx"], par["ny"]), dtype=par["dtype"])
 
     assert dottest(
-        FDCTop, *FDCTop.shape, rtol=1e-12, complexflag=0 if par["imag"] == 0 else 3
+        FDCTop,
+        *FDCTop.shape,
+        rtol=1e-12,
+        complexflag=0 if par["imag"] == 0 else 3
     )
 
     y = FDCTop * x.ravel()
@@ -74,15 +77,19 @@ def test_FDCT2D_3dsignal(par):
     """
     x = (
         np.random.normal(0.0, 1.0, (par["nx"], par["ny"], par["nz"]))
-        + np.random.normal(0.0, 1.0, (par["nx"], par["ny"], par["nz"])) * par["imag"]
+        + np.random.normal(0.0, 1.0, (par["nx"], par["ny"], par["nz"]))
+        * par["imag"]
     )
-    dirs = [0, -1]
+    axes = [0, -1]
     FDCTop = FDCT2D(
-        dims=(par["nx"], par["ny"], par["nz"]), dirs=dirs, dtype=par["dtype"]
+        dims=(par["nx"], par["ny"], par["nz"]), axes=axes, dtype=par["dtype"]
     )
 
     assert dottest(
-        FDCTop, *FDCTop.shape, rtol=1e-12, complexflag=0 if par["imag"] == 0 else 3
+        FDCTop,
+        *FDCTop.shape,
+        rtol=1e-12,
+        complexflag=0 if par["imag"] == 0 else 3
     )
 
     y = FDCTop * x.ravel()
@@ -97,13 +104,17 @@ def test_FDCT3D_3dsignal(par):
     """
     x = (
         np.random.normal(0.0, 1.0, (par["nx"], par["ny"], par["nz"]))
-        + np.random.normal(0.0, 1.0, (par["nx"], par["ny"], par["nz"])) * par["imag"]
+        + np.random.normal(0.0, 1.0, (par["nx"], par["ny"], par["nz"]))
+        * par["imag"]
     )
 
     FDCTop = FDCT3D(dims=(par["nx"], par["ny"], par["nz"]), dtype=par["dtype"])
 
     assert dottest(
-        FDCTop, *FDCTop.shape, rtol=1e-12, complexflag=0 if par["imag"] == 0 else 3
+        FDCTop,
+        *FDCTop.shape,
+        rtol=1e-12,
+        complexflag=0 if par["imag"] == 0 else 3
     )
 
     y = FDCTop * x.ravel()
@@ -132,17 +143,21 @@ def test_FDCT3D_4dsignal(par):
     """
     x = (
         np.random.normal(0.0, 1.0, (par["nx"], 4, par["ny"], par["nz"]))
-        + np.random.normal(0.0, 1.0, (par["nx"], 4, par["ny"], par["nz"])) * par["imag"]
+        + np.random.normal(0.0, 1.0, (par["nx"], 4, par["ny"], par["nz"]))
+        * par["imag"]
     )
-    dirs = [0, -2, -1]
+    axes = [0, -2, -1]
     FDCTop = FDCT3D(
         dims=(par["nx"], 4, par["ny"], par["nz"]),
-        dirs=dirs,
+        axes=axes,
         dtype=par["dtype"],
     )
 
     assert dottest(
-        FDCTop, *FDCTop.shape, rtol=1e-12, complexflag=0 if par["imag"] == 0 else 3
+        FDCTop,
+        *FDCTop.shape,
+        rtol=1e-12,
+        complexflag=0 if par["imag"] == 0 else 3
     )
 
     x = x.ravel()
