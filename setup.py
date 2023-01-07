@@ -129,6 +129,7 @@ setup(
     license=LICENSE,
     test_suite="pytests",
     tests_require=["pytest"],
+    extras_require={"dev": ["pytest"]},
     python_requires=">=3.7",
     classifiers=[
         "Development Status :: 3 - Beta",
