@@ -15,10 +15,10 @@ if "clean" in sys.argv:
 from pybind11.setup_helpers import Pybind11Extension, build_ext
 
 NAME = "curvelops"
-VERSION = "0.2"
+VERSION = "0.21"
 AUTHOR = "Carlos Alberto da Costa Filho"
 AUTHOR_EMAIL = "c.dacostaf@gmail.com"
-URL = "https://github.com/cako/curvelops"
+URL = "https://github.com/pylops/curvelops"
 DESCRIPTION = "Python wrapper for CurveLab's 2D and 3D curvelet transforms"
 LICENSE = "MIT"
 
@@ -118,22 +118,29 @@ setup(
     ext_modules=ext_modules,
     packages=find_packages(exclude=["pytests"]),
     install_requires=[
-        "numpy",
+        "numpy>=1.21.0",
+        "scipy>=1.9.1; python_version >= '3.9'",
         "pylops>=2.0",
-        "scipy",
     ],
-    setup_requires=["pybind11"],
+    setup_requires=[
+        "pybind11>=2.6.0; python_version < '3.10'",
+        "pybind11>=2.10.0; python_version >= '3.11'",
+    ],
     license=LICENSE,
     test_suite="pytests",
     tests_require=["pytest"],
-    python_requires=">=3.6",
+    extras_require={"dev": ["pytest"]},
+    python_requires=">=3.7",
     classifiers=[
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 3 - Beta",
         "Intended Audience :: Science/Research",
         "License :: OSI Approved :: MIT License",
         "Natural Language :: English",
-        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
         "Topic :: Scientific/Engineering :: Mathematics",
     ],
     keywords="curvelet curvelab pylops",

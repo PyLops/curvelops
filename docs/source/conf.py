@@ -26,7 +26,7 @@ author = "Carlos Alberto da Costa Filho"
 # The short X.Y version
 version = ""
 # The full version, including alpha/beta/rc tags
-release = "0.2"
+release = "0.21"
 
 
 # -- General configuration ---------------------------------------------------
