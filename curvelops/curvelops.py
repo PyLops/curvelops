@@ -2,9 +2,6 @@
 Provides a LinearOperator for the 2D and 3D curvelet transforms.
 """
 
-__version__ = "0.21"
-__author__ = "Carlos Alberto da Costa Filho"
-
 from itertools import product
 from typing import List, Optional, Tuple, Callable, Union, Sequence
 import numpy as np
