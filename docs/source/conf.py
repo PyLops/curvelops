@@ -16,17 +16,15 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+from curvelops import __version__ as version
+
+release = version
 
 # -- Project information -----------------------------------------------------
 
 project = "curvelops"
-copyright = "2020, Carlos Alberto da Costa Filho"
+copyright = "2020-2023, Carlos Alberto da Costa Filho"
 author = "Carlos Alberto da Costa Filho"
-
-# The short X.Y version
-version = ""
-# The full version, including alpha/beta/rc tags
-release = "0.21"
 
 
 # -- General configuration ---------------------------------------------------

@@ -15,10 +15,9 @@ if "clean" in sys.argv:
 from pybind11.setup_helpers import Pybind11Extension, build_ext
 
 NAME = "curvelops"
-VERSION = "0.21"
 AUTHOR = "Carlos Alberto da Costa Filho"
 AUTHOR_EMAIL = "c.dacostaf@gmail.com"
-URL = "https://github.com/pylops/curvelops"
+URL = "https://github.com/PyLops/curvelops"
 DESCRIPTION = "Python wrapper for CurveLab's 2D and 3D curvelet transforms"
 LICENSE = "MIT"
 
@@ -104,7 +103,6 @@ if MACOS and int(os.getenv("MACOS_GCC", 0)) == 1:
 
 setup(
     name=NAME,
-    version=VERSION,
     author=AUTHOR,
     author_email=AUTHOR_EMAIL,
     url=URL,
@@ -125,7 +123,11 @@ setup(
     setup_requires=[
         "pybind11>=2.6.0; python_version < '3.10'",
         "pybind11>=2.10.0; python_version >= '3.11'",
+        "setuptools_scm",
     ],
+    use_scm_version=dict(
+        root=".", relative_to=__file__, write_to=f"{NAME}/_version.py"
+    ),
     license=LICENSE,
     test_suite="pytests",
     tests_require=["pytest"],

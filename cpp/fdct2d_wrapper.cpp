@@ -1,5 +1,5 @@
 /* fdct2d_wrapper (Pybind11 wrapper for Fast 2D Curvelet Wrapping Transform)
-   Copyright (C) 2020 Carlos Alberto da Costa Filho
+   Copyright (C) 2020-2023 Carlos Alberto da Costa Filho
 
     ${CXX} -O3 -Wall -shared -std=c++11 -fPIC \
         -I${FFTW}/fftw `python3 -m pybind11 --includes` \
