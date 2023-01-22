@@ -11,11 +11,12 @@ import numpy as np
 from numpy.typing import DTypeLike, NDArray
 from numpy.core.multiarray import normalize_axis_index  # type: ignore
 from pylops import LinearOperator
+from pylops.utils.typing import InputDimsLike
 
 from .fdct2d_wrapper import *  # noqa: F403
 from .fdct3d_wrapper import *  # noqa: F403
 
-from .typing import InputDimsLike, FDCTStructLike
+from .typing import FDCTStructLike
 
 
 def _fdct_docs(dimension: int) -> str:
