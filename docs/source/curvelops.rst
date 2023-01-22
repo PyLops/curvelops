@@ -13,6 +13,7 @@ Subpackages
    :maxdepth: 4
 
    curvelops.typing
+   curvelops.utils
 
 Submodules
 ----------
