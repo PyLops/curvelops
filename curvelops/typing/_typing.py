@@ -1,7 +1,6 @@
 __all__ = ["FDCTStructLike", "RecursiveListNDArray"]
-from typing import List, Sequence, Union
+from typing import List, Union
 
-import numpy as np
 from numpy.typing import NDArray
 
 FDCTStructLike = List[List[NDArray]]
