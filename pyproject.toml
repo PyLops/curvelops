@@ -16,6 +16,7 @@ module = [
     "curvelops.fdct2d_wrapper",
     "curvelops.fdct3d_wrapper",
     "pylops",
+    "pylops.utils.typing",
     "matplotlib",
     "matplotlib.*",
     "mpl_toolkits.axes_grid1",
