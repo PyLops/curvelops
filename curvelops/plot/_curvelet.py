@@ -14,8 +14,7 @@ from matplotlib.colors import Colormap
 from matplotlib.figure import Figure
 from numpy.typing import NDArray
 
-from curvelops import apply_along_wedges, energy_split
-
+from ..utils import apply_along_wedges, energy_split
 from ..typing import FDCTStructLike
 
 
