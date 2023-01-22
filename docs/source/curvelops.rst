@@ -12,6 +12,7 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
+   curvelops.plot
    curvelops.typing
    curvelops.utils
 
