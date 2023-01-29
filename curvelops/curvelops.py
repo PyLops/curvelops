@@ -42,9 +42,11 @@ def _fdct_docs(dimension: int) -> str:
         nbangles_coarse : :obj:`int`, optional
             Number of angles at 2nd coarsest scale.
         allcurvelets : :obj:`bool`, optional
-            Use curvelets at all scales, including coarsest scale.
+            Use curvelets at the finest (last) scale.
             If ``False``, a wavelet transform will be used for the
-            coarsest scale.
+            finest scale. The coarsest scale is always a wavelet transform;
+            the ones between the coarsest and the finest are all curvelet
+            transforms. This option only affects the finest scale.
         dtype : :obj:`DTypeLike <numpy.typing.DTypeLike>`, optional
             ``dtype`` of the transform.
         """
