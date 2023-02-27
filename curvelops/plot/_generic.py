@@ -4,14 +4,14 @@ __all__ = [
     "create_inset_axes_grid",
     "overlay_arrows",
 ]
-from typing import Tuple, Optional
+from typing import Optional, Tuple
 
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.axes import Axes
 from matplotlib.colorbar import Colorbar
-from matplotlib.image import AxesImage
 from matplotlib.figure import Figure
+from matplotlib.image import AxesImage
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 from numpy.typing import NDArray
 
@@ -126,9 +126,7 @@ def create_axes_grid(
     axs = np.empty((rows, cols), dtype=Axes)
     for irow in range(rows):
         for icol in range(cols):
-            axs[irow, icol] = fig.add_subplot(
-                grid[irow, icol], **kwargs_subplots
-            )
+            axs[irow, icol] = fig.add_subplot(grid[irow, icol], **kwargs_subplots)
     return fig, axs
 
 

@@ -6,16 +6,16 @@ Provides a LinearOperator for the 2D and 3D curvelet transforms.
 """
 
 from itertools import product
-from typing import Optional, Tuple, Callable, Union
+from typing import Callable, Optional, Tuple, Union
+
 import numpy as np
-from numpy.typing import DTypeLike, NDArray
 from numpy.core.multiarray import normalize_axis_index  # type: ignore
+from numpy.typing import DTypeLike, NDArray
 from pylops import LinearOperator
 from pylops.utils.typing import InputDimsLike
 
 from .fdct2d_wrapper import *  # noqa: F403
 from .fdct3d_wrapper import *  # noqa: F403
-
 from .typing import FDCTStructLike
 
 
@@ -148,9 +148,7 @@ class FDCT(LinearOperator):
         )
 
     def _matvec(self, x: NDArray) -> NDArray:
-        fwd_out = np.zeros(
-            (self._output_len, self._ndim_iterable), dtype=self.dtype
-        )
+        fwd_out = np.zeros((self._output_len, self._ndim_iterable), dtype=self.dtype)
         for i, index in enumerate(self._iterator):
             x_shaped = np.array(x.reshape(self.inpdims)[index])
             c_struct: FDCTStructLike = self.fdct(
@@ -248,9 +246,7 @@ class FDCT2D(FDCT):
     ) -> None:
         if len(axes) != 2:
             raise ValueError("FDCT2D must be called with exactly two axes")
-        super().__init__(
-            dims, axes, nbscales, nbangles_coarse, allcurvelets, dtype
-        )
+        super().__init__(dims, axes, nbscales, nbangles_coarse, allcurvelets, dtype)
 
 
 class FDCT3D(FDCT):
@@ -267,6 +263,4 @@ class FDCT3D(FDCT):
     ) -> None:
         if len(axes) != 3:
             raise ValueError("FDCT3D must be called with exactly three axes")
-        super().__init__(
-            dims, axes, nbscales, nbangles_coarse, allcurvelets, dtype
-        )
+        super().__init__(dims, axes, nbscales, nbangles_coarse, allcurvelets, dtype)

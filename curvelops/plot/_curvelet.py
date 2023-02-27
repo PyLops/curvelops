@@ -14,8 +14,8 @@ from matplotlib.colors import Colormap
 from matplotlib.figure import Figure
 from numpy.typing import NDArray
 
-from ..utils import apply_along_wedges, energy_split
 from ..typing import FDCTStructLike
+from ..utils import apply_along_wedges, energy_split
 
 
 def curveshow(
@@ -95,9 +95,7 @@ def curveshow(
             cols,
             figsize=(basesize * cols, basesize * rows),
         )
-        fig.suptitle(
-            f"Scale {iscale} ({nangles} wedge{'s' if nangles > 1 else ''})"
-        )
+        fig.suptitle(f"Scale {iscale} ({nangles} wedge{'s' if nangles > 1 else ''})")
         figs_axes.append((fig, axes))
         axes = np.atleast_1d(axes).ravel()
 
@@ -248,9 +246,7 @@ def overlay_disks(
     >>> )
     """
     rows, cols = axes.shape
-    e_split = apply_along_wedges(
-        c_struct, lambda w, *_: energy_split(w, rows, cols)
-    )
+    e_split = apply_along_wedges(c_struct, lambda w, *_: energy_split(w, rows, cols))
     max_e = max(a.max() for a in itertools.chain.from_iterable(e_split))
 
     cmapper = cm.ScalarMappable(
@@ -265,9 +261,7 @@ def overlay_disks(
         angles_per_wedge = 2 * np.pi / nangles
 
         if normalize == "scale":
-            max_e = max(
-                a.max() for a in itertools.chain.from_iterable(e_split[iscale])
-            )
+            max_e = max(a.max() for a in itertools.chain.from_iterable(e_split[iscale]))
 
         # To start starting counterclockwise from the top middle,
         # we need to offset the wedge index by the following amount
@@ -288,9 +282,7 @@ def overlay_disks(
                         color = cmapper.to_rgba(1)
 
                     # Place the starting wedges in the correct place
-                    iwedge_shift = (
-                        nangles // 2 + iwedge + iwedge_offset
-                    ) % nangles
+                    iwedge_shift = (nangles // 2 + iwedge + iwedge_offset) % nangles
 
                     # Wedge coordinates in polar plot
                     wedge_x = (iwedge_shift + 0.5) * angles_per_wedge
