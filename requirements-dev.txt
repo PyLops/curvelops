@@ -11,6 +11,8 @@ pytest
 # Docs require
 Sphinx
 sphinx-rtd-theme
+# Dev requires
+pre-commit
 # Lint
 flake8
 mypy
