@@ -11,6 +11,7 @@ pytest
 # Docs require
 Sphinx
 sphinx-rtd-theme
+sphinx-gallery
 # Dev requires
 pre-commit
 # Lint

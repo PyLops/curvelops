@@ -13,6 +13,7 @@ Python wrapper for `CurveLab <http://www.curvelet.org>`_'s 2D and 3D curvelet tr
    :caption: Contents:
 
    modules.rst
+   gallery/index.rst   
 
 Indices and tables
 ==================
