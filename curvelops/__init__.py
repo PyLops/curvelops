@@ -1,4 +1,13 @@
+"""
+``curvelops``
+=============
+
+Python wrapper for CurveLab's 2D and 3D curvelet transforms.
+"""
 from .curvelops import *
+from .utils import *
+from .plot import *
+from .typing import *
 
 
 try:

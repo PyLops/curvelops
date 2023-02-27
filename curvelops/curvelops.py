@@ -1,19 +1,22 @@
 """
+``curvelops.curvelops``
+=======================
+
 Provides a LinearOperator for the 2D and 3D curvelet transforms.
 """
 
 from itertools import product
-from typing import List, Optional, Tuple, Callable, Union, Sequence
+from typing import Callable, Optional, Tuple, Union
+
 import numpy as np
-from numpy.typing import DTypeLike, NDArray
 from numpy.core.multiarray import normalize_axis_index  # type: ignore
+from numpy.typing import DTypeLike, NDArray
 from pylops import LinearOperator
+from pylops.utils.typing import InputDimsLike
 
 from .fdct2d_wrapper import *  # noqa: F403
 from .fdct3d_wrapper import *  # noqa: F403
-
-InputDimsLike = Union[Sequence[int], NDArray[np.int_]]
-FDCTStructLike = List[List[NDArray]]
+from .typing import FDCTStructLike
 
 
 def _fdct_docs(dimension: int) -> str:
@@ -30,30 +33,22 @@ def _fdct_docs(dimension: int) -> str:
         Parameters
         ----------
         dims : :obj:`tuple`
-            Number of samples for each dimension
+            Number of samples for each dimension.
         axes : :obj:`tuple`, optional
-            Axes along which FDCT is applied
+            Axes along which FDCT is applied.
         nbscales : :obj:`int`, optional
             Number of scales (including the coarsest level);
             Defaults to ceil(log2(min(input_dims)) - 3).
         nbangles_coarse : :obj:`int`, optional
-            Number of angles at 2nd coarsest scale
+            Number of angles at 2nd coarsest scale.
         allcurvelets : :obj:`bool`, optional
-            Use curvelets at all scales, including coarsest scale.
+            Use curvelets at the finest (last) scale.
             If ``False``, a wavelet transform will be used for the
-            coarsest scale.
-        dtype : :obj:`str`, optional
-            Type of the transform
-
-        PyLops Attributes
-        ----------
-        shape : :obj:`tuple`
-            Operator shape
-        dtype : :obj:`numpy.dtype`
-            Type of operator. Only supports complex types at the moment
-        explicit : :obj:`bool`
-            Operator contains a matrix that can be solved explicitly.
-            Always False
+            finest scale. The coarsest scale is always a wavelet transform;
+            the ones between the coarsest and the finest are all curvelet
+            transforms. This option only affects the finest scale.
+        dtype : :obj:`DTypeLike <numpy.typing.DTypeLike>`, optional
+            ``dtype`` of the transform.
         """
 
 
@@ -153,9 +148,7 @@ class FDCT(LinearOperator):
         )
 
     def _matvec(self, x: NDArray) -> NDArray:
-        fwd_out = np.zeros(
-            (self._output_len, self._ndim_iterable), dtype=self.dtype
-        )
+        fwd_out = np.zeros((self._output_len, self._ndim_iterable), dtype=self.dtype)
         for i, index in enumerate(self._iterator):
             x_shaped = np.array(x.reshape(self.inpdims)[index])
             c_struct: FDCTStructLike = self.fdct(
@@ -187,7 +180,26 @@ class FDCT(LinearOperator):
         return self._rmatvec(x)
 
     def struct(self, x: NDArray) -> FDCTStructLike:
-        c_struct = []
+        """Convert curvelet flattened vector to curvelet structure.
+
+        The FDCT always returns a 1D vector that has all curvelet
+        coefficients. These coefficients can be organized into
+        scales, wedges and spatial positions. Applying this
+        function to a 1D vector generates this structure.
+
+        Parameters
+        ----------
+        x : :obj:`NDArray <numpy.typing.NDArray>`
+            Input flattened vector.
+
+        Returns
+        -------
+        :obj:`FDCTStructLike <curvelops.typing.FDCTStructLike>`
+            Curvelet structure, a list of lists of multidimensional arrays.
+            The first index corresponds to scale, the second corresponds to
+            angular wedge.
+        """
+        c_struct: FDCTStructLike = []
         k = 0
         for i in range(len(self.shapes)):
             angles = []
@@ -199,6 +211,24 @@ class FDCT(LinearOperator):
         return c_struct
 
     def vect(self, x: FDCTStructLike) -> NDArray:
+        """Convert curvelet structure to curvelet flattened vector.
+
+        The FDCT always returns a 1D vector that has all curvelet
+        coefficients. These coefficients can be organized into
+        scales, wedges and spatial positions. Applying this
+        function to a curvelet structure returns the flattened
+        vector.
+
+        Parameters
+        ----------
+        x : :obj:`FDCTStructLike <curvelops.typing.FDCTStructLike>`
+            Input curvelet structure.
+
+        Returns
+        -------
+        :obj:`NDArray <numpy.typing.NDArray>`
+            Flattened vector.
+        """
         return np.concatenate([coef.ravel() for angle in x for coef in angle])
 
 
@@ -216,9 +246,7 @@ class FDCT2D(FDCT):
     ) -> None:
         if len(axes) != 2:
             raise ValueError("FDCT2D must be called with exactly two axes")
-        super().__init__(
-            dims, axes, nbscales, nbangles_coarse, allcurvelets, dtype
-        )
+        super().__init__(dims, axes, nbscales, nbangles_coarse, allcurvelets, dtype)
 
 
 class FDCT3D(FDCT):
@@ -235,6 +263,4 @@ class FDCT3D(FDCT):
     ) -> None:
         if len(axes) != 3:
             raise ValueError("FDCT3D must be called with exactly three axes")
-        super().__init__(
-            dims, axes, nbscales, nbangles_coarse, allcurvelets, dtype
-        )
+        super().__init__(dims, axes, nbscales, nbangles_coarse, allcurvelets, dtype)

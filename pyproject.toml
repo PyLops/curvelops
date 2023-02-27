@@ -11,5 +11,14 @@ build-backend = "setuptools.build_meta"
 profile = "black"
 
 [[tool.mypy.overrides]]
-module = ["pylops", "curvelops.fdct2d_wrapper", "curvelops.fdct3d_wrapper"]
+module = [
+    "curvelops._version",
+    "curvelops.fdct2d_wrapper",
+    "curvelops.fdct3d_wrapper",
+    "pylops",
+    "pylops.utils.typing",
+    "matplotlib",
+    "matplotlib.*",
+    "mpl_toolkits.axes_grid1",
+]
 ignore_missing_imports = true
