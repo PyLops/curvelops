@@ -18,7 +18,7 @@ Visit :ref:`Installation` and then get started with the
 
 ..  attention::
    `CurveLab <http://www.curvelet.org>`__ is a proprietary library which must be
-   sourced independently by the user. It is free for academic use. This package
+   sourced independently by the user. It is free for academic use. Curvelops
    contains no CurveLab code apart from function calls.
 
 ..  note::
