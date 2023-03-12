@@ -34,16 +34,6 @@ tests:
 	make pytestcheck
 	$(PYTEST) tests
 
-doc:
-	cd docs && rm -rf build && sphinx-apidoc -f -M -o source/ ../curvelops && make html && cd -
-	# Add -P to sphinx-apidoc to include private files
-
-watchdoc:
-	while inotifywait -q -r curvelops/ -e create,delete,modify; do { make doc; }; done
-
-servedoc:
-	$(PYTHON) -m http.server --directory docs/build/html/
-
 lint:
 	flake8 docs/ curvelops/ tests/
 
@@ -52,3 +42,27 @@ typeannot:
 
 coverage:
 	coverage run -m pytest && coverage xml && coverage html && $(PYTHON) -m http.server --directory htmlcov/
+
+watchdoc:
+	make doc && while inotifywait -q -r curvelops/ docssrc/source/ -e create,delete,modify; do { make docupdate; }; done
+
+servedoc:
+	$(PYTHON) -m http.server --directory docssrc/build/html/
+
+doc:
+    # Add after rm: sphinx-apidoc -f -M -o source/ ../curvelops
+    # Use -O to include private files
+	cd docssrc  && rm -rf source/api/generated && rm -rf source/gallery &&\
+	rm -rf source/tutorials && rm -rf source/examples &&\
+	rm -rf build && make html && cd ..
+
+docupdate:
+	cd docssrc && make html && cd ..
+
+docgithub:
+	cd docssrc && make github && cd ..
+
+docpush:
+	git checkout gh-pages && git merge main && cd docssrc && make github &&\
+	cd ../docs && git add . && git commit -m "Updated documentation" &&\
+	git push origin gh-pages && git checkout main
