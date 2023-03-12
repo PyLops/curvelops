@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>curvelops package &mdash; curvelops 0.22.dev17+g37a7b3e.d20230312 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sg_gallery.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sg_gallery-binder.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sg_gallery-dataframe.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sg_gallery-rendered-html.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="curvelops.plot package" href="curvelops.plot.html" />
+    <link rel="prev" title="curvelops" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> curvelops
+          </a>
+              <div class="version">
+                0.22.dev17+g37a7b3e.d20230312
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">curvelops</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">curvelops package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#curvelops"><code class="docutils literal notranslate"><span class="pre">curvelops</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="curvelops.plot.html">curvelops.plot package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="curvelops.typing.html">curvelops.typing package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="curvelops.utils.html">curvelops.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-curvelops.curvelops">curvelops.curvelops module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#curvelops-curvelops"><code class="docutils literal notranslate"><span class="pre">curvelops.curvelops</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#curvelops.curvelops.FDCT"><code class="docutils literal notranslate"><span class="pre">FDCT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#curvelops.curvelops.FDCT2D"><code class="docutils literal notranslate"><span class="pre">FDCT2D</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#curvelops.curvelops.FDCT3D"><code class="docutils literal notranslate"><span class="pre">FDCT3D</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-curvelops.fdct2d_wrapper">curvelops.fdct2d_wrapper module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#curvelops.fdct2d_wrapper.fdct2d_forward_wrap"><code class="docutils literal notranslate"><span class="pre">fdct2d_forward_wrap()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#curvelops.fdct2d_wrapper.fdct2d_inverse_wrap"><code class="docutils literal notranslate"><span class="pre">fdct2d_inverse_wrap()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#curvelops.fdct2d_wrapper.fdct2d_param_wrap"><code class="docutils literal notranslate"><span class="pre">fdct2d_param_wrap()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-curvelops.fdct3d_wrapper">curvelops.fdct3d_wrapper module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#curvelops.fdct3d_wrapper.fdct3d_forward_wrap"><code class="docutils literal notranslate"><span class="pre">fdct3d_forward_wrap()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#curvelops.fdct3d_wrapper.fdct3d_inverse_wrap"><code class="docutils literal notranslate"><span class="pre">fdct3d_inverse_wrap()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#curvelops.fdct3d_wrapper.fdct3d_param_wrap"><code class="docutils literal notranslate"><span class="pre">fdct3d_param_wrap()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gallery/index.html">Gallery</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">curvelops</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">curvelops</a></li>
+      <li class="breadcrumb-item active">curvelops package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/curvelops.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-curvelops">
+<span id="curvelops-package"></span><h1>curvelops package<a class="headerlink" href="#module-curvelops" title="Permalink to this heading"></a></h1>
+<section id="curvelops">
+<h2><code class="docutils literal notranslate"><span class="pre">curvelops</span></code><a class="headerlink" href="#curvelops" title="Permalink to this heading"></a></h2>
+<p>Python wrapper for CurveLab’s 2D and 3D curvelet transforms.</p>
+</section>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="curvelops.plot.html">curvelops.plot package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="curvelops.plot.html#curvelops-plot"><code class="docutils literal notranslate"><span class="pre">curvelops.plot</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="curvelops.plot.html#curvelops.plot.create_axes_grid"><code class="docutils literal notranslate"><span class="pre">create_axes_grid()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="curvelops.plot.html#curvelops.plot.create_colorbar"><code class="docutils literal notranslate"><span class="pre">create_colorbar()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="curvelops.plot.html#curvelops.plot.create_inset_axes_grid"><code class="docutils literal notranslate"><span class="pre">create_inset_axes_grid()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="curvelops.plot.html#curvelops.plot.curveshow"><code class="docutils literal notranslate"><span class="pre">curveshow()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="curvelops.plot.html#curvelops.plot.overlay_arrows"><code class="docutils literal notranslate"><span class="pre">overlay_arrows()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="curvelops.plot.html#curvelops.plot.overlay_disks"><code class="docutils literal notranslate"><span class="pre">overlay_disks()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="curvelops.typing.html">curvelops.typing package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="curvelops.typing.html#curvelops-typing"><code class="docutils literal notranslate"><span class="pre">curvelops.typing</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="curvelops.utils.html">curvelops.utils package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="curvelops.utils.html#curvelops-utils"><code class="docutils literal notranslate"><span class="pre">curvelops.utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="curvelops.utils.html#curvelops.utils.apply_along_wedges"><code class="docutils literal notranslate"><span class="pre">apply_along_wedges()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="curvelops.utils.html#curvelops.utils.array_split_nd"><code class="docutils literal notranslate"><span class="pre">array_split_nd()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="curvelops.utils.html#curvelops.utils.energy"><code class="docutils literal notranslate"><span class="pre">energy()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="curvelops.utils.html#curvelops.utils.energy_split"><code class="docutils literal notranslate"><span class="pre">energy_split()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="curvelops.utils.html#curvelops.utils.ndargmax"><code class="docutils literal notranslate"><span class="pre">ndargmax()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="curvelops.utils.html#curvelops.utils.split_nd"><code class="docutils literal notranslate"><span class="pre">split_nd()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-curvelops.curvelops">
+<span id="curvelops-curvelops-module"></span><h2>curvelops.curvelops module<a class="headerlink" href="#module-curvelops.curvelops" title="Permalink to this heading"></a></h2>
+<section id="curvelops-curvelops">
+<h3><code class="docutils literal notranslate"><span class="pre">curvelops.curvelops</span></code><a class="headerlink" href="#curvelops-curvelops" title="Permalink to this heading"></a></h3>
+<p>Provides a LinearOperator for the 2D and 3D curvelet transforms.</p>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="curvelops.curvelops.FDCT">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">curvelops.curvelops.</span></span><span class="sig-name descname"><span class="pre">FDCT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbscales</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbangles_coarse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allcurvelets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'complex128'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/curvelops.html#FDCT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.curvelops.FDCT" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">LinearOperator</span></code></p>
+<p>2D/3D dimensional Curvelet operator.
+Apply 2D/3D Curvelet Transform along two <code class="docutils literal notranslate"><span class="pre">axes</span></code> of a
+multi-dimensional array of size <code class="docutils literal notranslate"><span class="pre">dims</span></code>.</p>
+<section id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Permalink to this heading"></a></h3>
+<dl>
+<dt>dims<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a></span></dt><dd><p>Number of samples for each dimension.</p>
+</dd>
+<dt>axes<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a>, optional</span></dt><dd><p>Axes along which FDCT is applied.</p>
+</dd>
+<dt>nbscales<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Number of scales (including the coarsest level);
+Defaults to ceil(log2(min(input_dims)) - 3).</p>
+</dd>
+<dt>nbangles_coarse<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Number of angles at 2nd coarsest scale.</p>
+</dd>
+<dt>allcurvelets<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional</span></dt><dd><p>Use curvelets at the finest (last) scale.
+If <code class="docutils literal notranslate"><span class="pre">False</span></code>, a wavelet transform will be used for the
+finest scale. The coarsest scale is always a wavelet transform;
+the ones between the coarsest and the finest are all curvelet
+transforms. This option only affects the finest scale.</p>
+</dd>
+<dt>dtype<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.DTypeLike" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DTypeLike</span></code></a>, optional</span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">dtype</span></code> of the transform.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="curvelops.curvelops.FDCT.inverse">
+<span class="sig-name descname"><span class="pre">inverse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/curvelops.html#FDCT.inverse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.curvelops.FDCT.inverse" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="curvelops.curvelops.FDCT.struct">
+<span class="sig-name descname"><span class="pre">struct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/curvelops.html#FDCT.struct"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.curvelops.FDCT.struct" title="Permalink to this definition"></a></dt>
+<dd><p>Convert curvelet flattened vector to curvelet structure.</p>
+<p>The FDCT always returns a 1D vector that has all curvelet
+coefficients. These coefficients can be organized into
+scales, wedges and spatial positions. Applying this
+function to a 1D vector generates this structure.</p>
+<section id="id1">
+<h4>Parameters<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+<dl>
+<dt>x<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></span></dt><dd><p>Input flattened vector.</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h4>Returns<a class="headerlink" href="#returns" title="Permalink to this heading"></a></h4>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">FDCTStructLike</span></code></dt><dd><p>Curvelet structure, a list of lists of multidimensional arrays.
+The first index corresponds to scale, the second corresponds to
+angular wedge.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="curvelops.curvelops.FDCT.vect">
+<span class="sig-name descname"><span class="pre">vect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/curvelops.html#FDCT.vect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.curvelops.FDCT.vect" title="Permalink to this definition"></a></dt>
+<dd><p>Convert curvelet structure to curvelet flattened vector.</p>
+<p>The FDCT always returns a 1D vector that has all curvelet
+coefficients. These coefficients can be organized into
+scales, wedges and spatial positions. Applying this
+function to a curvelet structure returns the flattened
+vector.</p>
+<section id="id2">
+<h4>Parameters<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h4>
+<dl>
+<dt>x<span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FDCTStructLike</span></code></span></dt><dd><p>Input curvelet structure.</p>
+</dd>
+</dl>
+</section>
+<section id="id3">
+<h4>Returns<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h4>
+<dl class="simple">
+<dt><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></dt><dd><p>Flattened vector.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="curvelops.curvelops.FDCT2D">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">curvelops.curvelops.</span></span><span class="sig-name descname"><span class="pre">FDCT2D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(-2,</span> <span class="pre">-1)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbscales</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbangles_coarse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allcurvelets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'complex128'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/curvelops.html#FDCT2D"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.curvelops.FDCT2D" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#curvelops.curvelops.FDCT" title="curvelops.curvelops.FDCT"><code class="xref py py-class docutils literal notranslate"><span class="pre">FDCT</span></code></a></p>
+<p>2D dimensional Curvelet operator.
+Apply 2D Curvelet Transform along two <code class="docutils literal notranslate"><span class="pre">axes</span></code> of a
+multi-dimensional array of size <code class="docutils literal notranslate"><span class="pre">dims</span></code>.</p>
+<section id="id4">
+<h3>Parameters<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<dl>
+<dt>dims<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a></span></dt><dd><p>Number of samples for each dimension.</p>
+</dd>
+<dt>axes<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a>, optional</span></dt><dd><p>Axes along which FDCT is applied.</p>
+</dd>
+<dt>nbscales<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Number of scales (including the coarsest level);
+Defaults to ceil(log2(min(input_dims)) - 3).</p>
+</dd>
+<dt>nbangles_coarse<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Number of angles at 2nd coarsest scale.</p>
+</dd>
+<dt>allcurvelets<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional</span></dt><dd><p>Use curvelets at the finest (last) scale.
+If <code class="docutils literal notranslate"><span class="pre">False</span></code>, a wavelet transform will be used for the
+finest scale. The coarsest scale is always a wavelet transform;
+the ones between the coarsest and the finest are all curvelet
+transforms. This option only affects the finest scale.</p>
+</dd>
+<dt>dtype<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.DTypeLike" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DTypeLike</span></code></a>, optional</span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">dtype</span></code> of the transform.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="curvelops.curvelops.FDCT3D">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">curvelops.curvelops.</span></span><span class="sig-name descname"><span class="pre">FDCT3D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(-3,</span> <span class="pre">-2,</span> <span class="pre">-1)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbscales</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbangles_coarse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allcurvelets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'complex128'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/curvelops.html#FDCT3D"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.curvelops.FDCT3D" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#curvelops.curvelops.FDCT" title="curvelops.curvelops.FDCT"><code class="xref py py-class docutils literal notranslate"><span class="pre">FDCT</span></code></a></p>
+<p>3D dimensional Curvelet operator.
+Apply 3D Curvelet Transform along two <code class="docutils literal notranslate"><span class="pre">axes</span></code> of a
+multi-dimensional array of size <code class="docutils literal notranslate"><span class="pre">dims</span></code>.</p>
+<section id="id5">
+<h3>Parameters<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<dl>
+<dt>dims<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a></span></dt><dd><p>Number of samples for each dimension.</p>
+</dd>
+<dt>axes<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a>, optional</span></dt><dd><p>Axes along which FDCT is applied.</p>
+</dd>
+<dt>nbscales<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Number of scales (including the coarsest level);
+Defaults to ceil(log2(min(input_dims)) - 3).</p>
+</dd>
+<dt>nbangles_coarse<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Number of angles at 2nd coarsest scale.</p>
+</dd>
+<dt>allcurvelets<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional</span></dt><dd><p>Use curvelets at the finest (last) scale.
+If <code class="docutils literal notranslate"><span class="pre">False</span></code>, a wavelet transform will be used for the
+finest scale. The coarsest scale is always a wavelet transform;
+the ones between the coarsest and the finest are all curvelet
+transforms. This option only affects the finest scale.</p>
+</dd>
+<dt>dtype<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.DTypeLike" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DTypeLike</span></code></a>, optional</span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">dtype</span></code> of the transform.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+<section id="module-curvelops.fdct2d_wrapper">
+<span id="curvelops-fdct2d-wrapper-module"></span><h2>curvelops.fdct2d_wrapper module<a class="headerlink" href="#module-curvelops.fdct2d_wrapper" title="Permalink to this heading"></a></h2>
+<p>FDCT2D pybind11 wrapper</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="curvelops.fdct2d_wrapper.fdct2d_forward_wrap">
+<span class="sig-prename descclassname"><span class="pre">curvelops.fdct2d_wrapper.</span></span><span class="sig-name descname"><span class="pre">fdct2d_forward_wrap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.24)"><span class="pre">numpy.ndarray</span></a><span class="p"><span class="pre">[</span></span><span class="pre">numpy.complex128</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.24)"><span class="pre">numpy.ndarray</span></a><span class="p"><span class="pre">[</span></span><span class="pre">numpy.complex128</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#curvelops.fdct2d_wrapper.fdct2d_forward_wrap" title="Permalink to this definition"></a></dt>
+<dd><p>2D Forward FDCT</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="curvelops.fdct2d_wrapper.fdct2d_inverse_wrap">
+<span class="sig-prename descclassname"><span class="pre">curvelops.fdct2d_wrapper.</span></span><span class="sig-name descname"><span class="pre">fdct2d_inverse_wrap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg4</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg5</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.24)"><span class="pre">numpy.ndarray</span></a><span class="p"><span class="pre">[</span></span><span class="pre">numpy.complex128</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.24)"><span class="pre">numpy.ndarray</span></a><span class="p"><span class="pre">[</span></span><span class="pre">numpy.complex128</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#curvelops.fdct2d_wrapper.fdct2d_inverse_wrap" title="Permalink to this definition"></a></dt>
+<dd><p>2D Inverse FDCT</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="curvelops.fdct2d_wrapper.fdct2d_param_wrap">
+<span class="sig-prename descclassname"><span class="pre">curvelops.fdct2d_wrapper.</span></span><span class="sig-name descname"><span class="pre">fdct2d_param_wrap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg4</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><span class="pre">tuple</span></a></span></span><a class="headerlink" href="#curvelops.fdct2d_wrapper.fdct2d_param_wrap" title="Permalink to this definition"></a></dt>
+<dd><p>Parameters for 2D FDCT</p>
+</dd></dl>
+
+</section>
+<section id="module-curvelops.fdct3d_wrapper">
+<span id="curvelops-fdct3d-wrapper-module"></span><h2>curvelops.fdct3d_wrapper module<a class="headerlink" href="#module-curvelops.fdct3d_wrapper" title="Permalink to this heading"></a></h2>
+<p>FDCT3D pybind11 wrapper</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="curvelops.fdct3d_wrapper.fdct3d_forward_wrap">
+<span class="sig-prename descclassname"><span class="pre">curvelops.fdct3d_wrapper.</span></span><span class="sig-name descname"><span class="pre">fdct3d_forward_wrap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.24)"><span class="pre">numpy.ndarray</span></a><span class="p"><span class="pre">[</span></span><span class="pre">numpy.complex128</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.24)"><span class="pre">numpy.ndarray</span></a><span class="p"><span class="pre">[</span></span><span class="pre">numpy.complex128</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#curvelops.fdct3d_wrapper.fdct3d_forward_wrap" title="Permalink to this definition"></a></dt>
+<dd><p>3D Forward FDCT</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="curvelops.fdct3d_wrapper.fdct3d_inverse_wrap">
+<span class="sig-prename descclassname"><span class="pre">curvelops.fdct3d_wrapper.</span></span><span class="sig-name descname"><span class="pre">fdct3d_inverse_wrap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg4</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg5</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg6</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.24)"><span class="pre">numpy.ndarray</span></a><span class="p"><span class="pre">[</span></span><span class="pre">numpy.complex128</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.24)"><span class="pre">numpy.ndarray</span></a><span class="p"><span class="pre">[</span></span><span class="pre">numpy.complex128</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#curvelops.fdct3d_wrapper.fdct3d_inverse_wrap" title="Permalink to this definition"></a></dt>
+<dd><p>3D Inverse FDCT</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="curvelops.fdct3d_wrapper.fdct3d_param_wrap">
+<span class="sig-prename descclassname"><span class="pre">curvelops.fdct3d_wrapper.</span></span><span class="sig-name descname"><span class="pre">fdct3d_param_wrap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg4</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg5</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><span class="pre">tuple</span></a></span></span><a class="headerlink" href="#curvelops.fdct3d_wrapper.fdct3d_param_wrap" title="Permalink to this definition"></a></dt>
+<dd><p>Parameters for 3D FDCT</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="curvelops" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="curvelops.plot.html" class="btn btn-neutral float-right" title="curvelops.plot package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2023, Carlos Alberto da Costa Filho.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

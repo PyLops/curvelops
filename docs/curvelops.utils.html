@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>curvelops.utils package &mdash; curvelops 0.22.dev17+g37a7b3e.d20230312 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sg_gallery.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sg_gallery-binder.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sg_gallery-dataframe.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sg_gallery-rendered-html.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Gallery" href="gallery/index.html" />
+    <link rel="prev" title="curvelops.typing package" href="curvelops.typing.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> curvelops
+          </a>
+              <div class="version">
+                0.22.dev17+g37a7b3e.d20230312
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">curvelops</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="curvelops.html">curvelops package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="curvelops.html#curvelops"><code class="docutils literal notranslate"><span class="pre">curvelops</span></code></a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="curvelops.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="curvelops.plot.html">curvelops.plot package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="curvelops.typing.html">curvelops.typing package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">curvelops.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="curvelops.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="curvelops.html#module-curvelops.curvelops">curvelops.curvelops module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="curvelops.html#module-curvelops.fdct2d_wrapper">curvelops.fdct2d_wrapper module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="curvelops.html#module-curvelops.fdct3d_wrapper">curvelops.fdct3d_wrapper module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gallery/index.html">Gallery</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">curvelops</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">curvelops</a></li>
+          <li class="breadcrumb-item"><a href="curvelops.html">curvelops package</a></li>
+      <li class="breadcrumb-item active">curvelops.utils package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/curvelops.utils.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-curvelops.utils">
+<span id="curvelops-utils-package"></span><h1>curvelops.utils package<a class="headerlink" href="#module-curvelops.utils" title="Permalink to this heading"></a></h1>
+<section id="curvelops-utils">
+<h2><code class="docutils literal notranslate"><span class="pre">curvelops.utils</span></code><a class="headerlink" href="#curvelops-utils" title="Permalink to this heading"></a></h2>
+<p>Utility functions for processing curvelets.</p>
+</section>
+<dl class="py function">
+<dt class="sig sig-object py" id="curvelops.utils.apply_along_wedges">
+<span class="sig-prename descclassname"><span class="pre">curvelops.utils.</span></span><span class="sig-name descname"><span class="pre">apply_along_wedges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c_struct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fun</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/utils/_utils.html#apply_along_wedges"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.utils.apply_along_wedges" title="Permalink to this definition"></a></dt>
+<dd><p>Applies a function to each individual wedge.</p>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>c_struct<span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FDCTStructLike</span></code></span></dt><dd><p>Input curvelet coefficients in struct format.</p>
+</dd>
+<dt>fun<span class="classifier">Callable[[<a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>], T]</span></dt><dd><p>Function to apply to each individual wedge. The function’s arguments
+are respectively: <cite>wedge</cite>, <cite>wedge index in scale</cite>, <cite>scale index</cite>, <cite>number of
+wedges in scale</cite>, <cite>number of scales</cite>.</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h2>Returns<a class="headerlink" href="#returns" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>List[List[T]]</dt><dd><p>Struct containing the result of applying <cite>fun</cite> to each wedge.</p>
+</dd>
+</dl>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">curvelops</span> <span class="kn">import</span> <span class="n">FDCT2D</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">curvelops.utils</span> <span class="kn">import</span> <span class="n">apply_along_wedges</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span> <span class="o">=</span> <span class="n">FDCT2D</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">nbscales</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">nbangles_coarse</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">allcurvelets</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">struct</span><span class="p">(</span><span class="n">C</span> <span class="o">@</span> <span class="n">x</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">apply_along_wedges</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">w</span><span class="p">,</span> <span class="o">*</span><span class="n">_</span><span class="p">:</span> <span class="n">w</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="go">[[(11, 11)],</span>
+<span class="go"> [(23, 11),</span>
+<span class="go">  (23, 11),</span>
+<span class="go">  (11, 23),</span>
+<span class="go">  (11, 23),</span>
+<span class="go">  (23, 11),</span>
+<span class="go">  (23, 11),</span>
+<span class="go">  (11, 23),</span>
+<span class="go">  (11, 23)],</span>
+<span class="go"> [(32, 32)]]</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="curvelops.utils.array_split_nd">
+<span class="sig-prename descclassname"><span class="pre">curvelops.utils.</span></span><span class="sig-name descname"><span class="pre">array_split_nd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ary</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/utils/_utils.html#array_split_nd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.utils.array_split_nd" title="Permalink to this definition"></a></dt>
+<dd><p>Split an array into multiple sub-arrays recursively, possibly unevenly.</p>
+<section id="see-also">
+<h2>See Also<a class="headerlink" href="#see-also" title="Permalink to this heading"></a></h2>
+<p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.array_split.html#numpy.array_split" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.array_split</span></code></a> : Split an array into multiple sub-arrays.</p>
+<p><a class="reference internal" href="#curvelops.utils.split_nd" title="curvelops.utils.split_nd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">split_nd</span></code></a>: Evenly split an array into multiple sub-arrays recursively.</p>
+</section>
+<section id="id1">
+<h2>Parameters<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>ary<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></span></dt><dd><p>Input array.</p>
+</dd>
+<dt>args<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Number of splits for each axis of <cite>ary</cite>.
+Axis 0 will be split into <cite>args[0]</cite> subarrays, axis 1 will be
+into <cite>args[1]</cite> subarrays, etc. An axis of length
+<cite>l = ary.shape[axis]</cite> that should be split into <cite>n = args[axis]</cite>
+sections, will return <cite>l % n</cite> sub-arrays of size <cite>l//n + 1</cite>
+and the rest of size <cite>l//n</cite>.</p>
+</dd>
+</dl>
+</section>
+<section id="id2">
+<h2>Returns<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">RecursiveListNDArray</span></code></dt><dd><p>Recursive lists of lists of <a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a>.
+The number of recursions is equivalent to the number arguments in args.</p>
+</dd>
+</dl>
+</section>
+<section id="id3">
+<h2>Examples<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">curvelops.utils</span> <span class="kn">import</span> <span class="n">array_split_nd</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ary</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="go">array([[2, 3, 4],</span>
+<span class="go">       [4, 6, 8]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">array_split_nd</span><span class="p">(</span><span class="n">ary</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">[[array([[2]]), array([[3]]), array([[4]])],</span>
+<span class="go"> [array([[4]]), array([[6]]), array([[8]])]]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">curvelops.utils</span> <span class="kn">import</span> <span class="n">array_split_nd</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ary</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">array_split_nd</span><span class="p">(</span><span class="n">ary</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">[[array([[0, 0],</span>
+<span class="go">         [0, 1]]),</span>
+<span class="go">  array([[0, 0],</span>
+<span class="go">         [2, 3]]),</span>
+<span class="go">  array([[0],</span>
+<span class="go">         [4]])],</span>
+<span class="go"> [array([[0, 2]]), array([[4, 6]]), array([[8]])]]</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="curvelops.utils.energy">
+<span class="sig-prename descclassname"><span class="pre">curvelops.utils.</span></span><span class="sig-name descname"><span class="pre">energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ary</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/utils/_utils.html#energy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.utils.energy" title="Permalink to this definition"></a></dt>
+<dd><p>Computes the energy of an n-dimensional wedge.</p>
+<p>The energy of a vector (flattened n-dimensional array)
+<span class="math notranslate nohighlight">\((a_0,\ldots,a_{N-1})\)</span> is defined as</p>
+<div class="math notranslate nohighlight">
+\[\sqrt{\frac{1}{N}\sum\limits_{i=0}^{N-1} |a_i|^2}.\]</div>
+<section id="id4">
+<h2>Parameters<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>ary<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></span></dt><dd><p>Input wedge.</p>
+</dd>
+</dl>
+</section>
+<section id="id5">
+<h2>Returns<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></dt><dd><p>Energy.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="curvelops.utils.energy_split">
+<span class="sig-prename descclassname"><span class="pre">curvelops.utils.</span></span><span class="sig-name descname"><span class="pre">energy_split</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/utils/_utils.html#energy_split"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.utils.energy_split" title="Permalink to this definition"></a></dt>
+<dd><p>Splits a wedge into <code class="docutils literal notranslate"><span class="pre">(rows,</span> <span class="pre">cols)</span></code> wedges and computes the energy
+of each of these subdivisions.</p>
+<section id="id6">
+<h2>See Also<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h2>
+<p><a class="reference internal" href="#curvelops.utils.energy" title="curvelops.utils.energy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">energy</span></code></a> : Computes the energy of a wedge.</p>
+</section>
+<section id="id7">
+<h2>Parameters<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>ary<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></span></dt><dd><p>Input wedge.</p>
+</dd>
+<dt>rows<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Split axis 0 into <cite>rows</cite> subdivisions.</p>
+</dd>
+<dt>cols<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Split axis 1 into <cite>cols</cite> subdivisions.</p>
+</dd>
+</dl>
+</section>
+<section id="id8">
+<h2>Returns<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></dt><dd><p>Matrix of shape <code class="docutils literal notranslate"><span class="pre">(rows,</span> <span class="pre">cols)</span></code> containing the energy of each
+subdivision of the input wedge.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="curvelops.utils.ndargmax">
+<span class="sig-prename descclassname"><span class="pre">curvelops.utils.</span></span><span class="sig-name descname"><span class="pre">ndargmax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ary</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/utils/_utils.html#ndargmax"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.utils.ndargmax" title="Permalink to this definition"></a></dt>
+<dd><p>N-dimensional argmax of array.</p>
+<section id="id9">
+<h2>Parameters<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>ary<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></span></dt><dd><p>Input array</p>
+</dd>
+</dl>
+</section>
+<section id="id10">
+<h2>Examples<a class="headerlink" href="#id10" title="Permalink to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">curvelops.utils</span> <span class="kn">import</span> <span class="n">ndargmax</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ndargmax</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="go">(1, 1, 1)</span>
+</pre></div>
+</div>
+</section>
+<section id="id11">
+<h2>Returns<a class="headerlink" href="#id11" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>tuple</dt><dd><p>N-dimensional index of the maximum of <code class="docutils literal notranslate"><span class="pre">ary</span></code>.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="curvelops.utils.split_nd">
+<span class="sig-prename descclassname"><span class="pre">curvelops.utils.</span></span><span class="sig-name descname"><span class="pre">split_nd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ary</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/utils/_utils.html#split_nd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.utils.split_nd" title="Permalink to this definition"></a></dt>
+<dd><p>Evenly split an array into multiple sub-arrays recursively.</p>
+<section id="id12">
+<h2>See Also<a class="headerlink" href="#id12" title="Permalink to this heading"></a></h2>
+<p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.split.html#numpy.split" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.split</span></code></a> : Split an array into multiple sub-arrays.</p>
+<p><a class="reference internal" href="#curvelops.utils.array_split_nd" title="curvelops.utils.array_split_nd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">array_split_nd</span></code></a>: Split an array into multiple sub-arrays recursively, possibly unevenly.</p>
+</section>
+<section id="id13">
+<h2>Parameters<a class="headerlink" href="#id13" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>ary<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></span></dt><dd><p>Input array.</p>
+</dd>
+<dt>args<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Number of splits for each axis of <cite>ary</cite>.
+Axis 0 will be split into <cite>args[0]</cite> subarrays, axis 1 will be
+into <cite>args[1]</cite> subarrays, etc. If the split cannot be made even
+for all dimensions, raises an error.</p>
+</dd>
+</dl>
+</section>
+<section id="id14">
+<h2>Returns<a class="headerlink" href="#id14" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">RecursiveListNDArray</span></code></dt><dd><p>Recursive lists of lists of <a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a>.
+The number of recursions is equivalent to the number arguments in args.</p>
+</dd>
+</dl>
+</section>
+<section id="id15">
+<h2>Examples<a class="headerlink" href="#id15" title="Permalink to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">curvelops.utils</span> <span class="kn">import</span> <span class="n">split_nd</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ary</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="go">array([[2, 3, 4],</span>
+<span class="go">       [4, 6, 8]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">split_nd</span><span class="p">(</span><span class="n">ary</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">[[array([[2]]), array([[3]]), array([[4]])],</span>
+<span class="go"> [array([[4]]), array([[6]]), array([[8]])]]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">curvelops.utils</span> <span class="kn">import</span> <span class="n">split_nd</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ary</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">split_nd</span><span class="p">(</span><span class="n">ary</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">ValueError: array split does not result in an equal division</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="curvelops.typing.html" class="btn btn-neutral float-left" title="curvelops.typing package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="gallery/index.html" class="btn btn-neutral float-right" title="Gallery" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2023, Carlos Alberto da Costa Filho.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
