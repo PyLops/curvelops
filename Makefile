@@ -35,10 +35,10 @@ tests:
 	$(PYTEST) tests
 
 lint:
-	flake8 docs/ curvelops/ tests/
+	flake8 examples/ docs/ curvelops/ tests/
 
 typeannot:
-	mypy curvelops/
+	mypy curvelops/ examples/
 
 coverage:
 	coverage run -m pytest && coverage xml && coverage html && $(PYTHON) -m http.server --directory htmlcov/

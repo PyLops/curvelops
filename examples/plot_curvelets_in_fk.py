@@ -40,6 +40,8 @@ empty_fdct = Cop @ data_empty
 empty_fdct_struct = Cop.struct(empty_fdct)
 
 # %%
+
+
 def create_dirac_wedge(Cop, scale, wedge):
     d = np.zeros(Cop.dims)
     wedge_only_fdct = Cop @ d

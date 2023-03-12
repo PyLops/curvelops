@@ -17,7 +17,10 @@ try:
     # Progress bars
     from tqdm.notebook import tqdm
 except ImportError:
-    tqdm = lambda x: x
+
+    def tqdm(x):
+        return x
+
     print("Try out tqdm for progress bars!")
 
 # %%
@@ -76,6 +79,8 @@ Cop = FDCT2D(d.shape)
 Cop.shape
 
 # %%
+
+
 def reconstruct(data, op, perc=0.1):
     """
     Convenience function to calculate reconstruction using top
