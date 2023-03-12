@@ -44,7 +44,7 @@ coverage:
 	coverage run -m pytest && coverage xml && coverage html && $(PYTHON) -m http.server --directory htmlcov/
 
 watchdoc:
-	make doc && while inotifywait -q -r curvelops/ docssrc/source/ -e create,delete,modify; do { make docupdate; }; done
+	make doc && while inotifywait -q -r curvelops/ examples/ docssrc/source/ -e create,delete,modify; do { make docupdate; }; done
 
 servedoc:
 	$(PYTHON) -m http.server --directory docssrc/build/html/
