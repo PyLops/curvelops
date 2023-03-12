@@ -3,22 +3,36 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to curvelops's documentation!
-=====================================
+========
+Overview
+========
 
-Python wrapper for `CurveLab <http://www.curvelet.org>`_'s 2D and 3D curvelet transforms. It uses the `PyLops <https://pylops.readthedocs.io/>`_ design framework to provide the forward and inverse curvelet transforms as matrix-free linear operations. Check out `some examples <https://github.com/PyLops/curvelops/tree/main/examples>`_ or view the documentation below.
+Curvelops is part of the PyLops ecossystem, an open-source Python library
+focused on providing a backend-agnostic, idiomatic, matrix-free library of
+linear operators and related computations. Curvelops provides 2D and 3D
+Curvelet transforms via `CurveLab <http://www.curvelet.org>`__.
+
+Visit :ref:`Installation` and then get started with the
+`Gallery <https://pylops.github.io/curvelops/gallery/index.html>`__ or browse the
+:ref:`API`.
+
+
+..  attention::
+   `CurveLab <http://www.curvelet.org>`__ is a proprietary library which must be
+   sourced independently by the user. It is free for academic use. This package
+   contains no CurveLab code apart from function calls.
+
+..  note::
+   All CurveLab rights are reserved to Emmanuel Candes, Laurent Demanet, David
+   Donoho and Lexing Ying. PyLops and Curvelops are not affiliated with
+   CurveLab or its authors in any way.
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 1
+   :hidden:
 
+   self
+   installation.rst
    modules.rst
    gallery/index.rst
    contributing.rst
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

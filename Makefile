@@ -44,7 +44,7 @@ coverage:
 	coverage run -m pytest && coverage xml && coverage html && $(PYTHON) -m http.server --directory htmlcov/
 
 watchdoc:
-	while inotifywait -q -r curvelops/ docssrc/source/ -e create,delete,modify; do { make docupdate; }; done
+	make doc && while inotifywait -q -r curvelops/ docssrc/source/ -e create,delete,modify; do { make docupdate; }; done
 
 servedoc:
 	$(PYTHON) -m http.server --directory docssrc/build/html/
@@ -63,6 +63,6 @@ docgithub:
 	cd docssrc && make github && cd ..
 
 docpush:
-	git checkout gh-pages && git merge gh-pages-triage && cd docssrc && make github &&\
+	git checkout gh-pages && git merge main && cd docssrc && make github &&\
 	cd ../docs && git add . && git commit -m "Updated documentation" &&\
-	git push origin gh-pages && git checkout gh-pages-triage
+	git push origin gh-pages && git checkout main
