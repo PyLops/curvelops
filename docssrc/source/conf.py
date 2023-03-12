@@ -219,5 +219,20 @@ templates_path = ["_templates"]
 exclude_patterns = ["_build", "**.ipynb_checkpoints", "**.ipynb", "**.md5"]
 source_suffix = ".rst"
 
+# Copybutton config
 copybutton_prompt_text = r">>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: "
 copybutton_prompt_is_regexp = True
+
+# Pydata config
+html_theme_options = {
+    "github_url": "https://github.com/PyLops/curvelops",
+    "external_links": [{"url": "https://github.com/PyLops/pylops", "name": "PyLops"}],
+    "header_links_before_dropdown": 10,
+    "show_toc_level": 2,
+}
+html_context = {
+    "github_user": "PyLops",
+    "github_repo": "curvelops",
+    "github_version": "main",
+    "doc_path": "docssrc",
+}

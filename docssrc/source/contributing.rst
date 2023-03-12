@@ -1,4 +1,3 @@
-============
 Contributing
 ============
 
@@ -7,7 +6,7 @@ in the `GitHub repo <https://github.com/PyLops/pylops>`__. You are also
 welcome to join the `PyLops slack channel <https://pylops.slack.com/>`__.
 
 Installation for developers
-===========================
+---------------------------
 
 Developers should clone the
 `main <https://github.com/PyLops/curvelops/tree/main>`__ branch of the
@@ -35,7 +34,7 @@ Developers should also install `pre-commit <https://pre-commit.com/>`__ hooks wi
 
 
 Developer workflow
-==================
+------------------
 
 Developers should start from a fresh copy of main with
 

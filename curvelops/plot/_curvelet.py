@@ -23,6 +23,7 @@ def curveshow(
     k_space: bool = False,
     basesize: int = 5,
     showaxis: bool = False,
+    real: bool = True,
     kwargs_imshow: Optional[dict] = None,
 ) -> List[Figure]:
     """Display curvelet coefficients in each wedge as images.
@@ -43,6 +44,9 @@ def curveshow(
         ``rows = floor(sqrt(nangles))`` and ``cols = ceil(nangles / rows)``
     showaxis : :obj:`bool`, optional
         Turn on axis lines and labels, by default False.
+    real : :obj:`bool`, optional
+        Plot real or imaginary part of curvelet coefficients. Only applicable
+        when ``k_space`` is False.
     kwargs_imshow : ``Optional[dict]``, optional
         Arguments to be passed to :obj:`matplotlib.pyplot.imshow`.
 
@@ -85,6 +89,7 @@ def curveshow(
     else:
         kwargs_imshow = {**_kwargs_imshow_default, **kwargs_imshow}
 
+    figsize_aspect = c_struct[0][0].shape[0] / c_struct[0][0].shape[1]
     figs_axes = []
     for iscale, c_scale in enumerate(c_struct):
         nangles = len(c_scale)
@@ -93,7 +98,7 @@ def curveshow(
         fig, axes = plt.subplots(
             rows,
             cols,
-            figsize=(basesize * cols, basesize * rows),
+            figsize=(basesize * cols, figsize_aspect * basesize * rows),
         )
         fig.suptitle(f"Scale {iscale} ({nangles} wedge{'s' if nangles > 1 else ''})")
         figs_axes.append((fig, axes))
@@ -103,7 +108,10 @@ def curveshow(
             if k_space:
                 ax.imshow(np.abs(fft(c_wedge)), **kwargs_imshow)
             else:
-                ax.imshow(c_wedge.real, **kwargs_imshow)
+                if real:
+                    ax.imshow(c_wedge.real, **kwargs_imshow)
+                else:
+                    ax.imshow(c_wedge.imag, **kwargs_imshow)
             if nangles > 1:
                 ax.set(title=f"Wedge {iwedge}")
             if not showaxis:
