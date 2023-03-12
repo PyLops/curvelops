@@ -18,20 +18,21 @@
 .. _sphx_glr_gallery_plot_single_curvelet.py:
 
 
-Single Curvelet
-===============
-This example shows a single curvelet coefficient.
+1. Visualize a Single Curvelet
+==============================
+This example shows a single curvelet coefficient in
+spatial and frequency domains.
 
-.. GENERATED FROM PYTHON SOURCE LINES 8-16
+.. GENERATED FROM PYTHON SOURCE LINES 9-16
 
 .. code-block:: default
 
     import matplotlib.pyplot as plt
     import numpy as np
     from matplotlib.ticker import MultipleLocator
-    from mpl_toolkits.axes_grid1 import make_axes_locatable
 
     from curvelops import FDCT2D
+    from curvelops.plot import create_colorbar
 
 
 
@@ -40,30 +41,12 @@ This example shows a single curvelet coefficient.
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 17-19
 
-.. GENERATED FROM PYTHON SOURCE LINES 17-24
+Setup
+=====
 
-.. code-block:: default
-
-    def create_colorbar(im, ax):
-        divider = make_axes_locatable(ax)
-        cax = divider.append_axes("right", size="5%", pad=0.1)
-        cb = ax.get_figure().colorbar(im, cax=cax, orientation="vertical")
-        return cax, cb
-
-
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 25-26
-
-### Setup
-
-.. GENERATED FROM PYTHON SOURCE LINES 28-33
+.. GENERATED FROM PYTHON SOURCE LINES 19-24
 
 .. code-block:: default
 
@@ -79,11 +62,12 @@ This example shows a single curvelet coefficient.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 34-35
+.. GENERATED FROM PYTHON SOURCE LINES 25-27
 
-### Curvelet Domain
+Curvelet Domain
+===============
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-43
+.. GENERATED FROM PYTHON SOURCE LINES 29-35
 
 .. code-block:: default
 
@@ -100,11 +84,12 @@ This example shows a single curvelet coefficient.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 44-45
+.. GENERATED FROM PYTHON SOURCE LINES 36-38
 
 Select single curvelet
+======================
 
-.. GENERATED FROM PYTHON SOURCE LINES 45-54
+.. GENERATED FROM PYTHON SOURCE LINES 38-47
 
 .. code-block:: default
 
@@ -124,11 +109,12 @@ Select single curvelet
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 55-56
+.. GENERATED FROM PYTHON SOURCE LINES 48-50
 
 Perform adjoint transform and reshape
+=====================================
 
-.. GENERATED FROM PYTHON SOURCE LINES 56-58
+.. GENERATED FROM PYTHON SOURCE LINES 50-52
 
 .. code-block:: default
 
@@ -141,11 +127,12 @@ Perform adjoint transform and reshape
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 59-60
+.. GENERATED FROM PYTHON SOURCE LINES 53-55
 
 F-K domain
+==========
 
-.. GENERATED FROM PYTHON SOURCE LINES 60-62
+.. GENERATED FROM PYTHON SOURCE LINES 55-57
 
 .. code-block:: default
 
@@ -158,11 +145,12 @@ F-K domain
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 63-64
+.. GENERATED FROM PYTHON SOURCE LINES 58-60
 
 Visualize
+=========
 
-.. GENERATED FROM PYTHON SOURCE LINES 64-96
+.. GENERATED FROM PYTHON SOURCE LINES 60-92
 
 .. code-block:: default
 
@@ -213,7 +201,7 @@ Visualize
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.419 seconds)
+   **Total running time of the script:** ( 0 minutes  1.222 seconds)
 
 
 .. _sphx_glr_download_gallery_plot_single_curvelet.py:
