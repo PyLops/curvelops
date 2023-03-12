@@ -16,8 +16,9 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-from curvelops import __version__ as version
 from sphinx_gallery.sorting import ExampleTitleSortKey
+
+from curvelops import __version__ as version
 
 release = version
 

@@ -1,7 +1,9 @@
+curvelops/_version.py
+
 # Documentation
-docs/build
-docs/source/api/generated
-docs/source/gallery
+docssrc/build
+docssrc/source/api/generated
+docssrc/source/gallery
 
 # Editors
 .*.sw[po]
