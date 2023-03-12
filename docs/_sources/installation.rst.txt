@@ -1,13 +1,12 @@
 .. _installation:
 
-============
 Installation
 ============
 
 .. _requirements:
 
 Requirements
-============
+------------
 
 Installing Curvelops requires the following external components:
 
@@ -17,7 +16,7 @@ Installing Curvelops requires the following external components:
 Both of these packages must be installed manually.
 
 Installing FFTW
----------------
+~~~~~~~~~~~~~~~
 Download and install with:
 
 
@@ -35,7 +34,7 @@ install FFTW and where to find the GCC compiler, respectively. We recommend
 using the same compiler for FFTW and CurveLab.
 
 Installing CurveLab
--------------------
+~~~~~~~~~~~~~~~~~~~
 After downloading the latest version of CurveLab, run
 
 ..  code-block:: console
@@ -54,7 +53,7 @@ the ouput of ``which g++`` (or whatever C++ compiler is the equivalent of
 the selected ``CC`` compiler).
 
 Installing Curvelops
-====================
+--------------------
 
 Once FFTW and CurveLab are installed, install Curvelops with:
 

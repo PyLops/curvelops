@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>curvelops.plot._curvelet &#8212; curvelops 0.22 documentation</title>
+    <title>curvelops.plot._curvelet &#8212; curvelops 0.22.2.dev4+g49f3798.d20230312 documentation</title>
   
   
   
@@ -102,7 +102,7 @@
 
   
   
-    <p class="title logo__title">curvelops 0.22 documentation</p>
+    <p class="title logo__title">curvelops 0.22.2.dev4+g49f3798.d20230312 documentation</p>
   
 </a>
     
@@ -153,6 +153,13 @@
                       </a>
                     </li>
                 
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://github.com/PyLops/pylops">
+                    PyLops
+                  </a>
+                </li>
+                
     </ul>
 </nav>
       </div>
@@ -179,6 +186,17 @@
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyLops/curvelops" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
       </ul>
       </div>
       
@@ -257,6 +275,13 @@
                       </a>
                     </li>
                 
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://github.com/PyLops/pylops">
+                    PyLops
+                  </a>
+                </li>
+                
     </ul>
 </nav>
       </div>
@@ -278,6 +303,17 @@
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyLops/curvelops" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
       </ul>
       </div>
       
@@ -336,6 +372,7 @@
     <span class="n">k_space</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
     <span class="n">basesize</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
     <span class="n">showaxis</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">real</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
     <span class="n">kwargs_imshow</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Figure</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Display curvelet coefficients in each wedge as images.</span>
@@ -356,6 +393,9 @@
 <span class="sd">        ``rows = floor(sqrt(nangles))`` and ``cols = ceil(nangles / rows)``</span>
 <span class="sd">    showaxis : :obj:`bool`, optional</span>
 <span class="sd">        Turn on axis lines and labels, by default False.</span>
+<span class="sd">    real : :obj:`bool`, optional</span>
+<span class="sd">        Plot real or imaginary part of curvelet coefficients. Only applicable</span>
+<span class="sd">        when ``k_space`` is False.</span>
 <span class="sd">    kwargs_imshow : ``Optional[dict]``, optional</span>
 <span class="sd">        Arguments to be passed to :obj:`matplotlib.pyplot.imshow`.</span>
 
@@ -398,6 +438,7 @@
     <span class="k">else</span><span class="p">:</span>
         <span class="n">kwargs_imshow</span> <span class="o">=</span> <span class="p">{</span><span class="o">**</span><span class="n">_kwargs_imshow_default</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs_imshow</span><span class="p">}</span>
 
+    <span class="n">figsize_aspect</span> <span class="o">=</span> <span class="n">c_struct</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">c_struct</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
     <span class="n">figs_axes</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">iscale</span><span class="p">,</span> <span class="n">c_scale</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">c_struct</span><span class="p">):</span>
         <span class="n">nangles</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">c_scale</span><span class="p">)</span>
@@ -406,7 +447,7 @@
         <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span>
             <span class="n">rows</span><span class="p">,</span>
             <span class="n">cols</span><span class="p">,</span>
-            <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="n">basesize</span> <span class="o">*</span> <span class="n">cols</span><span class="p">,</span> <span class="n">basesize</span> <span class="o">*</span> <span class="n">rows</span><span class="p">),</span>
+            <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="n">basesize</span> <span class="o">*</span> <span class="n">cols</span><span class="p">,</span> <span class="n">figsize_aspect</span> <span class="o">*</span> <span class="n">basesize</span> <span class="o">*</span> <span class="n">rows</span><span class="p">),</span>
         <span class="p">)</span>
         <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Scale </span><span class="si">{</span><span class="n">iscale</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">nangles</span><span class="si">}</span><span class="s2"> wedge</span><span class="si">{</span><span class="s1">&#39;s&#39;</span> <span class="k">if</span> <span class="n">nangles</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
         <span class="n">figs_axes</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span><span class="p">))</span>
@@ -416,7 +457,10 @@
             <span class="k">if</span> <span class="n">k_space</span><span class="p">:</span>
                 <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">fft</span><span class="p">(</span><span class="n">c_wedge</span><span class="p">)),</span> <span class="o">**</span><span class="n">kwargs_imshow</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">c_wedge</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs_imshow</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">real</span><span class="p">:</span>
+                    <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">c_wedge</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs_imshow</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">c_wedge</span><span class="o">.</span><span class="n">imag</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs_imshow</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">nangles</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
                 <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Wedge </span><span class="si">{</span><span class="n">iwedge</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">showaxis</span><span class="p">:</span>

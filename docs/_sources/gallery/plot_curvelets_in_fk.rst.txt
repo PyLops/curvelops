@@ -23,7 +23,20 @@
 This example shows the regions in the FK domain where each
 curvelet coefficient occupies.
 
-.. GENERATED FROM PYTHON SOURCE LINES 8-14
+.. GENERATED FROM PYTHON SOURCE LINES 7-9
+
+.. code-block:: default
+
+    # sphinx_gallery_thumbnail_number = 5
+
+
+
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 10-16
 
 .. code-block:: default
 
@@ -40,12 +53,12 @@ curvelet coefficient occupies.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 15-17
+.. GENERATED FROM PYTHON SOURCE LINES 17-19
 
 Setup
 =====
 
-.. GENERATED FROM PYTHON SOURCE LINES 19-22
+.. GENERATED FROM PYTHON SOURCE LINES 21-24
 
 .. code-block:: default
 
@@ -59,7 +72,7 @@ Setup
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 23-27
+.. GENERATED FROM PYTHON SOURCE LINES 25-29
 
 .. code-block:: default
 
@@ -74,7 +87,7 @@ Setup
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 28-35
+.. GENERATED FROM PYTHON SOURCE LINES 30-37
 
 .. code-block:: default
 
@@ -92,7 +105,7 @@ Setup
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 36-42
+.. GENERATED FROM PYTHON SOURCE LINES 38-44
 
 .. code-block:: default
 
@@ -109,7 +122,7 @@ Setup
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 43-59
+.. GENERATED FROM PYTHON SOURCE LINES 45-61
 
 .. code-block:: default
 
@@ -136,16 +149,16 @@ Setup
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 60-62
+.. GENERATED FROM PYTHON SOURCE LINES 62-64
 
 Plot Wedges of each Scale
 =========================
 
-.. GENERATED FROM PYTHON SOURCE LINES 64-65
+.. GENERATED FROM PYTHON SOURCE LINES 66-67
 
 Colormap to be used in all plots below
 
-.. GENERATED FROM PYTHON SOURCE LINES 65-75
+.. GENERATED FROM PYTHON SOURCE LINES 67-77
 
 .. code-block:: default
 
@@ -171,7 +184,7 @@ Colormap to be used in all plots below
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 76-116
+.. GENERATED FROM PYTHON SOURCE LINES 78-117
 
 .. code-block:: default
 
@@ -189,7 +202,6 @@ Colormap to be used in all plots below
         axes = np.atleast_1d(axes).ravel()
         wedge_scale_fk_abs = np.zeros_like(data_empty)
         for iw, (fdct_wedge, ax) in enumerate(zip(fdct_scale, axes), start=1):
-
             dirac_wedge = create_dirac_wedge(Cop, j - 1, iw - 1)
             dirac_wedge_fk = np.fft.fftshift(
                 np.fft.fft2(np.fft.ifftshift(dirac_wedge), norm="ortho")
@@ -274,12 +286,12 @@ Colormap to be used in all plots below
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 117-119
+.. GENERATED FROM PYTHON SOURCE LINES 118-120
 
 Plot Dirac in Space domain
 ==========================
 
-.. GENERATED FROM PYTHON SOURCE LINES 121-143
+.. GENERATED FROM PYTHON SOURCE LINES 122-144
 
 .. code-block:: default
 
@@ -320,7 +332,7 @@ Plot Dirac in Space domain
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  5.758 seconds)
+   **Total running time of the script:** ( 0 minutes  5.321 seconds)
 
 
 .. _sphx_glr_download_gallery_plot_curvelets_in_fk.py:

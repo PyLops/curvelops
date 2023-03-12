@@ -20,12 +20,24 @@
 
 2. Sigmoid Example
 ==================
-This example shows the effectiveness of curvelets in
-describing a typing subsurface structure. It compares
-the Curvelet transform with the Wavelet and Seislet
-transforms.
+This example shows the effectiveness of curvelets in describing a typical
+subsurface structure. It compares the Curvelet transform with the Wavelet
+and Seislet transforms.
 
-.. GENERATED FROM PYTHON SOURCE LINES 10-26
+.. GENERATED FROM PYTHON SOURCE LINES 8-10
+
+.. code-block:: default
+
+    # sphinx_gallery_thumbnail_number = 3
+
+
+
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 11-27
 
 .. code-block:: default
 
@@ -52,12 +64,12 @@ transforms.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 27-29
+.. GENERATED FROM PYTHON SOURCE LINES 28-30
 
 Input data
 ==========
 
-.. GENERATED FROM PYTHON SOURCE LINES 31-39
+.. GENERATED FROM PYTHON SOURCE LINES 32-40
 
 .. code-block:: default
 
@@ -76,7 +88,7 @@ Input data
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 40-55
+.. GENERATED FROM PYTHON SOURCE LINES 41-56
 
 .. code-block:: default
 
@@ -107,7 +119,7 @@ Input data
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 56-61
+.. GENERATED FROM PYTHON SOURCE LINES 57-62
 
 Sparsifying Transforms
 ======================
@@ -115,7 +127,7 @@ Sparsifying Transforms
 * Wavelet
 * Curvelet
 
-.. GENERATED FROM PYTHON SOURCE LINES 63-69
+.. GENERATED FROM PYTHON SOURCE LINES 64-70
 
 .. code-block:: default
 
@@ -138,7 +150,7 @@ Sparsifying Transforms
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 70-75
+.. GENERATED FROM PYTHON SOURCE LINES 71-76
 
 .. code-block:: default
 
@@ -160,7 +172,7 @@ Sparsifying Transforms
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 76-81
+.. GENERATED FROM PYTHON SOURCE LINES 77-82
 
 .. code-block:: default
 
@@ -182,7 +194,7 @@ Sparsifying Transforms
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 82-104
+.. GENERATED FROM PYTHON SOURCE LINES 83-105
 
 .. code-block:: default
 
@@ -215,7 +227,7 @@ Sparsifying Transforms
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 105-112
+.. GENERATED FROM PYTHON SOURCE LINES 106-113
 
 .. code-block:: default
 
@@ -233,7 +245,7 @@ Sparsifying Transforms
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 113-140
+.. GENERATED FROM PYTHON SOURCE LINES 114-141
 
 .. code-block:: default
 
@@ -276,7 +288,7 @@ Sparsifying Transforms
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 141-155
+.. GENERATED FROM PYTHON SOURCE LINES 142-156
 
 .. code-block:: default
 
@@ -306,7 +318,7 @@ Sparsifying Transforms
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 156-169
+.. GENERATED FROM PYTHON SOURCE LINES 157-170
 
 .. code-block:: default
 
@@ -336,7 +348,7 @@ Sparsifying Transforms
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 170-177
+.. GENERATED FROM PYTHON SOURCE LINES 171-178
 
 .. code-block:: default
 
@@ -362,7 +374,7 @@ Sparsifying Transforms
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  52.802 seconds)
+   **Total running time of the script:** ( 0 minutes  50.748 seconds)
 
 
 .. _sphx_glr_download_gallery_plot_sigmoid.py:

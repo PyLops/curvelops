@@ -48,18 +48,18 @@ Below is a gallery of examples using curvelops.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="3. Seismic Regularization">
+    <div class="sphx-glr-thumbcontainer" tooltip="3. Visualizing Curvelet Coefficients">
 
 .. only:: html
 
-  .. image:: /gallery/images/thumb/sphx_glr_plot_seismic_regularization_thumb.png
+  .. image:: /gallery/images/thumb/sphx_glr_plot_sigmoid_coefficients_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_plot_seismic_regularization.py`
+  :ref:`sphx_glr_gallery_plot_sigmoid_coefficients.py`
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">3. Seismic Regularization</div>
+      <div class="sphx-glr-thumbnail-title">3. Visualizing Curvelet Coefficients</div>
     </div>
 
 
@@ -82,6 +82,40 @@ Below is a gallery of examples using curvelops.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="5. Seismic Regularization">
+
+.. only:: html
+
+  .. image:: /gallery/images/thumb/sphx_glr_plot_seismic_regularization_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_gallery_plot_seismic_regularization.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">5. Seismic Regularization</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="6. Multiscale Local Directions">
+
+.. only:: html
+
+  .. image:: /gallery/images/thumb/sphx_glr_plot_sigmoid_disks_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_gallery_plot_sigmoid_disks.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">6. Multiscale Local Directions</div>
+    </div>
+
+
+.. raw:: html
+
     </div>
 
 
@@ -90,8 +124,10 @@ Below is a gallery of examples using curvelops.
 
    /gallery/plot_single_curvelet
    /gallery/plot_sigmoid
-   /gallery/plot_seismic_regularization
+   /gallery/plot_sigmoid_coefficients
    /gallery/plot_curvelets_in_fk
+   /gallery/plot_seismic_regularization
+   /gallery/plot_sigmoid_disks
 
 
 

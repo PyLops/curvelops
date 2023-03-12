@@ -1,11 +1,12 @@
 r"""
 2. Sigmoid Example
 ==================
-This example shows the effectiveness of curvelets in
-describing a typing subsurface structure. It compares
-the Curvelet transform with the Wavelet and Seislet
-transforms.
+This example shows the effectiveness of curvelets in describing a typical
+subsurface structure. It compares the Curvelet transform with the Wavelet
+and Seislet transforms.
 """
+# sphinx_gallery_thumbnail_number = 3
+
 # %%
 import matplotlib.pyplot as plt
 import numpy as np

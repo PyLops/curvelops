@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>API &#8212; curvelops 0.22 documentation</title>
+    <title>API &#8212; curvelops 0.22.2.dev4+g49f3798.d20230312 documentation</title>
   
   
   
@@ -106,7 +106,7 @@
 
   
   
-    <p class="title logo__title">curvelops 0.22 documentation</p>
+    <p class="title logo__title">curvelops 0.22.2.dev4+g49f3798.d20230312 documentation</p>
   
 </a>
     
@@ -157,6 +157,13 @@
                       </a>
                     </li>
                 
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://github.com/PyLops/pylops">
+                    PyLops
+                  </a>
+                </li>
+                
     </ul>
 </nav>
       </div>
@@ -183,6 +190,17 @@
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyLops/curvelops" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
       </ul>
       </div>
       
@@ -261,6 +279,13 @@
                       </a>
                     </li>
                 
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://github.com/PyLops/pylops">
+                    PyLops
+                  </a>
+                </li>
+                
     </ul>
 </nav>
       </div>
@@ -282,6 +307,17 @@
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyLops/curvelops" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
       </ul>
       </div>
       
@@ -637,7 +673,7 @@ left to right (cols).</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="curvelops.plot.curveshow">
-<span class="sig-prename descclassname"><span class="pre">curvelops.plot.</span></span><span class="sig-name descname"><span class="pre">curveshow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c_struct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_space</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">basesize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showaxis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs_imshow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/plot/_curvelet.html#curveshow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.plot.curveshow" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">curvelops.plot.</span></span><span class="sig-name descname"><span class="pre">curveshow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c_struct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_space</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">basesize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showaxis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">real</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs_imshow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/plot/_curvelet.html#curveshow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.plot.curveshow" title="Permalink to this definition">#</a></dt>
 <dd><p>Display curvelet coefficients in each wedge as images.</p>
 <p>For each curvelet scale, display a figure with each wedge
 plotted as an image in its own axis.</p>
@@ -654,6 +690,9 @@ by default False.</p>
 <code class="docutils literal notranslate"><span class="pre">rows</span> <span class="pre">=</span> <span class="pre">floor(sqrt(nangles))</span></code> and <code class="docutils literal notranslate"><span class="pre">cols</span> <span class="pre">=</span> <span class="pre">ceil(nangles</span> <span class="pre">/</span> <span class="pre">rows)</span></code></p>
 </dd>
 <dt>showaxis<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional</span></dt><dd><p>Turn on axis lines and labels, by default False.</p>
+</dd>
+<dt>real<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional</span></dt><dd><p>Plot real or imaginary part of curvelet coefficients. Only applicable
+when <code class="docutils literal notranslate"><span class="pre">k_space</span></code> is False.</p>
 </dd>
 <dt>kwargs_imshow<span class="classifier"><code class="docutils literal notranslate"><span class="pre">Optional[dict]</span></code>, optional</span></dt><dd><p>Arguments to be passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow" title="(in Matplotlib v3.7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib.pyplot.imshow</span></code></a>.</p>
 </dd>
@@ -1158,7 +1197,7 @@ The number of recursions is equivalent to the number arguments in args.</p>
   <a class="reference internal nav-link" href="#module-curvelops.curvelops">
    curvelops
   </a>
-  <ul class="nav section-nav flex-column">
+  <ul class="visible nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#curvelops-curvelops">
      <code class="docutils literal notranslate">
@@ -1230,7 +1269,7 @@ The number of recursions is equivalent to the number arguments in args.</p>
   <a class="reference internal nav-link" href="#module-curvelops.plot">
    plot
   </a>
-  <ul class="nav section-nav flex-column">
+  <ul class="visible nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#curvelops-plot">
      <code class="docutils literal notranslate">
@@ -1300,7 +1339,7 @@ The number of recursions is equivalent to the number arguments in args.</p>
   <a class="reference internal nav-link" href="#module-curvelops.typing">
    typing
   </a>
-  <ul class="nav section-nav flex-column">
+  <ul class="visible nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#curvelops-typing">
      <code class="docutils literal notranslate">
@@ -1316,7 +1355,7 @@ The number of recursions is equivalent to the number arguments in args.</p>
   <a class="reference internal nav-link" href="#module-curvelops.utils">
    utils
   </a>
-  <ul class="nav section-nav flex-column">
+  <ul class="visible nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#curvelops-utils">
      <code class="docutils literal notranslate">
