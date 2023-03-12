@@ -1,5 +1,5 @@
 r"""
-3. Curvelet Coefficients in the FK domain
+4. Curvelet Coefficients in the FK domain
 =========================================
 This example shows the regions in the FK domain where each
 curvelet coefficient occupies.
