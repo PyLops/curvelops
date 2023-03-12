@@ -10,8 +10,9 @@ setuptools_scm
 pytest
 # Docs require
 Sphinx
-sphinx-rtd-theme
+pydata-sphinx-theme
 sphinx-gallery
+sphinx-copybutton
 # Dev requires
 pre-commit
 # Lint
