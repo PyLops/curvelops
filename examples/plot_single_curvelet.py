@@ -1,37 +1,29 @@
 r"""
-Single Curvelet
-===============
-This example shows a single curvelet coefficient.
+1. Visualize a Single Curvelet
+==============================
+This example shows a single curvelet coefficient in
+spatial and frequency domains.
 """
 
 # %%
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.ticker import MultipleLocator
-from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 from curvelops import FDCT2D
-
-
-# %%
-def create_colorbar(im, ax):
-    divider = make_axes_locatable(ax)
-    cax = divider.append_axes("right", size="5%", pad=0.1)
-    cb = ax.get_figure().colorbar(im, cax=cax, orientation="vertical")
-    return cax, cb
-
-
-# %% [markdown]
-# ### Setup
+from curvelops.plot import create_colorbar
 
 # %%
+# Setup
+# =====
 m = 512
 n = 512
 x = np.zeros((m, n))
 DCT = FDCT2D(x.shape)
 
-# %% [markdown]
-# ### Curvelet Domain
+# %%
+# Curvelet Domain
+# ===============
 
 # %%
 y = DCT * x
@@ -42,6 +34,7 @@ y_reshape = DCT.struct(y)
 
 # %%
 # Select single curvelet
+# ======================
 s = 4
 w = 0
 a, b = y_reshape[s][w].shape
@@ -53,14 +46,17 @@ y = DCT.vect(y_reshape)
 
 # %%
 # Perform adjoint transform and reshape
+# =====================================
 x = DCT.H @ y
 
 # %%
 # F-K domain
+# ==========
 x_fk = np.fft.fftshift(np.fft.fft2(np.fft.ifftshift(x), norm="ortho"))
 
 # %%
 # Visualize
+# =========
 vmin, vmax = 0.8 * np.array([-1, 1]) * np.abs(np.max(x))
 fig, ax = plt.subplots(2, 2, figsize=(8, 8), sharex="row", sharey="row")
 

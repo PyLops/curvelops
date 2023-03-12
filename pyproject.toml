@@ -16,9 +16,11 @@ module = [
     "curvelops.fdct2d_wrapper",
     "curvelops.fdct3d_wrapper",
     "pylops",
-    "pylops.utils.typing",
+    "pylops.*",
     "matplotlib",
     "matplotlib.*",
     "mpl_toolkits.axes_grid1",
+    "scipy.*",
+    "tqdm.*",
 ]
 ignore_missing_imports = true
