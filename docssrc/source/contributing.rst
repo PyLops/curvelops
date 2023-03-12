@@ -69,18 +69,3 @@ build/check documentation with:
 
 Once everything is in order, and your code has been pushed to GitHub,
 navigate to https://github.com/PyLops/curvelops and submit your PR!
-
-..  warning::
-
-    PRs changing documentation should be submitted to the
-    `gh-pages <https://github.com/PyLops/curvelops/tree/gh-pages>`__ branch.
-
-Contributing documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Documentation is built locally with the help of the ``Makefile`` in the root
-of the project. Use ``make doc`` to build the docs, ``make docupdate`` to
-build the docs without cleaning the build directories, and ``make watchdoc``
-to rerun ``make docupdate`` at every change in files in ``curvelops/`` or
-``docssrc/source/``. Serve the documents locally with ``make servedocs``.
-PRs changing documentation should be submitted to the `gh-pages <https://github.com/PyLops/curvelops/tree/gh-pages>`__ branch.
