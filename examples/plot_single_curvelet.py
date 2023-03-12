@@ -15,7 +15,7 @@ from curvelops.plot import create_colorbar
 
 # %%
 # Setup
-# #####
+# =====
 m = 512
 n = 512
 x = np.zeros((m, n))
@@ -23,7 +23,7 @@ DCT = FDCT2D(x.shape)
 
 # %%
 # Curvelet Domain
-# ###############
+# ===============
 
 # %%
 y = DCT * x
@@ -34,7 +34,7 @@ y_reshape = DCT.struct(y)
 
 # %%
 # Select single curvelet
-# ######################
+# ======================
 s = 4
 w = 0
 a, b = y_reshape[s][w].shape
@@ -46,17 +46,17 @@ y = DCT.vect(y_reshape)
 
 # %%
 # Perform adjoint transform and reshape
-# #####################################
+# =====================================
 x = DCT.H @ y
 
 # %%
 # F-K domain
-# ##########
+# ==========
 x_fk = np.fft.fftshift(np.fft.fft2(np.fft.ifftshift(x), norm="ortho"))
 
 # %%
 # Visualize
-# #########
+# =========
 vmin, vmax = 0.8 * np.array([-1, 1]) * np.abs(np.max(x))
 fig, ax = plt.subplots(2, 2, figsize=(8, 8), sharex="row", sharey="row")
 
