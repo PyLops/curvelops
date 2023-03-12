@@ -4,6 +4,7 @@ r"""
 This example shows how to use the Curvelet transform to
 condition a missing-data seismic regularization problem.
 """
+# sphinx_gallery_thumbnail_number = 2
 
 # %%
 import warnings

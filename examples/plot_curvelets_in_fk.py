@@ -4,6 +4,8 @@ r"""
 This example shows the regions in the FK domain where each
 curvelet coefficient occupies.
 """
+# sphinx_gallery_thumbnail_number = 5
+
 # %%
 import matplotlib as mpl
 import matplotlib.pyplot as plt
@@ -87,7 +89,6 @@ for j, fdct_scale in enumerate(empty_fdct_struct, start=1):
     axes = np.atleast_1d(axes).ravel()
     wedge_scale_fk_abs = np.zeros_like(data_empty)
     for iw, (fdct_wedge, ax) in enumerate(zip(fdct_scale, axes), start=1):
-
         dirac_wedge = create_dirac_wedge(Cop, j - 1, iw - 1)
         dirac_wedge_fk = np.fft.fftshift(
             np.fft.fft2(np.fft.ifftshift(dirac_wedge), norm="ortho")

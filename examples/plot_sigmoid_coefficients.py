@@ -4,14 +4,13 @@ r"""
 This example shows the how to visualize curvelet coefficients of an image,
 using as example a typical subsurface structure.
 """
+# sphinx_gallery_thumbnail_number = 3
 
 # %%
 import matplotlib.pyplot as plt
 import numpy as np
 
-from curvelops import FDCT2D
-from curvelops.plot import curveshow
-from curvelops.utils import apply_along_wedges, energy
+from curvelops import FDCT2D, apply_along_wedges, curveshow
 
 # %%
 # Input data
@@ -35,7 +34,7 @@ opts_plot = dict(
     aspect=aspect,
 )
 vmax = 0.5 * np.max(np.abs(d))
-figsize_aspect = aspect * d.shape[1] / d.shape[0]
+figsize_aspect = aspect * nt / nx
 fig, ax = plt.subplots(figsize=(8, figsize_aspect * 8), sharey=True, sharex=True)
 ax.imshow(d.T, vmin=-vmax, vmax=vmax, **opts_plot)
 ax.set(xlabel="Position [m]", ylabel="Time [s]", title=f"Data shape {d.shape}")
