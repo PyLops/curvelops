@@ -1,16 +1,16 @@
-import pytest
 import numpy as np
+import pytest
 from numpy.random import randint
+
 from curvelops import FDCT
 from curvelops.utils import (
-    array_split_nd,
     apply_along_wedges,
-    split_nd,
+    array_split_nd,
     energy,
     energy_split,
     ndargmax,
+    split_nd,
 )
-
 
 pars = [
     {"shape": (randint(1, 99),), "splits": (randint(1, 10),)},
@@ -72,10 +72,7 @@ def test_split_nd_sizes(par):
 def test_apply_along_wedges(par):
     shape = par["shape"]
     Cop = FDCT(shape, axes=list(range(len(shape))))
-    x = (
-        np.random.normal(0.0, 1.0, shape)
-        + np.random.normal(0.0, 1.0, shape) * 1j
-    )
+    x = np.random.normal(0.0, 1.0, shape) + np.random.normal(0.0, 1.0, shape) * 1j
     # Create a vector of curvelet coeffs
     y = Cop @ x
     # Convert to structure

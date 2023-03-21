@@ -16,6 +16,8 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+from sphinx_gallery.sorting import ExampleTitleSortKey
+
 from curvelops import __version__ as version
 
 release = version
@@ -43,6 +45,8 @@ extensions = [
     "sphinx.ext.ifconfig",
     "sphinx.ext.viewcode",
     "sphinx.ext.intersphinx",
+    "sphinx_gallery.gen_gallery",
+    "sphinx_copybutton",
 ]
 
 # intersphinx configuration
@@ -85,7 +89,7 @@ pygments_style = None
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = "sphinx_rtd_theme"
+html_theme = "pydata_sphinx_theme"
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -191,3 +195,44 @@ epub_exclude_files = ["search.html"]
 
 # -- Extension configuration -------------------------------------------------
 autodoc_typehints = "none"
+
+sphinx_gallery_conf = {
+    "examples_dirs": "../../examples",  # path to your example scripts
+    "gallery_dirs": "gallery",  # path to where to save gallery generated output
+    "filename_pattern": r"\.py",
+    # Remove the "Download all examples" button from the top level gallery
+    "download_all_examples": False,
+    # Sort gallery example by file name instead of number of lines (default)
+    "within_subsection_order": ExampleTitleSortKey,
+    # directory where function granular galleries are stored
+    "backreferences_dir": "api/generated/backreferences",
+    # Modules for which function level galleries are created.
+    "doc_module": "curvelops",
+    # Insert links to documentation of objects in the examples
+    "reference_url": {"curvelops": None},
+}
+# Always show the source code that generates a plot
+plot_include_source = True
+plot_formats = ["png"]
+# Sphinx project configuration
+templates_path = ["_templates"]
+exclude_patterns = ["_build", "**.ipynb_checkpoints", "**.ipynb", "**.md5"]
+source_suffix = ".rst"
+
+# Copybutton config
+copybutton_prompt_text = r">>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: "
+copybutton_prompt_is_regexp = True
+
+# Pydata config
+html_theme_options = {
+    "github_url": "https://github.com/PyLops/curvelops",
+    "external_links": [{"url": "https://github.com/PyLops/pylops", "name": "PyLops"}],
+    "header_links_before_dropdown": 10,
+    "show_toc_level": 2,
+}
+html_context = {
+    "github_user": "PyLops",
+    "github_repo": "curvelops",
+    "github_version": "main",
+    "doc_path": "docssrc",
+}
