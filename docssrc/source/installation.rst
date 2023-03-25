@@ -61,7 +61,7 @@ Once FFTW and CurveLab are installed, install Curvelops with:
 
     $ export FFTW=/path/to/fftw-2.1.5
     $ export FDCT=/path/to/CurveLab-2.1.3
-    $ python3 -m pip install git+https://github.com/PyLops/curvelops@0.21
+    $ python3 -m pip install git+https://github.com/PyLops/curvelops@0.23
 
 The ``FFTW`` variable is the same as ``FFTW_DIR`` as provided in the CurveLab
 installation. The ``FDCT`` variable points to the root of the CurveLab
