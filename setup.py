@@ -117,6 +117,7 @@ setup(
         "numpy>=1.21.0",
         "scipy>=1.9.1; python_version >= '3.9'",
         "pylops>=2.0",
+        "matplotlib",
     ],
     setup_requires=[
         "pybind11>=2.6.0; python_version < '3.10'",
