@@ -63,6 +63,9 @@ docgithub:
 	cd docssrc && make github && cd ..
 
 docpush:
+	# Only run when main is at a release commit/tag
+	python3 -m pip install git+https://github.com/PyLops/curvelops@`git describe --tags`
 	git checkout gh-pages && git merge main && cd docssrc && make github &&\
 	cd ../docs && git add . && git commit -m "Updated documentation" &&\
 	git push origin gh-pages && git checkout main
+	python3 -m pip install -e .
