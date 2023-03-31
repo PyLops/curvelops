@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Installation &#8212; curvelops 0.23 documentation</title>
+    <title>Installation &#8212; curvelops 0.23.2 documentation</title>
   
   
   
@@ -105,7 +105,7 @@
 
   
   
-    <p class="title logo__title">curvelops 0.23 documentation</p>
+    <p class="title logo__title">curvelops 0.23.2 documentation</p>
   
 </a>
     
@@ -368,11 +368,17 @@
 <span class="gp">$ </span>mv fftw-2.1.5/ /home/<span class="nv">$USER</span>/opt/
 <span class="gp">$ </span><span class="nb">cd</span> /home/<span class="nv">$USER</span>/opt/fftw-2.1.5/
 <span class="gp">$ </span>./configure --with-pic --prefix<span class="o">=</span>/home/<span class="nv">$USER</span>/opt/fftw-2.1.5 --with-gcc<span class="o">=</span><span class="k">$(</span>which gcc<span class="k">)</span>
+<span class="gp">$ </span>make
+<span class="gp">$ </span>make install
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">--prefix</span></code> and <code class="docutils literal notranslate"><span class="pre">--with-gcc</span></code> are optional and determine where it will
 install FFTW and where to find the GCC compiler, respectively. We recommend
-using the same compiler for FFTW and CurveLab.</p>
+using the same compiler for FFTW and CurveLab. To ensure that FFTW has been
+installed correctly, run</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>make check
+</pre></div>
+</div>
 </section>
 <section id="installing-curvelab">
 <h3>Installing CurveLab<a class="headerlink" href="#installing-curvelab" title="Permalink to this heading">#</a></h3>
@@ -389,7 +395,16 @@ We recommend setting <code class="docutils literal notranslate"><span class="pre
 (or whatever directory was used in the <code class="docutils literal notranslate"><span class="pre">--prefix</span></code> option above), the output
 of <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">gcc</span></code> in CC (or whatever compiler was used in <code class="docutils literal notranslate"><span class="pre">--with-gcc</span></code>), and
 the ouput of <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">g++</span></code> (or whatever C++ compiler is the equivalent of
-the selected <code class="docutils literal notranslate"><span class="pre">CC</span></code> compiler).</p>
+the selected <code class="docutils literal notranslate"><span class="pre">CC</span></code> compiler). Once the variables are set in <cite>makefile.opt</cite>,
+compile the library with</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span> /home/<span class="nv">$USER</span>/opt/CurveLab-2.1.3/
+<span class="gp">$ </span>make lib
+</pre></div>
+</div>
+<p>To ensure that CurveLab is installed correctly, run</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>make <span class="nb">test</span>
+</pre></div>
+</div>
 </section>
 </section>
 <section id="installing-curvelops">

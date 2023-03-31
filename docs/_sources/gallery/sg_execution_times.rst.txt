@@ -6,18 +6,18 @@
 
 Computation times
 =================
-**01:04.014** total execution time for **gallery** files:
+**01:22.187** total execution time for **gallery** files:
 
 +---------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_gallery_plot_sigmoid.py` (``plot_sigmoid.py``)                               | 00:50.748 | 0.0 MB |
+| :ref:`sphx_glr_gallery_plot_sigmoid.py` (``plot_sigmoid.py``)                               | 00:44.810 | 0.0 MB |
 +---------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_gallery_plot_sigmoid_coefficients.py` (``plot_sigmoid_coefficients.py``)     | 00:07.098 | 0.0 MB |
+| :ref:`sphx_glr_gallery_plot_seismic_regularization.py` (``plot_seismic_regularization.py``) | 00:17.616 | 0.0 MB |
 +---------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_gallery_plot_sigmoid_disks.py` (``plot_sigmoid_disks.py``)                   | 00:06.168 | 0.0 MB |
+| :ref:`sphx_glr_gallery_plot_sigmoid_coefficients.py` (``plot_sigmoid_coefficients.py``)     | 00:07.143 | 0.0 MB |
 +---------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_gallery_plot_curvelets_in_fk.py` (``plot_curvelets_in_fk.py``)               | 00:00.000 | 0.0 MB |
+| :ref:`sphx_glr_gallery_plot_sigmoid_disks.py` (``plot_sigmoid_disks.py``)                   | 00:06.142 | 0.0 MB |
 +---------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_gallery_plot_seismic_regularization.py` (``plot_seismic_regularization.py``) | 00:00.000 | 0.0 MB |
+| :ref:`sphx_glr_gallery_plot_curvelets_in_fk.py` (``plot_curvelets_in_fk.py``)               | 00:05.146 | 0.0 MB |
 +---------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_gallery_plot_single_curvelet.py` (``plot_single_curvelet.py``)               | 00:00.000 | 0.0 MB |
+| :ref:`sphx_glr_gallery_plot_single_curvelet.py` (``plot_single_curvelet.py``)               | 00:01.330 | 0.0 MB |
 +---------------------------------------------------------------------------------------------+-----------+--------+
