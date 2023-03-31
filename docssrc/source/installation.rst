@@ -28,10 +28,18 @@ Download and install with:
     $ mv fftw-2.1.5/ /home/$USER/opt/
     $ cd /home/$USER/opt/fftw-2.1.5/
     $ ./configure --with-pic --prefix=/home/$USER/opt/fftw-2.1.5 --with-gcc=$(which gcc)
+    $ make
+    $ make install
 
 The ``--prefix`` and ``--with-gcc`` are optional and determine where it will
 install FFTW and where to find the GCC compiler, respectively. We recommend
-using the same compiler for FFTW and CurveLab.
+using the same compiler for FFTW and CurveLab. To ensure that FFTW has been
+installed correctly, run
+
+..  code-block:: console
+
+    $ make check
+
 
 Installing CurveLab
 ~~~~~~~~~~~~~~~~~~~
@@ -50,7 +58,19 @@ We recommend setting ``FFTW_DIR=/home/$USER/opt/fftw-2.1.5``
 (or whatever directory was used in the ``--prefix`` option above), the output
 of ``which gcc`` in CC (or whatever compiler was used in ``--with-gcc``), and
 the ouput of ``which g++`` (or whatever C++ compiler is the equivalent of
-the selected ``CC`` compiler).
+the selected ``CC`` compiler). Once the variables are set in `makefile.opt`,
+compile the library with
+
+..  code-block:: console
+
+    $ cd /home/$USER/opt/CurveLab-2.1.3/
+    $ make lib
+
+To ensure that CurveLab is installed correctly, run
+
+..  code-block:: console
+
+    $ make test
 
 Installing Curvelops
 --------------------
