@@ -1,195 +1,207 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" data-content_root="./" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>API &#8212; curvelops 0.23.2 documentation</title>
+    <title>API &#8212; curvelops 0.23.1 documentation</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
-<link href="_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=362ab14a" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-rendered-html.css?v=1277b6f3" />
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
-
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-rendered-html.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
+    <script src="_static/documentation_options.js?v=832b3b9f"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=30646c52"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'modules';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Gallery" href="gallery/index.html" />
     <link rel="prev" title="Installation" href="installation.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="docsearch:language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.23.1" />
   </head>
   
   
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
-  <label class="overlay overlay-primary" for="__primary"></label>
-
-  
-  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
-      
-<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form>
-    </div>
-  </div>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
 
   
-  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
-      <span class="fa-solid fa-bars"></span>
-  </label>
-  <div id="navbar-start">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
     
+      <div class="navbar-item">
+
+  
     
   
-
 
 <a class="navbar-brand logo" href="index.html">
-
   
   
   
   
   
   
+    <p class="title logo__title">curvelops 0.23.1 documentation</p>
   
-
-  
-  
-    <p class="title logo__title">curvelops 0.23.2 documentation</p>
-  
-</a>
+</a></div>
     
   </div>
-
   
   <div class="col-lg-9 navbar-header-items">
-    <div id="navbar-center" class="mr-auto">
+    
+    <div class="me-auto navbar-header-items__center">
       
-      <div class="navbar-center-item">
-        <nav class="navbar-nav">
-    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
-        Site Navigation
-    </p>
-    <ul id="navbar-main-elements" class="navbar-nav">
-        
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="index.html">
-                        Overview
-                      </a>
-                    </li>
-                
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="index.html">
+    Overview
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="installation.html">
-                        Installation
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="#">
-                        API
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="installation.html">
+    Installation
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="gallery/index.html">
-                        Gallery
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="contributing.html">
-                        Contributing
-                      </a>
-                    </li>
-                
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    API
+  </a>
+</li>
 
-                <li class="nav-item">
-                  <a class="nav-link nav-external" href="https://github.com/PyLops/pylops">
-                    PyLops
-                  </a>
-                </li>
-                
-    </ul>
-</nav>
-      </div>
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="gallery/index.html">
+    Gallery
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="contributing.html">
+    Contributing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://github.com/PyLops/pylops">
+    PyLops
+  </a>
+</li>
+
+  </ul>
+</nav></div>
       
     </div>
-
-    <div id="navbar-end">
+    
+    
+    <div class="navbar-header-items__end">
       
-        <div class="navbar-end-item navbar-persistent--container">
+        <div class="navbar-item navbar-persistent--container">
           
-<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
-  <i class="fa-solid fa-magnifying-glass"></i>
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
 </button>
         </div>
       
       
-      <div class="navbar-end-item">
-        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
-</button>
-      </div>
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
-      <div class="navbar-end-item">
-        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
         <li class="nav-item">
           
           
@@ -198,115 +210,119 @@
           
           
           
-          <a href="https://github.com/PyLops/curvelops" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          
+          <a href="https://github.com/PyLops/curvelops" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
         </li>
-      </ul>
-      </div>
+</ul></div>
       
     </div>
+    
   </div>
-
-
   
   
     <div class="navbar-persistent--mobile">
-<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
-  <i class="fa-solid fa-magnifying-glass"></i>
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
 </button>
     </div>
   
 
   
-  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
-  </label>
+    </button>
   
-
 </div>
-  </nav>
+
+    </header>
   
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
+
   
   <div class="sidebar-header-items sidebar-primary__section">
     
     
       <div class="sidebar-header-items__center">
-      
-      <div class="navbar-center-item">
-        <nav class="navbar-nav">
-    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
-        Site Navigation
-    </p>
-    <ul id="navbar-main-elements" class="navbar-nav">
         
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="index.html">
-                        Overview
-                      </a>
-                    </li>
-                
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="index.html">
+    Overview
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="installation.html">
-                        Installation
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="#">
-                        API
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="installation.html">
+    Installation
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="gallery/index.html">
-                        Gallery
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="contributing.html">
-                        Contributing
-                      </a>
-                    </li>
-                
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    API
+  </a>
+</li>
 
-                <li class="nav-item">
-                  <a class="nav-link nav-external" href="https://github.com/PyLops/pylops">
-                    PyLops
-                  </a>
-                </li>
-                
-    </ul>
-</nav>
-      </div>
-      
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="gallery/index.html">
+    Gallery
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="contributing.html">
+    Contributing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://github.com/PyLops/pylops">
+    PyLops
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
       </div>
     
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
 
-    
-    
-    <div class="sidebar-header-items__end">
-      
-      <div class="navbar-end-item">
-        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
-</button>
-      </div>
-      
-      <div class="navbar-end-item">
-        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
         <li class="nav-item">
           
           
@@ -315,99 +331,145 @@
           
           
           
-          <a href="https://github.com/PyLops/curvelops" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          
+          <a href="https://github.com/PyLops/curvelops" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
         </li>
-      </ul>
+</ul></div>
+        
       </div>
-      
-    </div>
     
   </div>
-
   
-
-  
-  <div class="sidebar-end-items sidebar-primary__section">
-    <div class="sidebar-end-items__item">
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"></div>
+</nav></div>
     </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
-
   
   <div id="rtd-footer-container"></div>
 
+
       </div>
-      <main id="main-content" class="bd-main">
+      
+      <main id="main-content" class="bd-main" role="main">
         
         
-        <div class="bd-content">
-          <div class="bd-article-container">
-            
-            <div class="bd-header-article">
-                
-            </div>
-            
-            
-            <article class="bd-article" role="main">
+          <div class="bd-content">
+            <div class="bd-article-container">
               
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">API</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="api">
-<span id="id1"></span><h1>API<a class="headerlink" href="#api" title="Permalink to this heading">#</a></h1>
+<span id="id1"></span><h1>API<a class="headerlink" href="#api" title="Link to this heading">#</a></h1>
 <section id="module-curvelops.curvelops">
-<span id="curvelops"></span><h2>curvelops<a class="headerlink" href="#module-curvelops.curvelops" title="Permalink to this heading">#</a></h2>
+<span id="curvelops"></span><h2>curvelops<a class="headerlink" href="#module-curvelops.curvelops" title="Link to this heading">#</a></h2>
 <section id="curvelops-curvelops">
-<h3><code class="docutils literal notranslate"><span class="pre">curvelops.curvelops</span></code><a class="headerlink" href="#curvelops-curvelops" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">curvelops.curvelops</span></code><a class="headerlink" href="#curvelops-curvelops" title="Link to this heading">#</a></h3>
 <p>Provides a LinearOperator for the 2D and 3D curvelet transforms.</p>
 </section>
 <dl class="py class">
 <dt class="sig sig-object py" id="curvelops.curvelops.FDCT">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">curvelops.curvelops.</span></span><span class="sig-name descname"><span class="pre">FDCT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbscales</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbangles_coarse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allcurvelets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'complex128'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/curvelops.html#FDCT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.curvelops.FDCT" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">curvelops.curvelops.</span></span><span class="sig-name descname"><span class="pre">FDCT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbscales</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbangles_coarse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allcurvelets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'complex128'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/curvelops.html#FDCT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.curvelops.FDCT" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">LinearOperator</span></code></p>
 <p>2D/3D dimensional Curvelet operator.
 Apply 2D/3D Curvelet Transform along two <code class="docutils literal notranslate"><span class="pre">axes</span></code> of a
 multi-dimensional array of size <code class="docutils literal notranslate"><span class="pre">dims</span></code>.</p>
 <section id="parameters">
-<h3>Parameters<a class="headerlink" href="#parameters" title="Permalink to this heading">#</a></h3>
+<h3>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">#</a></h3>
 <dl>
-<dt>dims<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a></span></dt><dd><p>Number of samples for each dimension.</p>
+<dt>dims<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a></span></dt><dd><p>Number of samples for each dimension.</p>
 </dd>
-<dt>axes<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a>, optional</span></dt><dd><p>Axes along which FDCT is applied.</p>
+<dt>axes<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a>, optional</span></dt><dd><p>Axes along which FDCT is applied.</p>
 </dd>
-<dt>nbscales<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Number of scales (including the coarsest level);
+<dt>nbscales<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Number of scales (including the coarsest level);
 Defaults to ceil(log2(min(input_dims)) - 3).</p>
 </dd>
-<dt>nbangles_coarse<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Number of angles at 2nd coarsest scale.</p>
+<dt>nbangles_coarse<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Number of angles at 2nd coarsest scale.</p>
 </dd>
-<dt>allcurvelets<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional</span></dt><dd><p>Use curvelets at the finest (last) scale.
+<dt>allcurvelets<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional</span></dt><dd><p>Use curvelets at the finest (last) scale.
 If <code class="docutils literal notranslate"><span class="pre">False</span></code>, a wavelet transform will be used for the
 finest scale. The coarsest scale is always a wavelet transform;
 the ones between the coarsest and the finest are all curvelet
 transforms. This option only affects the finest scale.</p>
 </dd>
-<dt>dtype<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.DTypeLike" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DTypeLike</span></code></a>, optional</span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">dtype</span></code> of the transform.</p>
+<dt>dtype<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.DTypeLike" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DTypeLike</span></code></a>, optional</span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">dtype</span></code> of the transform.</p>
 </dd>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="curvelops.curvelops.FDCT.inverse">
-<span class="sig-name descname"><span class="pre">inverse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/curvelops.html#FDCT.inverse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.curvelops.FDCT.inverse" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">inverse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/curvelops.html#FDCT.inverse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.curvelops.FDCT.inverse" title="Link to this definition">#</a></dt>
+<dd><p>Inverse Curvelet Transform</p>
+<section id="id2">
+<h4>Parameters<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<dl class="simple">
+<dt>x<span class="classifier">NDArray</span></dt><dd><p>Input vector</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h4>Returns<a class="headerlink" href="#returns" title="Link to this heading">#</a></h4>
+<dl class="simple">
+<dt>NDArray</dt><dd><p>FDCT.H &#64; x</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="curvelops.curvelops.FDCT.struct">
-<span class="sig-name descname"><span class="pre">struct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/curvelops.html#FDCT.struct"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.curvelops.FDCT.struct" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">struct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/curvelops.html#FDCT.struct"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.curvelops.FDCT.struct" title="Link to this definition">#</a></dt>
 <dd><p>Convert curvelet flattened vector to curvelet structure.</p>
 <p>The FDCT always returns a 1D vector that has all curvelet
 coefficients. These coefficients can be organized into
 scales, wedges and spatial positions. Applying this
 function to a 1D vector generates this structure.</p>
-<section id="id2">
-<h4>Parameters<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<section id="id3">
+<h4>Parameters<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
 <dl>
-<dt>x<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></span></dt><dd><p>Input flattened vector.</p>
+<dt>x<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></span></dt><dd><p>Input flattened vector.</p>
 </dd>
 </dl>
 </section>
-<section id="returns">
-<h4>Returns<a class="headerlink" href="#returns" title="Permalink to this heading">#</a></h4>
+<section id="id4">
+<h4>Returns<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
 <dl class="simple">
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">FDCTStructLike</span></code></dt><dd><p>Curvelet structure, a list of lists of multidimensional arrays.
 The first index corresponds to scale, the second corresponds to
@@ -419,24 +481,24 @@ angular wedge.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="curvelops.curvelops.FDCT.vect">
-<span class="sig-name descname"><span class="pre">vect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/curvelops.html#FDCT.vect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.curvelops.FDCT.vect" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">vect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/curvelops.html#FDCT.vect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.curvelops.FDCT.vect" title="Link to this definition">#</a></dt>
 <dd><p>Convert curvelet structure to curvelet flattened vector.</p>
 <p>The FDCT always returns a 1D vector that has all curvelet
 coefficients. These coefficients can be organized into
 scales, wedges and spatial positions. Applying this
 function to a curvelet structure returns the flattened
 vector.</p>
-<section id="id3">
-<h4>Parameters<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<section id="id5">
+<h4>Parameters<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
 <dl>
 <dt>x<span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FDCTStructLike</span></code></span></dt><dd><p>Input curvelet structure.</p>
 </dd>
 </dl>
 </section>
-<section id="id4">
-<h4>Returns<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
+<section id="id6">
+<h4>Returns<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
 <dl class="simple">
-<dt><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></dt><dd><p>Flattened vector.</p>
+<dt><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></dt><dd><p>Flattened vector.</p>
 </dd>
 </dl>
 </section>
@@ -447,30 +509,30 @@ vector.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="curvelops.curvelops.FDCT2D">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">curvelops.curvelops.</span></span><span class="sig-name descname"><span class="pre">FDCT2D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(-2,</span> <span class="pre">-1)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbscales</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbangles_coarse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allcurvelets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'complex128'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/curvelops.html#FDCT2D"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.curvelops.FDCT2D" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">curvelops.curvelops.</span></span><span class="sig-name descname"><span class="pre">FDCT2D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(-2,</span> <span class="pre">-1)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbscales</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbangles_coarse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allcurvelets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'complex128'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/curvelops.html#FDCT2D"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.curvelops.FDCT2D" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#curvelops.curvelops.FDCT" title="curvelops.curvelops.FDCT"><code class="xref py py-class docutils literal notranslate"><span class="pre">FDCT</span></code></a></p>
 <p>2D dimensional Curvelet operator.
 Apply 2D Curvelet Transform along two <code class="docutils literal notranslate"><span class="pre">axes</span></code> of a
 multi-dimensional array of size <code class="docutils literal notranslate"><span class="pre">dims</span></code>.</p>
-<section id="id5">
-<h3>Parameters<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<section id="id7">
+<h3>Parameters<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <dl>
-<dt>dims<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a></span></dt><dd><p>Number of samples for each dimension.</p>
+<dt>dims<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a></span></dt><dd><p>Number of samples for each dimension.</p>
 </dd>
-<dt>axes<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a>, optional</span></dt><dd><p>Axes along which FDCT is applied.</p>
+<dt>axes<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a>, optional</span></dt><dd><p>Axes along which FDCT is applied.</p>
 </dd>
-<dt>nbscales<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Number of scales (including the coarsest level);
+<dt>nbscales<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Number of scales (including the coarsest level);
 Defaults to ceil(log2(min(input_dims)) - 3).</p>
 </dd>
-<dt>nbangles_coarse<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Number of angles at 2nd coarsest scale.</p>
+<dt>nbangles_coarse<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Number of angles at 2nd coarsest scale.</p>
 </dd>
-<dt>allcurvelets<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional</span></dt><dd><p>Use curvelets at the finest (last) scale.
+<dt>allcurvelets<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional</span></dt><dd><p>Use curvelets at the finest (last) scale.
 If <code class="docutils literal notranslate"><span class="pre">False</span></code>, a wavelet transform will be used for the
 finest scale. The coarsest scale is always a wavelet transform;
 the ones between the coarsest and the finest are all curvelet
 transforms. This option only affects the finest scale.</p>
 </dd>
-<dt>dtype<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.DTypeLike" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DTypeLike</span></code></a>, optional</span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">dtype</span></code> of the transform.</p>
+<dt>dtype<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.DTypeLike" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DTypeLike</span></code></a>, optional</span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">dtype</span></code> of the transform.</p>
 </dd>
 </dl>
 </section>
@@ -478,30 +540,30 @@ transforms. This option only affects the finest scale.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="curvelops.curvelops.FDCT3D">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">curvelops.curvelops.</span></span><span class="sig-name descname"><span class="pre">FDCT3D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(-3,</span> <span class="pre">-2,</span> <span class="pre">-1)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbscales</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbangles_coarse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allcurvelets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'complex128'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/curvelops.html#FDCT3D"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.curvelops.FDCT3D" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">curvelops.curvelops.</span></span><span class="sig-name descname"><span class="pre">FDCT3D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(-3,</span> <span class="pre">-2,</span> <span class="pre">-1)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbscales</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbangles_coarse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allcurvelets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'complex128'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/curvelops.html#FDCT3D"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.curvelops.FDCT3D" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#curvelops.curvelops.FDCT" title="curvelops.curvelops.FDCT"><code class="xref py py-class docutils literal notranslate"><span class="pre">FDCT</span></code></a></p>
 <p>3D dimensional Curvelet operator.
 Apply 3D Curvelet Transform along two <code class="docutils literal notranslate"><span class="pre">axes</span></code> of a
 multi-dimensional array of size <code class="docutils literal notranslate"><span class="pre">dims</span></code>.</p>
-<section id="id6">
-<h3>Parameters<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<section id="id8">
+<h3>Parameters<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <dl>
-<dt>dims<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a></span></dt><dd><p>Number of samples for each dimension.</p>
+<dt>dims<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a></span></dt><dd><p>Number of samples for each dimension.</p>
 </dd>
-<dt>axes<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a>, optional</span></dt><dd><p>Axes along which FDCT is applied.</p>
+<dt>axes<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a>, optional</span></dt><dd><p>Axes along which FDCT is applied.</p>
 </dd>
-<dt>nbscales<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Number of scales (including the coarsest level);
+<dt>nbscales<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Number of scales (including the coarsest level);
 Defaults to ceil(log2(min(input_dims)) - 3).</p>
 </dd>
-<dt>nbangles_coarse<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Number of angles at 2nd coarsest scale.</p>
+<dt>nbangles_coarse<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Number of angles at 2nd coarsest scale.</p>
 </dd>
-<dt>allcurvelets<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional</span></dt><dd><p>Use curvelets at the finest (last) scale.
+<dt>allcurvelets<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional</span></dt><dd><p>Use curvelets at the finest (last) scale.
 If <code class="docutils literal notranslate"><span class="pre">False</span></code>, a wavelet transform will be used for the
 finest scale. The coarsest scale is always a wavelet transform;
 the ones between the coarsest and the finest are all curvelet
 transforms. This option only affects the finest scale.</p>
 </dd>
-<dt>dtype<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.DTypeLike" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DTypeLike</span></code></a>, optional</span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">dtype</span></code> of the transform.</p>
+<dt>dtype<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.DTypeLike" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DTypeLike</span></code></a>, optional</span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">dtype</span></code> of the transform.</p>
 </dd>
 </dl>
 </section>
@@ -509,40 +571,40 @@ transforms. This option only affects the finest scale.</p>
 
 </section>
 <section id="module-curvelops.plot">
-<span id="plot"></span><h2>plot<a class="headerlink" href="#module-curvelops.plot" title="Permalink to this heading">#</a></h2>
+<span id="plot"></span><h2>plot<a class="headerlink" href="#module-curvelops.plot" title="Link to this heading">#</a></h2>
 <section id="curvelops-plot">
-<h3><code class="docutils literal notranslate"><span class="pre">curvelops.plot</span></code><a class="headerlink" href="#curvelops-plot" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">curvelops.plot</span></code><a class="headerlink" href="#curvelops-plot" title="Link to this heading">#</a></h3>
 <p>Auxiliary functions for plotting.</p>
 </section>
 <dl class="py function">
 <dt class="sig sig-object py" id="curvelops.plot.create_axes_grid">
-<span class="sig-prename descclassname"><span class="pre">curvelops.plot.</span></span><span class="sig-name descname"><span class="pre">create_axes_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs_figure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs_gridspec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs_subplots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/plot/_generic.html#create_axes_grid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.plot.create_axes_grid" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">curvelops.plot.</span></span><span class="sig-name descname"><span class="pre">create_axes_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs_figure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs_gridspec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs_subplots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/plot/_generic.html#create_axes_grid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.plot.create_axes_grid" title="Link to this definition">#</a></dt>
 <dd><p>Creates a grid of axes.</p>
-<section id="id7">
-<h3>Parameters<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<section id="id9">
+<h3>Parameters<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <dl>
-<dt>rows<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of rows.</p>
+<dt>rows<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of rows.</p>
 </dd>
-<dt>cols<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of columns.</p>
+<dt>cols<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of columns.</p>
 </dd>
-<dt>kwargs_figure<span class="classifier"><code class="docutils literal notranslate"><span class="pre">Optional[dict]</span></code>, optional</span></dt><dd><p>Arguments to be passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="(in Matplotlib v3.7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib.pyplot.figure</span></code></a>.</p>
+<dt>kwargs_figure<span class="classifier"><code class="docutils literal notranslate"><span class="pre">Optional[dict]</span></code>, optional</span></dt><dd><p>Arguments to be passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="(in Matplotlib v3.10.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib.pyplot.figure</span></code></a>.</p>
 </dd>
-<dt>kwargs_gridspec<span class="classifier"><code class="docutils literal notranslate"><span class="pre">Optional[dict]</span></code>, optional</span></dt><dd><p>Arguments to be passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.gridspec.GridSpec.html#matplotlib.gridspec.GridSpec" title="(in Matplotlib v3.7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib.gridspec.GridSpec</span></code></a>.</p>
+<dt>kwargs_gridspec<span class="classifier"><code class="docutils literal notranslate"><span class="pre">Optional[dict]</span></code>, optional</span></dt><dd><p>Arguments to be passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.gridspec.GridSpec.html#matplotlib.gridspec.GridSpec" title="(in Matplotlib v3.10.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib.gridspec.GridSpec</span></code></a>.</p>
 </dd>
-<dt>kwargs_subplots<span class="classifier"><code class="docutils literal notranslate"><span class="pre">Optional[dict]</span></code>, optional</span></dt><dd><p>Arguments to be passed to <a class="reference external" href="https://matplotlib.org/stable/api/figure_api.html#matplotlib.figure.Figure.add_subplot" title="(in Matplotlib v3.7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib.figure.Figure.add_subplot</span></code></a>.</p>
+<dt>kwargs_subplots<span class="classifier"><code class="docutils literal notranslate"><span class="pre">Optional[dict]</span></code>, optional</span></dt><dd><p>Arguments to be passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.add_subplot.html#matplotlib.figure.Figure.add_subplot" title="(in Matplotlib v3.10.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib.figure.Figure.add_subplot</span></code></a>.</p>
 </dd>
 </dl>
 </section>
-<section id="id8">
-<h3>Returns<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<section id="id10">
+<h3>Returns<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
 <dl>
-<dt>Tuple[<a class="reference external" href="https://matplotlib.org/stable/api/figure_api.html#matplotlib.figure.Figure" title="(in Matplotlib v3.7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Figure</span></code></a>, <a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a>]</dt><dd><p><strong>fig</strong> : Figure.</p>
-<p><strong>axs</strong> : Array of <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a> shaped <code class="docutils literal notranslate"><span class="pre">(rows,</span> <span class="pre">cols)</span></code>.</p>
+<dt>Tuple[<a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="(in Matplotlib v3.10.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Figure</span></code></a>, <a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a>]</dt><dd><p><strong>fig</strong> : Figure.</p>
+<p><strong>axs</strong> : Array of <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.10.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a> shaped <code class="docutils literal notranslate"><span class="pre">(rows,</span> <span class="pre">cols)</span></code>.</p>
 </dd>
 </dl>
 </section>
 <section id="examples">
-<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h3>
+<h3>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h3>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">curvelops.plot</span> <span class="kn">import</span> <span class="n">create_axes_grid</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rows</span><span class="p">,</span> <span class="n">cols</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">create_axes_grid</span><span class="p">(</span>
@@ -562,35 +624,35 @@ transforms. This option only affects the finest scale.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="curvelops.plot.create_colorbar">
-<span class="sig-prename descclassname"><span class="pre">curvelops.plot.</span></span><span class="sig-name descname"><span class="pre">create_colorbar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'vertical'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/plot/_generic.html#create_colorbar"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.plot.create_colorbar" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">curvelops.plot.</span></span><span class="sig-name descname"><span class="pre">create_colorbar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'vertical'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/plot/_generic.html#create_colorbar"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.plot.create_colorbar" title="Link to this definition">#</a></dt>
 <dd><p>Create a colorbar.</p>
 <p>Divides  axis and attaches a colorbar to it.</p>
-<section id="id9">
-<h3>Parameters<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<section id="id11">
+<h3>Parameters<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
 <dl>
-<dt>im<span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/image_api.html#matplotlib.image.AxesImage" title="(in Matplotlib v3.7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AxesImage</span></code></a></span></dt><dd><p>Image from which the colorbar will be created.
-Commonly the output of <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow" title="(in Matplotlib v3.7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib.pyplot.imshow</span></code></a>.</p>
+<dt>im<span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/image_api.html#matplotlib.image.AxesImage" title="(in Matplotlib v3.10.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AxesImage</span></code></a></span></dt><dd><p>Image from which the colorbar will be created.
+Commonly the output of <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow" title="(in Matplotlib v3.10.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib.pyplot.imshow</span></code></a>.</p>
 </dd>
-<dt>ax<span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Axis which to split.</p>
+<dt>ax<span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.10.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Axis which to split.</p>
 </dd>
-<dt>size<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>, optional</span></dt><dd><p>Size of split, by default 0.05. Effectively sets the size of the colorbar.</p>
+<dt>size<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>, optional</span></dt><dd><p>Size of split, by default 0.05. Effectively sets the size of the colorbar.</p>
 </dd>
-<dt>pad<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>, optional`</span></dt><dd><p>Padding between colorbar axis and input axis, by default 0.1.</p>
+<dt>pad<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>, optional`</span></dt><dd><p>Padding between colorbar axis and input axis, by default 0.1.</p>
 </dd>
-<dt>orientation<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>, optional</span></dt><dd><p>Orientation of the colorbar, by default “vertical”.</p>
+<dt>orientation<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>, optional</span></dt><dd><p>Orientation of the colorbar, by default “vertical”.</p>
 </dd>
 </dl>
 </section>
-<section id="id10">
-<h3>Returns<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<section id="id12">
+<h3>Returns<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <dl>
-<dt>Tuple[<a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, <a class="reference external" href="https://matplotlib.org/stable/api/colorbar_api.html#matplotlib.colorbar.Colorbar" title="(in Matplotlib v3.7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Colorbar</span></code></a>]</dt><dd><p><strong>cax</strong> : Colorbar axis.</p>
+<dt>Tuple[<a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.10.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, <a class="reference external" href="https://matplotlib.org/stable/api/colorbar_api.html#matplotlib.colorbar.Colorbar" title="(in Matplotlib v3.10.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Colorbar</span></code></a>]</dt><dd><p><strong>cax</strong> : Colorbar axis.</p>
 <p><strong>cb</strong> : Colorbar.</p>
 </dd>
 </dl>
 </section>
-<section id="id11">
-<h3>Examples<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<section id="id13">
+<h3>Examples<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <span class="n">MultipleLocator</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">curvelops.plot</span> <span class="kn">import</span> <span class="n">create_colorbar</span>
@@ -607,37 +669,37 @@ Commonly the output of <a class="reference external" href="https://matplotlib.or
 
 <dl class="py function">
 <dt class="sig sig-object py" id="curvelops.plot.create_inset_axes_grid">
-<span class="sig-prename descclassname"><span class="pre">curvelops.plot.</span></span><span class="sig-name descname"><span class="pre">create_inset_axes_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs_inset_axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/plot/_generic.html#create_inset_axes_grid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.plot.create_inset_axes_grid" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">curvelops.plot.</span></span><span class="sig-name descname"><span class="pre">create_inset_axes_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs_inset_axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/plot/_generic.html#create_inset_axes_grid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.plot.create_inset_axes_grid" title="Link to this definition">#</a></dt>
 <dd><p>Create a grid of insets.</p>
 <p>The input axis will be overlaid with a grid of insets.
 Numbering of the axes is top to bottom (rows) and
 left to right (cols).</p>
-<section id="id12">
-<h3>Parameters<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
-<dl>
-<dt>ax<span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Input axis.</p>
-</dd>
-<dt>rows<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of rows.</p>
-</dd>
-<dt>cols<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of columns.</p>
-</dd>
-<dt>width<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>, optional</span></dt><dd><p>Width of each axis, as a percentage of <code class="docutils literal notranslate"><span class="pre">cols</span></code>, by default 0.5.</p>
-</dd>
-<dt>height<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>, optional</span></dt><dd><p>Height of each axis, as a percentage of <code class="docutils literal notranslate"><span class="pre">rows</span></code>, by default 0.5.</p>
-</dd>
-<dt>kwargs_inset_axes<span class="classifier"><code class="docutils literal notranslate"><span class="pre">Optional[dict]</span></code>, optional</span></dt><dd><p>Arguments to be passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.inset_axes.html#matplotlib.axes.Axes.inset_axes" title="(in Matplotlib v3.7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib.axes.Axes.inset_axes</span></code></a>.</p>
-</dd>
-</dl>
-</section>
-<section id="id13">
-<h3>Returns<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
-<dl class="simple">
-<dt><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></dt><dd><p>Array of <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a> shaped <code class="docutils literal notranslate"><span class="pre">(rows,</span> <span class="pre">cols)</span></code>.</p>
-</dd>
-</dl>
-</section>
 <section id="id14">
-<h3>Examples<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
+<h3>Parameters<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<dl>
+<dt>ax<span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.10.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Input axis.</p>
+</dd>
+<dt>rows<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of rows.</p>
+</dd>
+<dt>cols<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of columns.</p>
+</dd>
+<dt>width<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>, optional</span></dt><dd><p>Width of each axis, as a percentage of <code class="docutils literal notranslate"><span class="pre">cols</span></code>, by default 0.5.</p>
+</dd>
+<dt>height<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>, optional</span></dt><dd><p>Height of each axis, as a percentage of <code class="docutils literal notranslate"><span class="pre">rows</span></code>, by default 0.5.</p>
+</dd>
+<dt>kwargs_inset_axes<span class="classifier"><code class="docutils literal notranslate"><span class="pre">Optional[dict]</span></code>, optional</span></dt><dd><p>Arguments to be passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.inset_axes.html#matplotlib.axes.Axes.inset_axes" title="(in Matplotlib v3.10.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib.axes.Axes.inset_axes</span></code></a>.</p>
+</dd>
+</dl>
+</section>
+<section id="id15">
+<h3>Returns<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></dt><dd><p>Array of <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.10.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a> shaped <code class="docutils literal notranslate"><span class="pre">(rows,</span> <span class="pre">cols)</span></code>.</p>
+</dd>
+</dl>
+</section>
+<section id="id16">
+<h3>Examples<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">curvelops.plot</span> <span class="kn">import</span> <span class="n">create_inset_axes_grid</span>
@@ -673,33 +735,33 @@ left to right (cols).</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="curvelops.plot.curveshow">
-<span class="sig-prename descclassname"><span class="pre">curvelops.plot.</span></span><span class="sig-name descname"><span class="pre">curveshow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c_struct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_space</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">basesize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showaxis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">real</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs_imshow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/plot/_curvelet.html#curveshow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.plot.curveshow" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">curvelops.plot.</span></span><span class="sig-name descname"><span class="pre">curveshow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c_struct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_space</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">basesize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showaxis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">real</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs_imshow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/plot/_curvelet.html#curveshow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.plot.curveshow" title="Link to this definition">#</a></dt>
 <dd><p>Display curvelet coefficients in each wedge as images.</p>
 <p>For each curvelet scale, display a figure with each wedge
 plotted as an image in its own axis.</p>
-<section id="id15">
-<h3>Parameters<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
+<section id="id17">
+<h3>Parameters<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
 <dl>
 <dt>c_struct<span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FDCTStructLike</span></code></span></dt><dd><p>Curvelet structure.</p>
 </dd>
-<dt>k_space<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional</span></dt><dd><p>Show curvelet coefficient (False) or its 2D FFT transform (True),
+<dt>k_space<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional</span></dt><dd><p>Show curvelet coefficient (False) or its 2D FFT transform (True),
 by default False.</p>
 </dd>
-<dt>basesize<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Base fize of figure, by default 5. Each figure will be sized
+<dt>basesize<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Base fize of figure, by default 5. Each figure will be sized
 <code class="docutils literal notranslate"><span class="pre">(basesize</span> <span class="pre">*</span> <span class="pre">cols,</span> <span class="pre">basesize</span> <span class="pre">*</span> <span class="pre">rows)</span></code>, where
 <code class="docutils literal notranslate"><span class="pre">rows</span> <span class="pre">=</span> <span class="pre">floor(sqrt(nangles))</span></code> and <code class="docutils literal notranslate"><span class="pre">cols</span> <span class="pre">=</span> <span class="pre">ceil(nangles</span> <span class="pre">/</span> <span class="pre">rows)</span></code></p>
 </dd>
-<dt>showaxis<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional</span></dt><dd><p>Turn on axis lines and labels, by default False.</p>
+<dt>showaxis<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional</span></dt><dd><p>Turn on axis lines and labels, by default False.</p>
 </dd>
-<dt>real<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional</span></dt><dd><p>Plot real or imaginary part of curvelet coefficients. Only applicable
+<dt>real<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional</span></dt><dd><p>Plot real or imaginary part of curvelet coefficients. Only applicable
 when <code class="docutils literal notranslate"><span class="pre">k_space</span></code> is False.</p>
 </dd>
-<dt>kwargs_imshow<span class="classifier"><code class="docutils literal notranslate"><span class="pre">Optional[dict]</span></code>, optional</span></dt><dd><p>Arguments to be passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow" title="(in Matplotlib v3.7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib.pyplot.imshow</span></code></a>.</p>
+<dt>kwargs_imshow<span class="classifier"><code class="docutils literal notranslate"><span class="pre">Optional[dict]</span></code>, optional</span></dt><dd><p>Arguments to be passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow" title="(in Matplotlib v3.10.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib.pyplot.imshow</span></code></a>.</p>
 </dd>
 </dl>
 </section>
-<section id="id16">
-<h3>Examples<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
+<section id="id18">
+<h3>Examples<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">curvelops</span> <span class="kn">import</span> <span class="n">FDCT2D</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">curvelops.utils</span> <span class="kn">import</span> <span class="n">apply_along_wedges</span><span class="p">,</span> <span class="n">energy</span>
@@ -716,10 +778,10 @@ when <code class="docutils literal notranslate"><span class="pre">k_space</span>
 </pre></div>
 </div>
 </section>
-<section id="id17">
-<h3>Returns<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h3>
+<section id="id19">
+<h3>Returns<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
 <dl class="simple">
-<dt>List[<a class="reference external" href="https://matplotlib.org/stable/api/figure_api.html#matplotlib.figure.Figure" title="(in Matplotlib v3.7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Figure</span></code></a>]</dt><dd><p>One figure per scale.</p>
+<dt>List[<a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="(in Matplotlib v3.10.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Figure</span></code></a>]</dt><dd><p>One figure per scale.</p>
 </dd>
 </dl>
 </section>
@@ -727,22 +789,22 @@ when <code class="docutils literal notranslate"><span class="pre">k_space</span>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="curvelops.plot.overlay_arrows">
-<span class="sig-prename descclassname"><span class="pre">curvelops.plot.</span></span><span class="sig-name descname"><span class="pre">overlay_arrows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vectors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arrowprops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/plot/_generic.html#overlay_arrows"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.plot.overlay_arrows" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">curvelops.plot.</span></span><span class="sig-name descname"><span class="pre">overlay_arrows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vectors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arrowprops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/plot/_generic.html#overlay_arrows"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.plot.overlay_arrows" title="Link to this definition">#</a></dt>
 <dd><p>Overlay arrows on an axis.</p>
-<section id="id18">
-<h3>Parameters<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h3>
+<section id="id20">
+<h3>Parameters<a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
 <dl>
-<dt>vectors<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></span></dt><dd><p>Array shaped <code class="docutils literal notranslate"><span class="pre">(rows,</span> <span class="pre">cols,</span> <span class="pre">2)</span></code>, corresponding to a 2D vector field.</p>
+<dt>vectors<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></span></dt><dd><p>Array shaped <code class="docutils literal notranslate"><span class="pre">(rows,</span> <span class="pre">cols,</span> <span class="pre">2)</span></code>, corresponding to a 2D vector field.</p>
 </dd>
-<dt>ax<span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Axis on which to overlay the arrows.</p>
+<dt>ax<span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.10.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Axis on which to overlay the arrows.</p>
 </dd>
-<dt>arrowprops<span class="classifier"><code class="docutils literal notranslate"><span class="pre">Optional[dict]</span></code>, optional</span></dt><dd><p>Arrow properties, to be passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.annotate.html#matplotlib.pyplot.annotate" title="(in Matplotlib v3.7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib.pyplot.annotate</span></code></a>.
+<dt>arrowprops<span class="classifier"><code class="docutils literal notranslate"><span class="pre">Optional[dict]</span></code>, optional</span></dt><dd><p>Arrow properties, to be passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.annotate.html#matplotlib.pyplot.annotate" title="(in Matplotlib v3.10.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib.pyplot.annotate</span></code></a>.
 By default will be set to <code class="docutils literal notranslate"><span class="pre">dict(facecolor=&quot;black&quot;,</span> <span class="pre">shrink=0.05)</span></code>.</p>
 </dd>
 </dl>
 </section>
-<section id="id19">
-<h3>Examples<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h3>
+<section id="id21">
+<h3>Examples<a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">curvelops.plot</span> <span class="kn">import</span> <span class="n">overlay_arrows</span>
@@ -773,7 +835,7 @@ By default will be set to <code class="docutils literal notranslate"><span class
 
 <dl class="py function">
 <dt class="sig sig-object py" id="curvelops.plot.overlay_disks">
-<span class="sig-prename descclassname"><span class="pre">curvelops.plot.</span></span><span class="sig-name descname"><span class="pre">overlay_disks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c_struct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linewidth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linecolor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'r'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">map_cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gray_r'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pclip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">map_alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/plot/_curvelet.html#overlay_disks"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.plot.overlay_disks" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">curvelops.plot.</span></span><span class="sig-name descname"><span class="pre">overlay_disks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c_struct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linewidth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linecolor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'r'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">map_cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gray_r'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pclip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">map_alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/plot/_curvelet.html#overlay_disks"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.plot.overlay_disks" title="Link to this definition">#</a></dt>
 <dd><p>Overlay curvelet disks over a 2D grid of axes.</p>
 <p>Its intended usage is to display the strength of curvelet coefficients
 of a certain image with a disk display. Given an <code class="docutils literal notranslate"><span class="pre">axes</span></code> 2D array,
@@ -781,41 +843,41 @@ each curvelet wedge will be split into <code class="docutils literal notranslate
 sub-wedges. The energy of each of these sub-wedges will be mapped
 to a colormap color and/or transparency.</p>
 <section id="see-also">
-<h3>See Also<a class="headerlink" href="#see-also" title="Permalink to this heading">#</a></h3>
+<h3>See Also<a class="headerlink" href="#see-also" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#curvelops.utils.energy_split" title="curvelops.utils.energy_split"><code class="xref py py-obj docutils literal notranslate"><span class="pre">energy_split</span></code></a>: Splits a wedge into <code class="docutils literal notranslate"><span class="pre">(rows,</span> <span class="pre">cols)</span></code> wedges and computes the energy of each of these subdivisions.</p>
 <p><a class="reference internal" href="#curvelops.plot.create_inset_axes_grid" title="curvelops.plot.create_inset_axes_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_inset_axes_grid</span></code></a>: Create a grid of insets.</p>
 <p><a class="reference internal" href="#curvelops.plot.create_axes_grid" title="curvelops.plot.create_axes_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_axes_grid</span></code></a>: Creates a grid of axes.</p>
 <p><a class="reference internal" href="#curvelops.plot.curveshow" title="curvelops.plot.curveshow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">curveshow</span></code></a>: Display curvelet coefficients in each wedge as images.</p>
 </section>
-<section id="id20">
-<h3>Parameters<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h3>
+<section id="id22">
+<h3>Parameters<a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
 <dl>
 <dt>c_struct<span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FDCTStructLike</span></code>:</span></dt><dd><p>Curvelet coefficients of underlying image.</p>
 </dd>
-<dt>axes<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></span></dt><dd><p>2D grid of axes for which disks will be computed.</p>
+<dt>axes<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></span></dt><dd><p>2D grid of axes for which disks will be computed.</p>
 </dd>
-<dt>linewidth<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>, optional</span></dt><dd><p>Width of line separating scales, by default 0.5.
+<dt>linewidth<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>, optional</span></dt><dd><p>Width of line separating scales, by default 0.5.
 Will be scaled by <code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">/</span> <span class="pre">nscales</span></code> internally.
 Set to zero to disable.</p>
 </dd>
-<dt>linecolor<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>, optional</span></dt><dd><p>Color of line separating scales, by default “r”.</p>
+<dt>linecolor<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>, optional</span></dt><dd><p>Color of line separating scales, by default “r”.</p>
 </dd>
-<dt>map_cmap<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional</span></dt><dd><p>When enabled, energy will be mapped to the colormap, by default True.</p>
+<dt>map_cmap<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional</span></dt><dd><p>When enabled, energy will be mapped to the colormap, by default True.</p>
 </dd>
-<dt>cmap<span class="classifier">Union[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.Colormap.html#matplotlib.colors.Colormap" title="(in Matplotlib v3.7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Colormap</span></code></a>], optional</span></dt><dd><p>Colormap, by default <code class="docutils literal notranslate"><span class="pre">&quot;gray_r&quot;</span></code>.</p>
+<dt>cmap<span class="classifier">Union[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.Colormap.html#matplotlib.colors.Colormap" title="(in Matplotlib v3.10.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Colormap</span></code></a>], optional</span></dt><dd><p>Colormap, by default <code class="docutils literal notranslate"><span class="pre">&quot;gray_r&quot;</span></code>.</p>
 </dd>
-<dt>alpha<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>, optional</span></dt><dd><p>When using <code class="docutils literal notranslate"><span class="pre">map_cmap</span></code>, sets a transparecy for all wedges.
+<dt>alpha<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>, optional</span></dt><dd><p>When using <code class="docutils literal notranslate"><span class="pre">map_cmap</span></code>, sets a transparecy for all wedges.
 Has no effect when <code class="docutils literal notranslate"><span class="pre">map_alpha</span></code> is enabled. By default 1.0.</p>
 </dd>
-<dt>pclip<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>, optional</span></dt><dd><p>Clips the maximum amplitude by this percentage. By default 1.0.
+<dt>pclip<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>, optional</span></dt><dd><p>Clips the maximum amplitude by this percentage. By default 1.0.
 Should be between 0.0 and 1.0.</p>
 </dd>
-<dt>map_alpha<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional</span></dt><dd><p>When enabled, energy will be mapped to the transparency, by default False.</p>
+<dt>map_alpha<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional</span></dt><dd><p>When enabled, energy will be mapped to the transparency, by default False.</p>
 </dd>
-<dt>min_alpha<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>, optional</span></dt><dd><p>When using <code class="docutils literal notranslate"><span class="pre">map_alpha</span></code>, sets a minimum transparency value.
+<dt>min_alpha<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>, optional</span></dt><dd><p>When using <code class="docutils literal notranslate"><span class="pre">map_alpha</span></code>, sets a minimum transparency value.
 Has no effect when <code class="docutils literal notranslate"><span class="pre">map_alpha</span></code> is disabled. By default 0.05.</p>
 </dd>
-<dt>normalize<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>, optional</span></dt><dd><p>Normalize wedges by:</p>
+<dt>normalize<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>, optional</span></dt><dd><p>Normalize wedges by:</p>
 <ul class="simple">
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">&quot;all&quot;</span></code> (default)</dt><dd><p>Colormap/alpha value of 1.0 will correspond to the maximum
@@ -831,7 +893,7 @@ energy found across all wedges in the same scale.</p>
 </li>
 </ul>
 </dd>
-<dt>annotate<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional</span></dt><dd><p>When true, will display in the middle of the wedge a
+<dt>annotate<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional</span></dt><dd><p>When true, will display in the middle of the wedge a
 pair of numbers <code class="docutils literal notranslate"><span class="pre">iscale,</span> <span class="pre">iwedge</span></code>, the index of that scale
 and that wedge, both starting from zero. This option is useful to
 understand which directions each wedge corresponds to.
@@ -839,8 +901,8 @@ By default False.</p>
 </dd>
 </dl>
 </section>
-<section id="id21">
-<h3>Examples<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h3>
+<section id="id23">
+<h3>Examples<a class="headerlink" href="#id23" title="Link to this heading">#</a></h3>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">curvelops</span> <span class="kn">import</span> <span class="n">FDCT2D</span>
@@ -903,42 +965,42 @@ By default False.</p>
 
 </section>
 <section id="module-curvelops.typing">
-<span id="typing"></span><h2>typing<a class="headerlink" href="#module-curvelops.typing" title="Permalink to this heading">#</a></h2>
+<span id="typing"></span><h2>typing<a class="headerlink" href="#module-curvelops.typing" title="Link to this heading">#</a></h2>
 <section id="curvelops-typing">
-<h3><code class="docutils literal notranslate"><span class="pre">curvelops.typing</span></code><a class="headerlink" href="#curvelops-typing" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">curvelops.typing</span></code><a class="headerlink" href="#curvelops-typing" title="Link to this heading">#</a></h3>
 <p>Typing submodule.</p>
 </section>
 </section>
 <section id="module-curvelops.utils">
-<span id="utils"></span><h2>utils<a class="headerlink" href="#module-curvelops.utils" title="Permalink to this heading">#</a></h2>
+<span id="utils"></span><h2>utils<a class="headerlink" href="#module-curvelops.utils" title="Link to this heading">#</a></h2>
 <section id="curvelops-utils">
-<h3><code class="docutils literal notranslate"><span class="pre">curvelops.utils</span></code><a class="headerlink" href="#curvelops-utils" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">curvelops.utils</span></code><a class="headerlink" href="#curvelops-utils" title="Link to this heading">#</a></h3>
 <p>Utility functions for processing curvelets.</p>
 </section>
 <dl class="py function">
 <dt class="sig sig-object py" id="curvelops.utils.apply_along_wedges">
-<span class="sig-prename descclassname"><span class="pre">curvelops.utils.</span></span><span class="sig-name descname"><span class="pre">apply_along_wedges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c_struct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fun</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/utils/_utils.html#apply_along_wedges"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.utils.apply_along_wedges" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">curvelops.utils.</span></span><span class="sig-name descname"><span class="pre">apply_along_wedges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c_struct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fun</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/utils/_utils.html#apply_along_wedges"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.utils.apply_along_wedges" title="Link to this definition">#</a></dt>
 <dd><p>Applies a function to each individual wedge.</p>
-<section id="id22">
-<h3>Parameters<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h3>
+<section id="id24">
+<h3>Parameters<a class="headerlink" href="#id24" title="Link to this heading">#</a></h3>
 <dl>
 <dt>c_struct<span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FDCTStructLike</span></code></span></dt><dd><p>Input curvelet coefficients in struct format.</p>
 </dd>
-<dt>fun<span class="classifier">Callable[[<a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>], T]</span></dt><dd><p>Function to apply to each individual wedge. The function’s arguments
+<dt>fun<span class="classifier">Callable[[<a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>], T]</span></dt><dd><p>Function to apply to each individual wedge. The function’s arguments
 are respectively: <cite>wedge</cite>, <cite>wedge index in scale</cite>, <cite>scale index</cite>, <cite>number of
 wedges in scale</cite>, <cite>number of scales</cite>.</p>
 </dd>
 </dl>
 </section>
-<section id="id23">
-<h3>Returns<a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h3>
+<section id="id25">
+<h3>Returns<a class="headerlink" href="#id25" title="Link to this heading">#</a></h3>
 <dl class="simple">
 <dt>List[List[T]]</dt><dd><p>Struct containing the result of applying <cite>fun</cite> to each wedge.</p>
 </dd>
 </dl>
 </section>
-<section id="id24">
-<h3>Examples<a class="headerlink" href="#id24" title="Permalink to this heading">#</a></h3>
+<section id="id26">
+<h3>Examples<a class="headerlink" href="#id26" title="Link to this heading">#</a></h3>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">curvelops</span> <span class="kn">import</span> <span class="n">FDCT2D</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">curvelops.utils</span> <span class="kn">import</span> <span class="n">apply_along_wedges</span>
@@ -963,19 +1025,19 @@ wedges in scale</cite>, <cite>number of scales</cite>.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="curvelops.utils.array_split_nd">
-<span class="sig-prename descclassname"><span class="pre">curvelops.utils.</span></span><span class="sig-name descname"><span class="pre">array_split_nd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ary</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/utils/_utils.html#array_split_nd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.utils.array_split_nd" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">curvelops.utils.</span></span><span class="sig-name descname"><span class="pre">array_split_nd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ary</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/utils/_utils.html#array_split_nd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.utils.array_split_nd" title="Link to this definition">#</a></dt>
 <dd><p>Split an array into multiple sub-arrays recursively, possibly unevenly.</p>
-<section id="id25">
-<h3>See Also<a class="headerlink" href="#id25" title="Permalink to this heading">#</a></h3>
-<p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.array_split.html#numpy.array_split" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.array_split</span></code></a> : Split an array into multiple sub-arrays.</p>
+<section id="id27">
+<h3>See Also<a class="headerlink" href="#id27" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.array_split.html#numpy.array_split" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.array_split</span></code></a> : Split an array into multiple sub-arrays.</p>
 <p><a class="reference internal" href="#curvelops.utils.split_nd" title="curvelops.utils.split_nd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">split_nd</span></code></a>: Evenly split an array into multiple sub-arrays recursively.</p>
 </section>
-<section id="id26">
-<h3>Parameters<a class="headerlink" href="#id26" title="Permalink to this heading">#</a></h3>
+<section id="id28">
+<h3>Parameters<a class="headerlink" href="#id28" title="Link to this heading">#</a></h3>
 <dl>
-<dt>ary<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></span></dt><dd><p>Input array.</p>
+<dt>ary<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></span></dt><dd><p>Input array.</p>
 </dd>
-<dt>args<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Number of splits for each axis of <cite>ary</cite>.
+<dt>args<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Number of splits for each axis of <cite>ary</cite>.
 Axis 0 will be split into <cite>args[0]</cite> subarrays, axis 1 will be
 into <cite>args[1]</cite> subarrays, etc. An axis of length
 <cite>l = ary.shape[axis]</cite> that should be split into <cite>n = args[axis]</cite>
@@ -984,16 +1046,16 @@ and the rest of size <cite>l//n</cite>.</p>
 </dd>
 </dl>
 </section>
-<section id="id27">
-<h3>Returns<a class="headerlink" href="#id27" title="Permalink to this heading">#</a></h3>
+<section id="id29">
+<h3>Returns<a class="headerlink" href="#id29" title="Link to this heading">#</a></h3>
 <dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">RecursiveListNDArray</span></code></dt><dd><p>Recursive lists of lists of <a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a>.
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">RecursiveListNDArray</span></code></dt><dd><p>Recursive lists of lists of <a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a>.
 The number of recursions is equivalent to the number arguments in args.</p>
 </dd>
 </dl>
 </section>
-<section id="id28">
-<h3>Examples<a class="headerlink" href="#id28" title="Permalink to this heading">#</a></h3>
+<section id="id30">
+<h3>Examples<a class="headerlink" href="#id30" title="Link to this heading">#</a></h3>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">curvelops.utils</span> <span class="kn">import</span> <span class="n">array_split_nd</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ary</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
 <span class="go">array([[2, 3, 4],</span>
@@ -1020,23 +1082,23 @@ The number of recursions is equivalent to the number arguments in args.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="curvelops.utils.energy">
-<span class="sig-prename descclassname"><span class="pre">curvelops.utils.</span></span><span class="sig-name descname"><span class="pre">energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ary</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/utils/_utils.html#energy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.utils.energy" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">curvelops.utils.</span></span><span class="sig-name descname"><span class="pre">energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ary</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/utils/_utils.html#energy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.utils.energy" title="Link to this definition">#</a></dt>
 <dd><p>Computes the energy of an n-dimensional wedge.</p>
 <p>The energy of a vector (flattened n-dimensional array)
 <span class="math notranslate nohighlight">\((a_0,\ldots,a_{N-1})\)</span> is defined as</p>
 <div class="math notranslate nohighlight">
 \[\sqrt{\frac{1}{N}\sum\limits_{i=0}^{N-1} |a_i|^2}.\]</div>
-<section id="id29">
-<h3>Parameters<a class="headerlink" href="#id29" title="Permalink to this heading">#</a></h3>
+<section id="id31">
+<h3>Parameters<a class="headerlink" href="#id31" title="Link to this heading">#</a></h3>
 <dl>
-<dt>ary<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></span></dt><dd><p>Input wedge.</p>
+<dt>ary<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></span></dt><dd><p>Input wedge.</p>
 </dd>
 </dl>
 </section>
-<section id="id30">
-<h3>Returns<a class="headerlink" href="#id30" title="Permalink to this heading">#</a></h3>
+<section id="id32">
+<h3>Returns<a class="headerlink" href="#id32" title="Link to this heading">#</a></h3>
 <dl class="simple">
-<dt><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></dt><dd><p>Energy.</p>
+<dt><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></dt><dd><p>Energy.</p>
 </dd>
 </dl>
 </section>
@@ -1044,28 +1106,28 @@ The number of recursions is equivalent to the number arguments in args.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="curvelops.utils.energy_split">
-<span class="sig-prename descclassname"><span class="pre">curvelops.utils.</span></span><span class="sig-name descname"><span class="pre">energy_split</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/utils/_utils.html#energy_split"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.utils.energy_split" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">curvelops.utils.</span></span><span class="sig-name descname"><span class="pre">energy_split</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/utils/_utils.html#energy_split"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.utils.energy_split" title="Link to this definition">#</a></dt>
 <dd><p>Splits a wedge into <code class="docutils literal notranslate"><span class="pre">(rows,</span> <span class="pre">cols)</span></code> wedges and computes the energy
 of each of these subdivisions.</p>
-<section id="id31">
-<h3>See Also<a class="headerlink" href="#id31" title="Permalink to this heading">#</a></h3>
+<section id="id33">
+<h3>See Also<a class="headerlink" href="#id33" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#curvelops.utils.energy" title="curvelops.utils.energy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">energy</span></code></a> : Computes the energy of a wedge.</p>
 </section>
-<section id="id32">
-<h3>Parameters<a class="headerlink" href="#id32" title="Permalink to this heading">#</a></h3>
+<section id="id34">
+<h3>Parameters<a class="headerlink" href="#id34" title="Link to this heading">#</a></h3>
 <dl>
-<dt>ary<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></span></dt><dd><p>Input wedge.</p>
+<dt>ary<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></span></dt><dd><p>Input wedge.</p>
 </dd>
-<dt>rows<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Split axis 0 into <cite>rows</cite> subdivisions.</p>
+<dt>rows<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Split axis 0 into <cite>rows</cite> subdivisions.</p>
 </dd>
-<dt>cols<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Split axis 1 into <cite>cols</cite> subdivisions.</p>
+<dt>cols<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Split axis 1 into <cite>cols</cite> subdivisions.</p>
 </dd>
 </dl>
 </section>
-<section id="id33">
-<h3>Returns<a class="headerlink" href="#id33" title="Permalink to this heading">#</a></h3>
+<section id="id35">
+<h3>Returns<a class="headerlink" href="#id35" title="Link to this heading">#</a></h3>
 <dl class="simple">
-<dt><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></dt><dd><p>Matrix of shape <code class="docutils literal notranslate"><span class="pre">(rows,</span> <span class="pre">cols)</span></code> containing the energy of each
+<dt><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></dt><dd><p>Matrix of shape <code class="docutils literal notranslate"><span class="pre">(rows,</span> <span class="pre">cols)</span></code> containing the energy of each
 subdivision of the input wedge.</p>
 </dd>
 </dl>
@@ -1074,17 +1136,17 @@ subdivision of the input wedge.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="curvelops.utils.ndargmax">
-<span class="sig-prename descclassname"><span class="pre">curvelops.utils.</span></span><span class="sig-name descname"><span class="pre">ndargmax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ary</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/utils/_utils.html#ndargmax"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.utils.ndargmax" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">curvelops.utils.</span></span><span class="sig-name descname"><span class="pre">ndargmax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ary</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/utils/_utils.html#ndargmax"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.utils.ndargmax" title="Link to this definition">#</a></dt>
 <dd><p>N-dimensional argmax of array.</p>
-<section id="id34">
-<h3>Parameters<a class="headerlink" href="#id34" title="Permalink to this heading">#</a></h3>
+<section id="id36">
+<h3>Parameters<a class="headerlink" href="#id36" title="Link to this heading">#</a></h3>
 <dl>
-<dt>ary<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></span></dt><dd><p>Input array</p>
+<dt>ary<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></span></dt><dd><p>Input array</p>
 </dd>
 </dl>
 </section>
-<section id="id35">
-<h3>Examples<a class="headerlink" href="#id35" title="Permalink to this heading">#</a></h3>
+<section id="id37">
+<h3>Examples<a class="headerlink" href="#id37" title="Link to this heading">#</a></h3>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">curvelops.utils</span> <span class="kn">import</span> <span class="n">ndargmax</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
@@ -1094,8 +1156,8 @@ subdivision of the input wedge.</p>
 </pre></div>
 </div>
 </section>
-<section id="id36">
-<h3>Returns<a class="headerlink" href="#id36" title="Permalink to this heading">#</a></h3>
+<section id="id38">
+<h3>Returns<a class="headerlink" href="#id38" title="Link to this heading">#</a></h3>
 <dl class="simple">
 <dt>tuple</dt><dd><p>N-dimensional index of the maximum of <code class="docutils literal notranslate"><span class="pre">ary</span></code>.</p>
 </dd>
@@ -1105,35 +1167,35 @@ subdivision of the input wedge.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="curvelops.utils.split_nd">
-<span class="sig-prename descclassname"><span class="pre">curvelops.utils.</span></span><span class="sig-name descname"><span class="pre">split_nd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ary</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/utils/_utils.html#split_nd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.utils.split_nd" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">curvelops.utils.</span></span><span class="sig-name descname"><span class="pre">split_nd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ary</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/curvelops/utils/_utils.html#split_nd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#curvelops.utils.split_nd" title="Link to this definition">#</a></dt>
 <dd><p>Evenly split an array into multiple sub-arrays recursively.</p>
-<section id="id37">
-<h3>See Also<a class="headerlink" href="#id37" title="Permalink to this heading">#</a></h3>
-<p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.split.html#numpy.split" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.split</span></code></a> : Split an array into multiple sub-arrays.</p>
+<section id="id39">
+<h3>See Also<a class="headerlink" href="#id39" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.split.html#numpy.split" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.split</span></code></a> : Split an array into multiple sub-arrays.</p>
 <p><a class="reference internal" href="#curvelops.utils.array_split_nd" title="curvelops.utils.array_split_nd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">array_split_nd</span></code></a>: Split an array into multiple sub-arrays recursively, possibly unevenly.</p>
 </section>
-<section id="id38">
-<h3>Parameters<a class="headerlink" href="#id38" title="Permalink to this heading">#</a></h3>
+<section id="id40">
+<h3>Parameters<a class="headerlink" href="#id40" title="Link to this heading">#</a></h3>
 <dl>
-<dt>ary<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></span></dt><dd><p>Input array.</p>
+<dt>ary<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a></span></dt><dd><p>Input array.</p>
 </dd>
-<dt>args<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Number of splits for each axis of <cite>ary</cite>.
+<dt>args<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Number of splits for each axis of <cite>ary</cite>.
 Axis 0 will be split into <cite>args[0]</cite> subarrays, axis 1 will be
 into <cite>args[1]</cite> subarrays, etc. If the split cannot be made even
 for all dimensions, raises an error.</p>
 </dd>
 </dl>
 </section>
-<section id="id39">
-<h3>Returns<a class="headerlink" href="#id39" title="Permalink to this heading">#</a></h3>
+<section id="id41">
+<h3>Returns<a class="headerlink" href="#id41" title="Link to this heading">#</a></h3>
 <dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">RecursiveListNDArray</span></code></dt><dd><p>Recursive lists of lists of <a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v1.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a>.
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">RecursiveListNDArray</span></code></dt><dd><p>Recursive lists of lists of <a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.NDArray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NDArray</span></code></a>.
 The number of recursions is equivalent to the number arguments in args.</p>
 </dd>
 </dl>
 </section>
-<section id="id40">
-<h3>Examples<a class="headerlink" href="#id40" title="Permalink to this heading">#</a></h3>
+<section id="id42">
+<h3>Examples<a class="headerlink" href="#id42" title="Link to this heading">#</a></h3>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">curvelops.utils</span> <span class="kn">import</span> <span class="n">split_nd</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ary</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
 <span class="go">array([[2, 3, 4],</span>
@@ -1156,346 +1218,154 @@ The number of recursions is equivalent to the number arguments in args.</p>
 </section>
 
 
-            </article>
-            
-            
-            
-            <footer class="bd-footer-article">
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="installation.html" title="previous page">
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="installation.html"
+       title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-          <p class="prev-next-subtitle">previous</p>
-          <p class="prev-next-title">Installation</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Installation</p>
       </div>
-  </a>
-  <a class='right-next' id="next-link" href="gallery/index.html" title="next page">
-  <div class="prev-next-info">
-      <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">Gallery</p>
-  </div>
-  <i class="fa-solid fa-angle-right"></i>
-  </a>
+    </a>
+    <a class="right-next"
+       href="gallery/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Gallery</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
-            </footer>
-            
-          </div>
-          
-          
-          
-            <div class="bd-sidebar-secondary bd-toc">
+                </footer>
               
-<div class="toc-item">
-  
-<div class="tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-</div>
-<nav id="bd-toc-nav" class="page-toc">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#module-curvelops.curvelops">
-   curvelops
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#curvelops-curvelops">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       curvelops.curvelops
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#curvelops.curvelops.FDCT">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       FDCT
-      </span>
-     </code>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#curvelops.curvelops.FDCT.inverse">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         FDCT.inverse()
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#curvelops.curvelops.FDCT.struct">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         FDCT.struct()
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#curvelops.curvelops.FDCT.vect">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         FDCT.vect()
-        </span>
-       </code>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#curvelops.curvelops.FDCT2D">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       FDCT2D
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#curvelops.curvelops.FDCT3D">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       FDCT3D
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#module-curvelops.plot">
-   plot
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#curvelops-plot">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       curvelops.plot
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#curvelops.plot.create_axes_grid">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       create_axes_grid()
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#curvelops.plot.create_colorbar">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       create_colorbar()
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#curvelops.plot.create_inset_axes_grid">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       create_inset_axes_grid()
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#curvelops.plot.curveshow">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       curveshow()
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#curvelops.plot.overlay_arrows">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       overlay_arrows()
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#curvelops.plot.overlay_disks">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       overlay_disks()
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#module-curvelops.typing">
-   typing
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#curvelops-typing">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       curvelops.typing
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#module-curvelops.utils">
-   utils
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#curvelops-utils">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       curvelops.utils
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#curvelops.utils.apply_along_wedges">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       apply_along_wedges()
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#curvelops.utils.array_split_nd">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       array_split_nd()
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#curvelops.utils.energy">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       energy()
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#curvelops.utils.energy_split">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       energy_split()
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#curvelops.utils.ndargmax">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       ndargmax()
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#curvelops.utils.split_nd">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       split_nd()
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-</nav>
-</div>
-
-<div class="toc-item">
-  
-<div id="searchbox"></div>
-</div>
-
-<div class="toc-item">
-  
-</div>
-
-<div class="toc-item">
-  
-<div class="tocsection sourcelink">
-    <a href="_sources/modules.rst.txt">
-        <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-</div>
-
-</div>
-
             </div>
-          
-          
-        </div>
-        <footer class="bd-footer-content">
-          <div class="bd-footer-content__inner">
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-curvelops.curvelops">curvelops</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvelops-curvelops"><code class="docutils literal notranslate"><span class="pre">curvelops.curvelops</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvelops.curvelops.FDCT"><code class="docutils literal notranslate"><span class="pre">FDCT</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#curvelops.curvelops.FDCT.inverse"><code class="docutils literal notranslate"><span class="pre">FDCT.inverse()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#curvelops.curvelops.FDCT.struct"><code class="docutils literal notranslate"><span class="pre">FDCT.struct()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#curvelops.curvelops.FDCT.vect"><code class="docutils literal notranslate"><span class="pre">FDCT.vect()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvelops.curvelops.FDCT2D"><code class="docutils literal notranslate"><span class="pre">FDCT2D</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvelops.curvelops.FDCT3D"><code class="docutils literal notranslate"><span class="pre">FDCT3D</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-curvelops.plot">plot</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvelops-plot"><code class="docutils literal notranslate"><span class="pre">curvelops.plot</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvelops.plot.create_axes_grid"><code class="docutils literal notranslate"><span class="pre">create_axes_grid()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvelops.plot.create_colorbar"><code class="docutils literal notranslate"><span class="pre">create_colorbar()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvelops.plot.create_inset_axes_grid"><code class="docutils literal notranslate"><span class="pre">create_inset_axes_grid()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvelops.plot.curveshow"><code class="docutils literal notranslate"><span class="pre">curveshow()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvelops.plot.overlay_arrows"><code class="docutils literal notranslate"><span class="pre">overlay_arrows()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvelops.plot.overlay_disks"><code class="docutils literal notranslate"><span class="pre">overlay_disks()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-curvelops.typing">typing</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvelops-typing"><code class="docutils literal notranslate"><span class="pre">curvelops.typing</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-curvelops.utils">utils</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvelops-utils"><code class="docutils literal notranslate"><span class="pre">curvelops.utils</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvelops.utils.apply_along_wedges"><code class="docutils literal notranslate"><span class="pre">apply_along_wedges()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvelops.utils.array_split_nd"><code class="docutils literal notranslate"><span class="pre">array_split_nd()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvelops.utils.energy"><code class="docutils literal notranslate"><span class="pre">energy()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvelops.utils.energy_split"><code class="docutils literal notranslate"><span class="pre">energy_split()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvelops.utils.ndargmax"><code class="docutils literal notranslate"><span class="pre">ndargmax()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvelops.utils.split_nd"><code class="docutils literal notranslate"><span class="pre">split_nd()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="_sources/modules.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
             
           </div>
-        </footer>
+          <footer class="bd-footer-content">
+            
+          </footer>
         
       </main>
     </div>
   </div>
-
   
-    
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
-  <footer class="bd-footer"><div class="bd-footer__inner container">
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
   
-  <div class="footer-item">
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
     
-<p class="copyright">
-
-    &copy; Copyright 2020-2023, Carlos Alberto da Costa Filho.<br>
-
-</p>
-
-  </div>
-  
-  <div class="footer-item">
-    <p class="theme-version">
-    Built with the
-    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
-        PyData Sphinx Theme
-    </a>
-    0.12.0.
-</p>
-  </div>
-  
-  <div class="footer-item">
+      © Copyright 2020-2023, Carlos Alberto da Costa Filho.
+      <br/>
     
-<p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
-</p>
+  </p>
+</div>
+      
+        <div class="footer-item">
 
-  </div>
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+</p></div>
+      
+    </div>
   
 </div>
+
   </footer>
   </body>
 </html>

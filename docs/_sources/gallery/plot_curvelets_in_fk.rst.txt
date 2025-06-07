@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_gallery_plot_curvelets_in_fk.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -25,7 +25,7 @@ curvelet coefficient occupies.
 
 .. GENERATED FROM PYTHON SOURCE LINES 7-9
 
-.. code-block:: default
+.. code-block:: Python
 
     # sphinx_gallery_thumbnail_number = 5
 
@@ -38,7 +38,7 @@ curvelet coefficient occupies.
 
 .. GENERATED FROM PYTHON SOURCE LINES 10-16
 
-.. code-block:: default
+.. code-block:: Python
 
     import matplotlib as mpl
     import matplotlib.pyplot as plt
@@ -60,7 +60,7 @@ Setup
 
 .. GENERATED FROM PYTHON SOURCE LINES 21-24
 
-.. code-block:: default
+.. code-block:: Python
 
     nx, nz = 301, 201
     data_empty = np.zeros((nx, nz))
@@ -74,7 +74,7 @@ Setup
 
 .. GENERATED FROM PYTHON SOURCE LINES 25-29
 
-.. code-block:: default
+.. code-block:: Python
 
     nbscales = 4
     nbangles_coarse = 8
@@ -89,7 +89,7 @@ Setup
 
 .. GENERATED FROM PYTHON SOURCE LINES 30-37
 
-.. code-block:: default
+.. code-block:: Python
 
     Cop = FDCT2D(
         data_empty.shape,
@@ -107,7 +107,7 @@ Setup
 
 .. GENERATED FROM PYTHON SOURCE LINES 38-44
 
-.. code-block:: default
+.. code-block:: Python
 
     empty_fdct = Cop @ data_empty
 
@@ -124,7 +124,7 @@ Setup
 
 .. GENERATED FROM PYTHON SOURCE LINES 45-61
 
-.. code-block:: default
+.. code-block:: Python
 
 
 
@@ -160,7 +160,7 @@ Colormap to be used in all plots below
 
 .. GENERATED FROM PYTHON SOURCE LINES 67-77
 
-.. code-block:: default
+.. code-block:: Python
 
     fig, ax = plt.subplots(figsize=(6, 1))
     col_map = plt.get_cmap("turbo")
@@ -186,7 +186,7 @@ Colormap to be used in all plots below
 
 .. GENERATED FROM PYTHON SOURCE LINES 78-117
 
-.. code-block:: default
+.. code-block:: Python
 
     wedge_fk_abs = np.zeros_like(data_empty)
     for j, fdct_scale in enumerate(empty_fdct_struct, start=1):
@@ -293,7 +293,7 @@ Plot Dirac in Space domain
 
 .. GENERATED FROM PYTHON SOURCE LINES 122-144
 
-.. code-block:: default
+.. code-block:: Python
 
     dirac_all_fdct_struct = Cop.struct(empty_fdct.copy())
     for fdct_scale in dirac_all_fdct_struct:
@@ -332,7 +332,7 @@ Plot Dirac in Space domain
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  5.146 seconds)
+   **Total running time of the script:** (0 minutes 7.491 seconds)
 
 
 .. _sphx_glr_download_gallery_plot_curvelets_in_fk.py:
@@ -341,16 +341,17 @@ Plot Dirac in Space domain
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_curvelets_in_fk.ipynb <plot_curvelets_in_fk.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_curvelets_in_fk.py <plot_curvelets_in_fk.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: plot_curvelets_in_fk.ipynb <plot_curvelets_in_fk.ipynb>`
+      :download:`Download zipped: plot_curvelets_in_fk.zip <plot_curvelets_in_fk.zip>`
 
 
 .. only:: html

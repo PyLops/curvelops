@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_gallery_plot_seismic_regularization.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -25,7 +25,7 @@ condition a missing-data seismic regularization problem.
 
 .. GENERATED FROM PYTHON SOURCE LINES 7-9
 
-.. code-block:: default
+.. code-block:: Python
 
     # sphinx_gallery_thumbnail_number = 2
 
@@ -38,7 +38,7 @@ condition a missing-data seismic regularization problem.
 
 .. GENERATED FROM PYTHON SOURCE LINES 10-25
 
-.. code-block:: default
+.. code-block:: Python
 
     import warnings
 
@@ -69,7 +69,7 @@ Setup
 
 .. GENERATED FROM PYTHON SOURCE LINES 28-64
 
-.. code-block:: default
+.. code-block:: Python
 
     inputfile = "../testdata/seismic.npz"
     inputdata = np.load(inputfile)
@@ -121,7 +121,7 @@ Curvelet transform
 
 .. GENERATED FROM PYTHON SOURCE LINES 69-74
 
-.. code-block:: default
+.. code-block:: Python
 
     DCTOp = FDCT2D((par["nx"], par["nt"]), nbscales=4)
 
@@ -137,7 +137,7 @@ Curvelet transform
 
 .. GENERATED FROM PYTHON SOURCE LINES 75-90
 
-.. code-block:: default
+.. code-block:: Python
 
     opts_plot = dict(
         cmap="gray",
@@ -183,7 +183,7 @@ Combined modelling operator
 
 .. GENERATED FROM PYTHON SOURCE LINES 96-104
 
-.. code-block:: default
+.. code-block:: Python
 
     RCop = Rop @ DCTOp.H
     RCop.dims = (RCop.shape[1],)  # flatten
@@ -220,24 +220,24 @@ Combined modelling operator
         10   -1.21e-03-1.48e-19j    6.910e-03   1.856e-01   9.125e-02
         11   -1.21e-03-1.49e-19j    6.755e-03   1.814e-01   8.857e-02
         21   -1.24e-03-1.52e-19j    6.198e-03   1.592e-01   6.407e-02
-        31   -1.06e-03-1.30e-19j    6.083e-03   1.522e-01   4.776e-02
-        41   -1.05e-03-1.29e-19j    6.050e-03   1.493e-01   3.752e-02
+        31   -1.06e-03+1.30e-19j    6.083e-03   1.522e-01   4.776e-02
+        41   -1.05e-03+1.29e-19j    6.050e-03   1.493e-01   3.752e-02
         51   -1.12e-03+1.37e-19j    6.022e-03   1.478e-01   3.129e-02
-        61   -1.06e-03-1.29e-19j    6.033e-03   1.469e-01   2.793e-02
+        61   -1.06e-03+1.29e-19j    6.033e-03   1.469e-01   2.793e-02
         71   -1.06e-03-1.30e-19j    6.018e-03   1.463e-01   2.484e-02
         81   -1.05e-03-1.29e-19j    6.023e-03   1.459e-01   2.252e-02
-        91   -1.04e-03-1.28e-19j    6.031e-03   1.456e-01   1.938e-02
-        92   -1.04e-03-1.28e-19j    6.034e-03   1.456e-01   1.921e-02
-        93   -1.04e-03-1.28e-19j    6.034e-03   1.456e-01   1.903e-02
-        94   -1.04e-03-1.27e-19j    6.033e-03   1.456e-01   1.884e-02
-        95   -1.04e-03-1.27e-19j    6.033e-03   1.455e-01   1.867e-02
-        96   -1.04e-03-1.27e-19j    6.033e-03   1.455e-01   1.851e-02
-        97   -1.04e-03-1.27e-19j    6.033e-03   1.455e-01   1.830e-02
-        98   -1.04e-03-1.27e-19j    6.029e-03   1.455e-01   1.802e-02
-        99   -1.04e-03-1.27e-19j    6.026e-03   1.455e-01   1.775e-02
+        91   -1.04e-03+1.28e-19j    6.031e-03   1.456e-01   1.938e-02
+        92   -1.04e-03+1.28e-19j    6.034e-03   1.456e-01   1.921e-02
+        93   -1.04e-03+1.28e-19j    6.034e-03   1.456e-01   1.903e-02
+        94   -1.04e-03+1.27e-19j    6.033e-03   1.456e-01   1.884e-02
+        95   -1.04e-03+1.27e-19j    6.033e-03   1.455e-01   1.867e-02
+        96   -1.04e-03+1.27e-19j    6.033e-03   1.455e-01   1.851e-02
+        97   -1.04e-03+1.27e-19j    6.033e-03   1.455e-01   1.830e-02
+        98   -1.04e-03+1.27e-19j    6.029e-03   1.455e-01   1.802e-02
+        99   -1.04e-03+1.27e-19j    6.026e-03   1.455e-01   1.775e-02
        100   -1.03e-03+1.27e-19j    6.024e-03   1.455e-01   1.753e-02
 
-    Iterations = 100        Total time (s) = 16.86
+    Iterations = 100        Total time (s) = 18.18
     --------------------------------------------------------------------------------
 
 
@@ -246,7 +246,7 @@ Combined modelling operator
 
 .. GENERATED FROM PYTHON SOURCE LINES 105-119
 
-.. code-block:: default
+.. code-block:: Python
 
     fig, axs = plt.subplots(1, 4, sharey=True, figsize=(16, 7))
     axs[0].imshow(x.T, **opts_plot)
@@ -282,7 +282,7 @@ Combined modelling operator
 
 .. GENERATED FROM PYTHON SOURCE LINES 120-124
 
-.. code-block:: default
+.. code-block:: Python
 
     fig, ax = plt.subplots(figsize=(16, 2))
     ax.plot(range(1, len(cost) + 1), cost, "k")
@@ -309,7 +309,7 @@ Combined modelling operator
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  17.616 seconds)
+   **Total running time of the script:** (0 minutes 19.310 seconds)
 
 
 .. _sphx_glr_download_gallery_plot_seismic_regularization.py:
@@ -318,16 +318,17 @@ Combined modelling operator
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_seismic_regularization.ipynb <plot_seismic_regularization.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_seismic_regularization.py <plot_seismic_regularization.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: plot_seismic_regularization.ipynb <plot_seismic_regularization.ipynb>`
+      :download:`Download zipped: plot_seismic_regularization.zip <plot_seismic_regularization.zip>`
 
 
 .. only:: html

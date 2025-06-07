@@ -11,6 +11,7 @@ Below is a gallery of examples using curvelops.
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -113,6 +114,8 @@ Below is a gallery of examples using curvelops.
       <div class="sphx-glr-thumbnail-title">6. Multiscale Local Directions</div>
     </div>
 
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 

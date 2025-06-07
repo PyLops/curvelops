@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_gallery_plot_sigmoid_disks.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -26,7 +26,7 @@ an image. Inspired by `Kymatio's Scattering disks <https://www.kymat.io/gallery_
 
 .. GENERATED FROM PYTHON SOURCE LINES 8-10
 
-.. code-block:: default
+.. code-block:: Python
 
     # sphinx_gallery_thumbnail_number = 3
 
@@ -39,7 +39,7 @@ an image. Inspired by `Kymatio's Scattering disks <https://www.kymat.io/gallery_
 
 .. GENERATED FROM PYTHON SOURCE LINES 11-27
 
-.. code-block:: default
+.. code-block:: Python
 
     import matplotlib as mpl
     import matplotlib.pyplot as plt
@@ -71,7 +71,7 @@ Input
 
 .. GENERATED FROM PYTHON SOURCE LINES 32-41
 
-.. code-block:: default
+.. code-block:: Python
 
     inputfile = "../testdata/sigmoid.npz"
 
@@ -91,7 +91,7 @@ Input
 
 .. GENERATED FROM PYTHON SOURCE LINES 42-57
 
-.. code-block:: default
+.. code-block:: Python
 
     aspect = dz / dx
     figsize_aspect = aspect * nz / nx
@@ -131,7 +131,7 @@ First we create and apply curvelet transform.
 
 .. GENERATED FROM PYTHON SOURCE LINES 63-66
 
-.. code-block:: default
+.. code-block:: Python
 
     Cop = FDCT2D(data.shape, nbscales=4, nbangles_coarse=8, allcurvelets=False)
     d_c = Cop.struct(Cop @ data)
@@ -157,7 +157,7 @@ which matches the input data.
 
 .. GENERATED FROM PYTHON SOURCE LINES 76-86
 
-.. code-block:: default
+.. code-block:: Python
 
     rows, cols = 1, 1
     fig, axes = create_axes_grid(
@@ -192,7 +192,7 @@ based on the 2D FFT that does not differentiate between scales.
 
 .. GENERATED FROM PYTHON SOURCE LINES 95-126
 
-.. code-block:: default
+.. code-block:: Python
 
     rows, cols = 5, 6
 
@@ -234,7 +234,7 @@ based on the 2D FFT that does not differentiate between scales.
 
 .. GENERATED FROM PYTHON SOURCE LINES 127-158
 
-.. code-block:: default
+.. code-block:: Python
 
     diskcmap = "turbo"
     rows, cols = 5, 6
@@ -282,7 +282,7 @@ based on the 2D FFT that does not differentiate between scales.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.142 seconds)
+   **Total running time of the script:** (0 minutes 8.387 seconds)
 
 
 .. _sphx_glr_download_gallery_plot_sigmoid_disks.py:
@@ -291,16 +291,17 @@ based on the 2D FFT that does not differentiate between scales.
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_sigmoid_disks.ipynb <plot_sigmoid_disks.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_sigmoid_disks.py <plot_sigmoid_disks.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: plot_sigmoid_disks.ipynb <plot_sigmoid_disks.ipynb>`
+      :download:`Download zipped: plot_sigmoid_disks.zip <plot_sigmoid_disks.zip>`
 
 
 .. only:: html

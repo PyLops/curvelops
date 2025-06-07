@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_gallery_plot_sigmoid_coefficients.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -25,7 +25,7 @@ using as example a typical subsurface structure.
 
 .. GENERATED FROM PYTHON SOURCE LINES 7-9
 
-.. code-block:: default
+.. code-block:: Python
 
     # sphinx_gallery_thumbnail_number = 3
 
@@ -38,7 +38,7 @@ using as example a typical subsurface structure.
 
 .. GENERATED FROM PYTHON SOURCE LINES 10-15
 
-.. code-block:: default
+.. code-block:: Python
 
     import matplotlib.pyplot as plt
     import numpy as np
@@ -59,7 +59,7 @@ Input data
 
 .. GENERATED FROM PYTHON SOURCE LINES 20-28
 
-.. code-block:: default
+.. code-block:: Python
 
     inputfile = "../testdata/sigmoid.npz"
 
@@ -78,7 +78,7 @@ Input data
 
 .. GENERATED FROM PYTHON SOURCE LINES 29-43
 
-.. code-block:: default
+.. code-block:: Python
 
     aspect = dt / dx
     opts_plot = dict(
@@ -113,7 +113,7 @@ Create Curvelet Transform
 
 .. GENERATED FROM PYTHON SOURCE LINES 46-50
 
-.. code-block:: default
+.. code-block:: Python
 
     nbscales = 4
     nbangles_coarse = 8
@@ -128,7 +128,7 @@ Create Curvelet Transform
 
 .. GENERATED FROM PYTHON SOURCE LINES 51-58
 
-.. code-block:: default
+.. code-block:: Python
 
     Cop = FDCT2D(
         d.shape,
@@ -150,7 +150,7 @@ Convert to a list of lists of ndarrays.
 
 .. GENERATED FROM PYTHON SOURCE LINES 60-62
 
-.. code-block:: default
+.. code-block:: Python
 
     d_fdct_struct = Cop.struct(Cop @ d)
 
@@ -171,7 +171,7 @@ ratio.
 
 .. GENERATED FROM PYTHON SOURCE LINES 70-94
 
-.. code-block:: default
+.. code-block:: Python
 
     for j, c_scale in enumerate(d_fdct_struct, start=1):
         nangles = len(c_scale)
@@ -244,7 +244,7 @@ Curvelops includes much of the above logic wrapped in the following
 
 .. GENERATED FROM PYTHON SOURCE LINES 99-103
 
-.. code-block:: default
+.. code-block:: Python
 
 
     # Normalize each coefficient by max abs
@@ -259,7 +259,7 @@ Curvelops includes much of the above logic wrapped in the following
 
 .. GENERATED FROM PYTHON SOURCE LINES 104-109
 
-.. code-block:: default
+.. code-block:: Python
 
     figs = curveshow(
         y_norm,
@@ -307,7 +307,7 @@ Curvelops includes much of the above logic wrapped in the following
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  7.143 seconds)
+   **Total running time of the script:** (0 minutes 12.052 seconds)
 
 
 .. _sphx_glr_download_gallery_plot_sigmoid_coefficients.py:
@@ -316,16 +316,17 @@ Curvelops includes much of the above logic wrapped in the following
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_sigmoid_coefficients.ipynb <plot_sigmoid_coefficients.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_sigmoid_coefficients.py <plot_sigmoid_coefficients.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: plot_sigmoid_coefficients.ipynb <plot_sigmoid_coefficients.ipynb>`
+      :download:`Download zipped: plot_sigmoid_coefficients.zip <plot_sigmoid_coefficients.zip>`
 
 
 .. only:: html
