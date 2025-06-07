@@ -24,7 +24,7 @@ After these are installed, you may install `curvelops` with:
 ```bash
 export FFTW=/path/to/fftw-2.1.5
 export FDCT=/path/to/CurveLab-2.1.3
-python3 -m pip install git+https://github.com/PyLops/curvelops@0.23.3
+python3 -m pip install git+https://github.com/PyLops/curvelops@0.23.4
 ```
 
 as long as you are using a `pip>=10.0`. To check, run `python3 -m pip --version`.
