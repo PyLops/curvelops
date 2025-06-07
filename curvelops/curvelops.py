@@ -7,7 +7,7 @@ Provides a LinearOperator for the 2D and 3D curvelet transforms.
 
 from itertools import product
 from math import prod
-from typing import Callable, Optional, Tuple, Union
+from typing import Callable, Optional, Self, Tuple, TypeAlias, Union
 
 import numpy as np
 from numpy.core.multiarray import normalize_axis_index  # type: ignore
@@ -29,6 +29,8 @@ from .fdct3d_wrapper import (  # noqa: F403
 
 # pylint: enable=no-name-in-module
 from .typing import FDCTStructLike
+
+FDCTPickle: TypeAlias = dict[str, tuple[int, ...] | int | bool]
 
 
 def _fdct_docs(dimension: int) -> str:
@@ -155,6 +157,20 @@ class FDCT(LinearOperator):
             dims=self.inpdims,
             dimsd=(*iterable_dims, self._output_len),
         )
+
+    def __getstate__(self: Self) -> FDCTPickle:
+        state = {
+            "dims": tuple(self.inpdims),
+            "axes": self.axes,
+            "nbscales": self.nbscales,
+            "nbangles_coarse": self.nbangles_coarse,
+            "allcurvelets": self.allcurvelets,
+            "dtype": self.dtype,
+        }
+        return state
+
+    def __setstate__(self: Self, state: FDCTPickle) -> None:
+        self.__init__(**state)  # type: ignore
 
     def _matvec(self, x: NDArray) -> NDArray:
         fwd_out = np.zeros((self._output_len, self._ndim_iterable), dtype=self.dtype)
