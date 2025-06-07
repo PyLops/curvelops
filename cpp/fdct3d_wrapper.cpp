@@ -64,14 +64,13 @@ fdct3d_forward_wrap(int nbscales,
     if (buf.ndim() != 3)
         throw std::runtime_error("x.ndims != 3");
 
-    // We don't to initialize x(m, n, p) because this allocates an array on the
-    // heap!
+    // We don't to initialize ``x(m, n, p)`` because this allocates an array on
+    // the heap!
     xtns._m = buf.shape()[0];
     xtns._n = buf.shape()[1];
     xtns._p = buf.shape()[2];
-    xtns._data =
-      (cpx*)buf
-        .data(); // Put our Python array buffer pointer as the CpxNumTns data
+    // Put our Python array buffer pointer as the CpxNumTns data
+    xtns._data = const_cast<cpx *>(buf.data());
 
     // Call our forward function with all the right types
     fdct3d_forward(
@@ -81,7 +80,7 @@ fdct3d_forward_wrap(int nbscales,
     // xtns didn't allocate any data, so we make sure it doesn't deallocate any
     // on the way out
     xtns._m = xtns._n = xtns._p = 0;
-    xtns._data = NULL;
+    xtns._data = nullptr;
 
     vector<vector<py::array_t<cpx>>> c;
     // Expand ``c`` to fit the scales
@@ -98,19 +97,18 @@ fdct3d_forward_wrap(int nbscales,
                 delete[] cpx_arr;
             });
 
-            py::array c_arr(
-              { ctns[i][j]._p, ctns[i][j]._n, ctns[i][j]._m }, // Shape
-              { sizeof(cpx) * ctns[i][j]._m *
-                  ctns[i][j]
-                    ._n, // Strides (in bytes) of the underlying data array
-                sizeof(cpx) * ctns[i][j]._m,
-                sizeof(cpx) },
-              ctns[i][j].data(), // Data pointer
-              free_when_done);
+            // Shape
+            // Strides (in bytes) of the underlying data array
+            // Data pointer
+            // Capsule to be called when the array is deleted in Python
+            py::array c_arr({ctns[i][j]._p, ctns[i][j]._n, ctns[i][j]._m},
+                            {sizeof(cpx) * ctns[i][j]._m * ctns[i][j]._n,
+                             sizeof(cpx) * ctns[i][j]._m, sizeof(cpx)},
+                            ctns[i][j].data(), free_when_done);
 
             c[i][j] = c_arr;
             ctns[i][j]._m = ctns[i][j]._n = ctns[i][j]._p = 0;
-            ctns[i][j]._data = NULL;
+            ctns[i][j]._data = nullptr;
         }
     }
     return c;
@@ -159,7 +157,7 @@ fdct3d_inverse_wrap(int m,
     for (i = 0; i < c.size(); i++)
         for (j = 0; j < c[i].size(); j++) {
             ctns[i][j]._m = ctns[i][j]._n = ctns[i][j]._p = 0;
-            ctns[i][j]._data = NULL;
+            ctns[i][j]._data = nullptr;
         }
 
     py::capsule free_when_done(xtns.data(), [](void* cpx_ptr) {
@@ -168,14 +166,16 @@ fdct3d_inverse_wrap(int m,
     });
 
     // Create output array
-    py::array x({ m, n, p },
-                { sizeof(cpx), sizeof(cpx) * m, sizeof(cpx) * m * n },
-                xtns.data(),
-                free_when_done);
+    // Shape
+    // Strides (in bytes) of the underlying data array
+    // Data pointer
+    // Capsule to be called when the array is deleted in Python
+    py::array x({m, n, p}, {sizeof(cpx), sizeof(cpx) * m, sizeof(cpx) * m * n},
+                xtns.data(), free_when_done);
 
     // Clear output structure without deallocating
     xtns._m = xtns._n = xtns._p = 0;
-    xtns._data = NULL;
+    xtns._data = nullptr;
 
     return x;
 }

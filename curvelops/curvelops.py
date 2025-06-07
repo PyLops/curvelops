@@ -6,6 +6,7 @@ Provides a LinearOperator for the 2D and 3D curvelet transforms.
 """
 
 from itertools import product
+from math import prod
 from typing import Callable, Optional, Tuple, Union
 
 import numpy as np
@@ -14,8 +15,19 @@ from numpy.typing import DTypeLike, NDArray
 from pylops import LinearOperator
 from pylops.utils.typing import InputDimsLike
 
-from .fdct2d_wrapper import *  # noqa: F403
-from .fdct3d_wrapper import *  # noqa: F403
+# pylint: disable=no-name-in-module
+from .fdct2d_wrapper import (  # noqa: F403
+    fdct2d_forward_wrap,
+    fdct2d_inverse_wrap,
+    fdct2d_param_wrap,
+)
+from .fdct3d_wrapper import (  # noqa: F403
+    fdct3d_forward_wrap,
+    fdct3d_inverse_wrap,
+    fdct3d_param_wrap,
+)
+
+# pylint: enable=no-name-in-module
 from .typing import FDCTStructLike
 
 
@@ -107,7 +119,7 @@ class FDCT(LinearOperator):
         # iterable_axes = [ False, True, False ]
         iterable_axes = [i not in axes for i in range(ndim)]
         iterable_dims = np.array(dims)[iterable_axes]
-        self._ndim_iterable = np.prod(iterable_dims)
+        self._ndim_iterable = prod(iterable_dims)
 
         # Build the iterator itself. In our example, the slices
         # would be [:, i, :] for i in range(200)
@@ -123,14 +135,11 @@ class FDCT(LinearOperator):
 
         # For a single 2d/3d input, the length of the vector will be given by
         # the shapes in FDCT.sizes
-        self.shapes = []
-        for i in range(len(nxs)):
-            shape = []
-            for j in range(len(nxs[i])):
-                shape.append(tuple(s[i][j] for s in sizes))
-            self.shapes.append(shape)
-
-        self._output_len = sum(np.prod(j) for i in self.shapes for j in i)
+        self.shapes = [
+            [tuple(s[i][j] for s in sizes) for j in range(len(nx))]
+            for i, nx in enumerate(nxs)
+        ]
+        self._output_len = sum(prod(j) for i in self.shapes for j in i)
 
         # Save some useful properties
         self.inpdims = dims
@@ -160,8 +169,8 @@ class FDCT(LinearOperator):
             fwd_out[:, i] = self.vect(c_struct)
         return fwd_out.ravel()
 
-    def _rmatvec(self, y: NDArray) -> NDArray:
-        y_shaped = y.reshape(self._output_len, self._ndim_iterable)
+    def _rmatvec(self, x: NDArray) -> NDArray:
+        y_shaped = x.reshape(self._output_len, self._ndim_iterable)
         inv_out = np.zeros(self.inpdims, dtype=self.dtype)
         for i, index in enumerate(self._iterator):
             y_struct = self.struct(np.array(y_shaped[:, i]))
@@ -177,6 +186,18 @@ class FDCT(LinearOperator):
         return inv_out.ravel()
 
     def inverse(self, x: NDArray) -> NDArray:
+        """Inverse Curvelet Transform
+
+        Parameters
+        ----------
+        x : NDArray
+            Input vector
+
+        Returns
+        -------
+        NDArray
+            FDCT.H @ x
+        """
         return self._rmatvec(x)
 
     def struct(self, x: NDArray) -> FDCTStructLike:
@@ -201,11 +222,11 @@ class FDCT(LinearOperator):
         """
         c_struct: FDCTStructLike = []
         k = 0
-        for i in range(len(self.shapes)):
+        for shapes_s in self.shapes:
             angles = []
-            for j in range(len(self.shapes[i])):
-                size = np.prod(self.shapes[i][j])
-                angles.append(x[k : k + size].reshape(self.shapes[i][j]))
+            for shape_w in shapes_s:
+                size = prod(shape_w)
+                angles.append(x[k : k + size].reshape(shape_w))
                 k += size
             c_struct.append(angles)
         return c_struct
@@ -244,8 +265,7 @@ class FDCT2D(FDCT):
         allcurvelets: bool = True,
         dtype: DTypeLike = "complex128",
     ) -> None:
-        if len(axes) != 2:
-            raise ValueError("FDCT2D must be called with exactly two axes")
+        assert len(axes) == 2, ValueError("FDCT2D must be called with exactly two axes")
         super().__init__(dims, axes, nbscales, nbangles_coarse, allcurvelets, dtype)
 
 
@@ -261,6 +281,7 @@ class FDCT3D(FDCT):
         allcurvelets: bool = True,
         dtype: DTypeLike = "complex128",
     ) -> None:
-        if len(axes) != 3:
-            raise ValueError("FDCT3D must be called with exactly three axes")
+        assert len(axes) == 3, ValueError(
+            "FDCT3D must be called with exactly three axes"
+        )
         super().__init__(dims, axes, nbscales, nbangles_coarse, allcurvelets, dtype)

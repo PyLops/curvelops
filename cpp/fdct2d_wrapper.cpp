@@ -18,8 +18,10 @@
 #include <pybind11/stl.h>
 #include <sstream>
 namespace py = pybind11;
-using namespace std;
-using namespace fdct_wrapping_ns;
+namespace fdct = fdct_wrapping_ns;
+using fdct_wrapping_ns::cpx;
+using fdct_wrapping_ns::CpxNumMat;
+using std::vector;
 
 py::tuple
 fdct2d_param_wrap(int m, int n, int nbscales, int nbangles_coarse, int ac)
@@ -29,8 +31,8 @@ fdct2d_param_wrap(int m, int n, int nbscales, int nbangles_coarse, int ac)
     vector<vector<double>> sx, sy;
     vector<vector<double>> fx, fy;
     vector<vector<int>> nx, ny;
-    fdct_wrapping_param(
-      m, n, nbscales, nbangles_coarse, ac, sx, sy, fx, fy, nx, ny);
+    fdct::fdct_wrapping_param(m, n, nbscales, nbangles_coarse, ac, sx, sy, fx,
+                              fy, nx, ny);
     return py::make_tuple(sx, sy, fx, fy, nx, ny);
 }
 
@@ -67,18 +69,18 @@ fdct2d_forward_wrap(int nbscales,
     // the heap!
     xmat._m = buf.shape()[0];
     xmat._n = buf.shape()[1];
-    xmat._data =
-      (cpx*)buf
-        .data(); // Put our Python array buffer pointer as the CpxNumMat data
+    // Put our Python array buffer pointer as the CpxNumMat data
+    xmat._data = const_cast<cpx *>(buf.data());
 
     // Call our forward function with all the right types
-    fdct_wrapping(xmat._m, xmat._n, nbscales, nbangles_coarse, ac, xmat, cmat);
+    fdct::fdct_wrapping(xmat._m, xmat._n, nbscales, nbangles_coarse, ac, xmat,
+                        cmat);
 
     // Clear the structure as if it had never existed...
     // xmat didn't allocate any data, so we make sure it doesn't deallocate any
     // on the way out
     xmat._m = xmat._n = 0;
-    xmat._data = NULL;
+    xmat._data = nullptr;
 
     vector<vector<py::array_t<cpx>>> c;
     // Expand ``c`` to fit the scales
@@ -95,17 +97,17 @@ fdct2d_forward_wrap(int nbscales,
                 delete[] cpx_arr;
             });
 
-            py::array c_arr(
-              { cmat[i][j]._n, cmat[i][j]._m }, // Shape
-              { sizeof(cpx) * cmat[i][j]._m,    // Strides (in bytes) of the
-                                                // underlying data array
-                sizeof(cpx) },
-              cmat[i][j].data(), // Data pointer
-              free_when_done);
+            // Shape
+            // Strides (in bytes) of the underlying data array
+            // Data pointer
+            // Capsule to be called when the array is deleted in Python
+            py::array c_arr({cmat[i][j]._n, cmat[i][j]._m},
+                            {sizeof(cpx) * cmat[i][j]._m, sizeof(cpx)},
+                            cmat[i][j].data(), free_when_done);
 
             c[i][j] = c_arr;
             cmat[i][j]._m = cmat[i][j]._n = 0;
-            cmat[i][j]._data = NULL;
+            cmat[i][j]._data = nullptr;
         }
     }
     return c;
@@ -146,13 +148,13 @@ fdct2d_inverse_wrap(int m,
     // ``cmat``) are not compatible with the other parameters, this function
     // WILL segfault
     // TODO: Optionally sanitize this by calling ``fdct2d_param_wrap``
-    ifdct_wrapping(m, n, nbscales, nbangles_coarse, ac, cmat, xmat);
+    fdct::ifdct_wrapping(m, n, nbscales, nbangles_coarse, ac, cmat, xmat);
 
     // Clear input structure without deallocating
     for (i = 0; i < c.size(); i++)
         for (j = 0; j < c[i].size(); j++) {
             cmat[i][j]._m = cmat[i][j]._n = 0;
-            cmat[i][j]._data = NULL;
+            cmat[i][j]._data = nullptr;
         }
 
     py::capsule free_when_done(xmat.data(), [](void* cpx_ptr) {
@@ -161,12 +163,16 @@ fdct2d_inverse_wrap(int m,
     });
 
     // Create output array
-    py::array x(
-      { m, n }, { sizeof(cpx), sizeof(cpx) * m }, xmat.data(), free_when_done);
+    // Shape
+    // Strides (in bytes) of the underlying data array
+    // Data pointer
+    // Capsule to be called when the array is deleted in Python
+    py::array x({m, n}, {sizeof(cpx), sizeof(cpx) * m}, xmat.data(),
+                free_when_done);
 
     // Clear output structure without deallocating
     xmat._m = xmat._n = 0;
-    xmat._data = NULL;
+    xmat._data = nullptr;
 
     return x;
 }
