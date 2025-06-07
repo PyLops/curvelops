@@ -64,6 +64,7 @@ compile the library with
 ..  code-block:: console
 
     $ cd /home/$USER/opt/CurveLab-2.1.3/
+    $ make clean
     $ make lib
 
 To ensure that CurveLab is installed correctly, run
